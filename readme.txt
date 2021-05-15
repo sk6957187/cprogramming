@@ -6,3 +6,5 @@ git push origin master
 
 1. git status
 2. git diff filename
+3. git branch
+
