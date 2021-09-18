@@ -44,16 +44,19 @@ int getDayNumber(int date, int month, int year)
 	return day;
 
 }
-int main()
+int isLeapYear(int year)
 {
-	int date,month, year;
-	int firstday, dayInMonth, isLeapYear,i;
-	isLeapYear=0;
+	if(year%4==0)
+	{
+		return 1;
+	}
+	return 0;
+}
+int gatNumberOfDaysInMonth(int month, int year)
+{
+	int dayInMonth, leapYear;
 	dayInMonth=0;
-	printf("Enter the month:\n");
-	scanf("%d",&month);
-	printf("Enter the year:\n");
-	scanf("%d",&year);
+	leapYear=isLeapYear(year);
 	if(month==1 || month==3 || month==5|| month==7 || month==8|| month==10||month==12)
 	{
 		dayInMonth = 31;
@@ -64,7 +67,7 @@ int main()
 	}
 	else if(month==2)
 	{
-		if(isLeapYear==1)
+		if(leapYear==1)
 		{
 			dayInMonth=29;
 		}
@@ -73,6 +76,19 @@ int main()
 			dayInMonth=28;
 		}
 	}
+	return dayInMonth;
+}
+
+int main()
+{
+	int date,month, year;
+	int firstday, dayInMonth, isLeapYear,i;
+	isLeapYear=0;
+	printf("Enter the month:\n");
+	scanf("%d",&month);
+	printf("Enter the year:\n");
+	scanf("%d",&year);
+	dayInMonth=gatNumberOfDaysInMonth(month,year);
 	if(dayInMonth==29)
 	{
 		printf("%d is leap year\n", year);
@@ -86,7 +102,7 @@ int main()
 	for(i=1;i<=dayInMonth; i++)
 	{
 		firstday = getDayNumber(i, month, year);
-		printf("%d\t",i);
+		printf("%d-%d-%d\t",i, month,year);
 		if (firstday == 0)
 		{
 			printf("Monday\n");
