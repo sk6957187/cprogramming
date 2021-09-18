@@ -12,7 +12,7 @@ int main()
 	printf("Enter the year:\n");
 	scanf("%d",&year);
 	month = (month - 1);
-	printf("month %d\n",month );
+	//printf("month %d\n",month );(feb is this loop not count)
 	if (year % 100 == 0 && year % 400 == 0)
 	{
 		lfeb = 1;  
@@ -36,17 +36,14 @@ int main()
 		{
 			feb =28;
 		}
-
-
 	}
-	printf("M %d\n",Mdays );
-	printf("M1 %d\n",Mdays1 );
-	//printf("%d\n",Mdays );
+	//printf("M %d\n",Mdays );
+	//printf("M1 %d\n",Mdays1 );
 	normalday = (year-1)*365;
 	leapdays = (year-1)/4-(year-1)/100+(year-1)/400;
-	printf("f %d\n",leapdays );
+	//printf("lf %d\n",leapdays );
 	totaldays = normalday+leapdays + Mdays1 +Mdays + lfeb + feb + date -1;
-	printf(" t %ld\n", totaldays );
+	//printf(" td %ld\n", totaldays );
 	firstday = totaldays % 7;
 	if (firstday == 0)
 	{
