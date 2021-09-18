@@ -16,6 +16,7 @@ int main()
 				break;
 			}
 		}
+		//mohan
 	
 		if (j==i)
 		{
