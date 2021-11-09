@@ -13,6 +13,7 @@ struct node* createnode()
 {
 	struct node *n;
 	n = (struct node *)malloc(sizeof(struct node));
+	n->link=NULL;
 	return(n);
 }
 void insertnode()
@@ -21,7 +22,7 @@ void insertnode()
 	temp=createnode();
 	printf("Enter a number\n");
 	scanf("%d",&temp -> info);
-	temp->link=NULL;
+	//temp->link=NULL;
 	if(start==NULL)
 	{
 		start=temp;
@@ -39,6 +40,10 @@ void insertnode()
 void deletenode()
 {
 	struct node *r,*t,*num;
+	struct node *currentNode, *previesNode, *nextNode;
+	currentNode=NULL;
+	previesNode=NULL;
+	nextNode=NULL;
 	if(start==NULL)
 	{
 		printf("\n **List is empty**\n");
@@ -48,25 +53,42 @@ void deletenode()
 	{
 
 		viewlist();
+		num=createnode();
 		printf("Whos number are delete\n");
 		scanf("%d",&num->info);
-		/*while(t->link != NULL)
+		t=start;
+		while(t != NULL)
 		{
-			printf("N -->%d\n",t->info );
+			//printf("N -->%d\n",t->info );
 			if(t->info == num->info)
 			{
+				currentNode=t;
+				nextNode=t->link;
+				break;
 				//printf("%d\n",t->info);
-				r=t->link;
-				t->link=r->link;
-				free(r);
-				viewlist();
+				//r=t->link;
+				//t->link=r->link;
+				//free(r);
+				//viewlist();
+			}
+			previesNode=t;
+			t=t->link;
+		}
+		//viewlist();
+		if(currentNode!=NULL)
+		{
+			if(previesNode!=NULL)
+			{
+				previesNode->link=nextNode;
 			}
 			else
 			{
-				t=t->link;
+				start=nextNode;
 			}
-		}*/
-		do
+			//viewlist();
+			free(currentNode);
+		}
+		/*do
 		{
 			if(t->info == num->info)
 			{
@@ -78,9 +100,9 @@ void deletenode()
 			}
 			t=t->link;
 
-		}while(t->link != NULL);
+		}while(t->link != NULL);*/
 	}
-
+	viewlist();
 }
 void viewlist()
 {
