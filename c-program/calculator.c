@@ -48,7 +48,7 @@ int main ()
     char op[20];
     int i,j, opCount = 0, numCount = 0;
     bool lastCharOp = false, lastCharNum = false;
-    printf("Enter input: ");
+    printf("Enter input (2+2+2): ");
     scanf("%s", input);
     len = strlen(input);
     if (len > 20) {

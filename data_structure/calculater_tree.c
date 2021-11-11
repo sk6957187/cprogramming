@@ -8,6 +8,7 @@ struct tree {
     struct tree *right;
 };
 struct tree *root=NULL;
+int INDEX = 0;
 
 void print(struct tree *rootTemp) {
     if (rootTemp == NULL) {
@@ -16,6 +17,14 @@ void print(struct tree *rootTemp) {
     print(rootTemp->left);
     print(rootTemp->right);
     printf("%c ", rootTemp->data);
+}
+void convertTreeToPosix(char posix[], struct tree *rootTemp) {
+    if (rootTemp == NULL) {
+        return;
+    }
+    convertTreeToPosix(posix, rootTemp->left);
+    convertTreeToPosix(posix, rootTemp->right);
+    posix[INDEX++] = rootTemp->data;
 }
 struct tree* createnode()
 {
@@ -40,8 +49,6 @@ int isNewNodeHasHighPrecedence(struct tree *rootTemp, char data) {
     }
     switch(rootTemp->data) {
         case '-':
-            return 1;
-        break;
         case '+':
             if (data == '*' || data == '/') {
                 return 1;
@@ -88,23 +95,22 @@ int main() {
     struct tree *temp;
     int i;
     unsigned long n;
-    // char input[20] = "3+5*4+2*2/2";
-    char input[20] = "3+5*4+2*2/2";
+    //char input[20] = "3+5*4+2*2/2";
+    char input[20] = "2-1+3";
+    char posixArray[20];
     // printf("Enter input (2+2+2): ");
     // scanf("%s", input);
     n = strlen(input);
     for(i=0; i<n; i++) {
         temp = createnode();
         temp->data = input[i];
-        // printf("%c  ",temp->data);
         root = insertnode(root, temp, input[i]);
-        printf("Final tree:\n");
-        print(root);
-        printf("\n");
     }
     printf("\n");
     printf("Final tree:\n");
     print(root);
+    convertTreeToPosix(posixArray, root);
+    printf("\nR  %c ",posixArray[0]);
     printf("\n");
     return 0;
 }
