@@ -10,11 +10,9 @@ int Pop();
 void show();
 
 
-
 void Push()
 {
     int x;
-    
     if(Top == Size-1)
     {
         printf("\nOverflow!!");
@@ -28,7 +26,6 @@ void Push()
     }
 }
 
- 
 int Pop()
 {
     int s = 0;
