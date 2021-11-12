@@ -4,7 +4,7 @@
 
 #define Size 20
 int Top=-1;
-char inp_array[Size];
+int inp_array[Size];
 
 struct tree {
     char data;
@@ -31,7 +31,7 @@ struct tree* createnode()
     return(n);
 }
 
-void Push(char dataChar)
+void Push(int dataChar)
 {
     int x;
     if(Top == Size-1)
@@ -170,8 +170,10 @@ int main() {
      * 4/2+3-2*5=2+3-10=-5
      * 3-2*5+4/2=3-10+2=-5
      * 3-2*5*8+4/2=3-80+2=-75
+     * 3+5*4+2*2=3+20+4=27
+     * 
      * */
-    char input[20] = "3-2*5*8+4/2";
+    char input[20] = "3+5*4+2*2";
     char posixArray[20];
     // printf("Enter input (2+2+2): ");
     // scanf("%s", input);

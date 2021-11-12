@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "partial_stack_linklist.h"
+
 
 struct tree {
     char data;
     struct tree *left;
     struct tree *right;
 };
+
 struct tree *root=NULL;
 int INDEX = 0;
 
@@ -25,6 +28,42 @@ struct tree* createnode()
     n->left = NULL;
     n->right = NULL;
     return(n);
+}
+
+void Push(int data) {
+    StackPush(data);
+}
+
+int Pop() {
+    return StackPop();
+}
+
+int evalutae(char posixArray[], int length) {
+    int i, a, b, c;
+    int result;
+    for(i=0; i<length; i++) {
+        if(posixArray[i] >= 48 && posixArray[i] <=57) {
+            Push(posixArray[i]-48);
+            continue;
+        }
+        a = Pop();
+        b = Pop();
+        if(posixArray[i] == '+') {
+            c = a+b;
+        }
+        if(posixArray[i] == '-') {
+            c = b-a;
+        }
+        if(posixArray[i] == '*') {
+            c = a*b;
+        }
+        if(posixArray[i] == '/') {
+            c = b/a;
+        }
+        Push(c);
+    }
+    result = Pop();
+    return result;
 }
 
 void convertTreeToPosix(char posix[], struct tree *rootTemp) {
@@ -95,10 +134,21 @@ struct tree * insertnode(struct tree *rootTemp, struct tree *newNode, char data)
 
 int main() {
     struct tree *temp;
-    int i;
+    int i, result;
     unsigned long n;
-    //char input[20] = "3+5*4+2*2/2";
-    char input[20] = "2-1+3";
+    /**
+     * 2+2 = 4
+     * 3+5*4+2*2/2 = 3+20+2/1 = 3+20+2 = 25
+     * 2/2*2+2+4*5+3 = 1*2+2+20+3 = 27
+     * 2+3-1=4
+     * 2-1+3=4
+     * 4/2+3-2*5=2+3-10=-5
+     * 3-2*5+4/2=3-10+2=-5
+     * 3-2*5*8+4/2=3-80+2=-75
+     * 3+5*4+2*2=3+20+4=27
+     * 
+     * */
+    char input[20] = "3+5*4+2*3";
     char posixArray[20];
     // printf("Enter input (2+2+2): ");
     // scanf("%s", input);
@@ -109,10 +159,12 @@ int main() {
         root = insertnode(root, temp, input[i]);
     }
     printf("\n");
+    printf("Input: %s\n", input);
     printf("Final tree:\n");
     print(root);
-    convertTreeToPosix(posixArray, root);
-    printf("\nR  %c ",posixArray[0]);
     printf("\n");
+    convertTreeToPosix(posixArray, root);
+    result = evalutae(posixArray,n);
+    printf("Final result: %d\n", result);
     return 0;
 }
