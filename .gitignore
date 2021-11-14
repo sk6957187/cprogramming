@@ -1,3 +1,8 @@
 a.out
 .DS_Store
 */.DS_Store
+python/*.pyc
+python/*/*.pyc
+python/*/*/*.pyc
+python/*/*/*/*.pyc
+python/*/*/*/*/*.pyc
