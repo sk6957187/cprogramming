@@ -43,13 +43,10 @@ public class ReadExcel {
                     //Check the cell type and format accordingly
                     if (cell.getCellType().toString() == number) {
                         tempArr.add(Double.toString(cell.getNumericCellValue()));
-                        //System.out.println(cell.getNumericCellValue());
 
                     }
                     else if (cell.getCellType().toString() == str) {
                         tempArr.add(cell.getStringCellValue());
-//                        j++;
-                        //System.out.println(cell.getStringCellValue());
                     }
                 }
                 arr.add(tempArr);
