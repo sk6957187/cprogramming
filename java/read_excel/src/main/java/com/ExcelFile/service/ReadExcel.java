@@ -10,8 +10,8 @@ import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class ReadExcel {
-    public static ArrayList<ArrayList<String>> readExcel(String pathname, int sheetIndex) {
+public class ReadExcel implements FileInterface {
+    public ArrayList<ArrayList<String>> readFile(String pathname, int sheetIndex) {
         ArrayList<ArrayList<String>> arr = new ArrayList<ArrayList<String>>();
         ArrayList<String> tempArr = new ArrayList<String>();
 
