@@ -12,7 +12,6 @@ public class BookService {
 
         public BookService() {
             super();
-
         }
         private Book getBookFromCsvData(int bookId, ArrayList<String> csvBook) {
             if (csvBook == null) {
@@ -30,8 +29,10 @@ public class BookService {
         }
         private void generateBookIdMap() {
             ArrayList<ArrayList<String>> arr = new ArrayList<ArrayList<String>>();
-            CSVFileService CSVFileService = new CSVFileService();
-            arr = CSVFileService.readFile("meta-data/book-record.csv", 0);
+//            CSVFileService CSVFileService = new CSVFileService();
+//            arr = CSVFileService.readFile("meta-data/book-record.csv", 0);
+            ReadExcel readExcel = new ReadExcel();
+            arr = readExcel.readFile("meta-data/book-record.xlsx", 0);
             System.out.println(arr);
             BookIdMap = new HashMap<String, Book>();
             // Creating some objects of Book while initializing
