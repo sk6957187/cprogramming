@@ -1,4 +1,4 @@
-package com.Book.service;
+package com.book.service;
 
 
 import com.opencsv.CSVReader;
@@ -6,7 +6,6 @@ import com.opencsv.CSVReaderBuilder;
 
 import java.io.FileReader;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class CSVFileService  {

@@ -1,7 +1,7 @@
-package com.Book.resource;
+package com.book.resource;
 
-import com.Book.obj.Book;
-import com.Book.service.BookService;
+import com.book.obj.Book;
+import com.book.service.BookService;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -26,7 +26,7 @@ public class BookController {
         System.out.println("Requested book id: " + id);
         Book result = bookService.getBook(id);
         if (result == null) {
-            result = new Book(id, "Book Not Found", "0");
+            result = new Book(id, "book Not Found", "0");
         }
         return result;
     }

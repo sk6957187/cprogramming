@@ -1,6 +1,6 @@
-package com.Book.service;
+package com.book.service;
 
-import com.Book.obj.Book;
+import com.book.obj.Book;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,22 +29,15 @@ public class BookService {
         }
         private void generateBookIdMap() {
             ArrayList<ArrayList<String>> arr = new ArrayList<ArrayList<String>>();
-//            CSVFileService CSVFileService = new CSVFileService();
-//            arr = CSVFileService.readFile("meta-data/book-record.csv", 0);
-            ReadExcel readExcel = new ReadExcel();
-            arr = readExcel.readFile("meta-data/book-record.xlsx", 0);
+            CSVFileService CSVFileService = new CSVFileService();
+            arr = CSVFileService.readFile("meta-data/book-record.csv", 0);
+//            ReadExcel readExcel = new ReadExcel();
+//            arr = readExcel.readFile("meta-data/book-record.xlsx", 0);
             System.out.println(arr);
             BookIdMap = new HashMap<String, Book>();
-            // Creating some objects of Book while initializing
-//                Book javaBook=new Book("1", "Head first java","400");
-//                Book springBook=new Book("4", "Spring in action","500");
-//                Book pythonBook=new Book("3", "Learning Python","250");
-//                Book hiberanteBook=new Book("2", "Hibernate in action","300");
-//
+            // Creating some objects of book while initializing
+//                book javaBook=new Book("1", "Head first java","400");
 //                BookIdMap.put("1", javaBook);
-//                BookIdMap.put("4", springBook);
-//                BookIdMap.put("3", pythonBook);
-//                BookIdMap.put("2", hiberanteBook);
             Book tempBook;
             int bookId = 1;
             if (arr != null) {
@@ -67,21 +60,24 @@ public class BookService {
 
         public Book getBook(String id) {
             this.generateBookIdMap();
-            Book Book= BookIdMap.get(id);
-            return Book;
+            Book book= BookIdMap.get(id);
+            if (book == null) {
+                book = new Book(id, "Book Not Found", "0");
+            }
+            return book;
         }
         public Book addBook(Book book)
         {
-//            Book.setId(getMaxId()+1);
-//            BookIdMap.put(Book.getId(), Book);
+//            book.setId(getMaxId()+1);
+//            BookIdMap.put(book.getId(), book);
             return book;
         }
 
         public Book updateBook(Book book)
         {
-//            if(Book.getId()<=0)
+//            if(book.getId()<=0)
 //                return null;
-//            BookIdMap.put(Book.getId(), Book);
+//            BookIdMap.put(book.getId(), book);
             return book;
 
         }

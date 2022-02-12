@@ -1,4 +1,4 @@
-package com.Book.obj;
+package com.book.obj;
 
 public class Book {
     String id;
