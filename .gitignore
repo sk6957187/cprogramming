@@ -6,3 +6,16 @@ python/*/*.pyc
 python/*/*/*.pyc
 python/*/*/*/*.pyc
 python/*/*/*/*/*.pyc
+
+java/calculator/Calculator/.idea/
+java/calculator/Calculator/Calculator.iml
+java/calculator/out/
+*.class
+
+java/read_excel/target/*
+java/read_excel/.idea/*
+java/read_excel/read_excel.iml
+
+java/book/Book.iml
+java/book/.idea/*
+java/book/target/*
