@@ -1,20 +1,20 @@
 package com.Book.obj;
 
 public class Book {
-    int id;
+    String id;
     String title;
-    long pages;
+    String pages;
 
-    public Book(int id, String title, long pages) {
+    public Book(String id, String title, String pages) {
         super();
         this.id = id;
         this.title = title;
         this.pages = pages;
     }
-    public int getId() {
+    public String getId() {
         return id;
     }
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
     public String getTitle() {
@@ -23,10 +23,10 @@ public class Book {
     public void setTitle(String title) {
         this.title = title;
     }
-    public long getPages() {
+    public String getPages() {
         return pages;
     }
-    public void setPages(long pages) {
+    public void setPages(String pages) {
         this.pages = pages;
     }
 }

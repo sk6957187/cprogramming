@@ -27,16 +27,15 @@ public class Calculator {
                 break;
                 case 2:
                     System.out.println("Poped element: " + stack.pop());
-                    break;
+                break;
                 case 3:
                     ArrayList<Integer> stackElement = stack.getStack();
                     for (int i=0; i<stackElement.size(); i++) {
                         System.out.print(stackElement.get(i) + " ");
                     }
                     System.out.println();
-                    break;
+                break;
                 case 4:
-                    return;
                 default:
                     System.out.println("Invalid choice");
                 break;

@@ -40,7 +40,13 @@ public class TestTree {
 
     public static void main(String[] args) {
         TestTree testTree = new TestTree();
-        String input = "12 -1*2-2+30/5";
+        //2 -1*2-2+30/5=2-2-2+6=4
+        //2-1+3=4
+        //12 + 3 - 1 = 14
+        //3+2-5*3/2 = 3+2-5*1 = 0
+        //3+2-5*4/2 = -5
+        //12 -1*2-2+30/5 = 12-2-2+6=14
+        String input = "3+2-5*4/2";
         ArrayList<String> arrOfinput = Stack.tokenizeStringNumeric(input);
         System.out.println(arrOfinput);
         Tree root = null;

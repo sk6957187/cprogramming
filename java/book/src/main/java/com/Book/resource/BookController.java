@@ -22,11 +22,11 @@ public class BookController {
 
     @Path("/book/{id}")
     @GET
-    public Book getBookById(@PathParam(value = "id") int id) {
-        System.out.println(id);
+    public Book getBookById(@PathParam(value = "id") String id) {
+        System.out.println("Requested book id: " + id);
         Book result = bookService.getBook(id);
         if (result == null) {
-            result = new Book(id, "Book Not Found", 0);
+            result = new Book(id, "Book Not Found", "0");
         }
         return result;
     }
