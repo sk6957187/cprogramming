@@ -13,8 +13,8 @@ class TemplateMastersheetUserRow extends React.Component {
                 <td>{this.props.name}</td>
                 <td>{this.props.designation}</td>
                 <td>{this.props.tickedNo}</td>
-                {dataLoop.map((x, i) =>
-                    <td></td>
+                {dataLoop.map((el, i) =>
+                    <td key={i}></td>
                 )}
             </tr>);
     }

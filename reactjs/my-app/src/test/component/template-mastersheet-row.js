@@ -25,29 +25,36 @@ class TemplateMastersheetRow extends React.Component {
                     <td></td>
                     <td></td>
                     {dataLoop.map((x, i) =>
-                        <td>{x}</td>
+                        <td key={i}>{x}</td>
                     )}
                 </tr>
-
-            <TemplateMastersheetUserRow
-                name = {this.props.name1}
-                designation = {this.props.designation1}
-                tickedNo = {this.props.tickedNo1}         
-                dataLoop = {dataLoop}
-            />
-            <TemplateMastersheetUserRow
-                name = {this.props.name2}
-                designation = {this.props.designation2}
-                tickedNo = {this.props.tickedNo2}         
-                dataLoop = {dataLoop}
-            />
-            <TemplateMastersheetUserRow
-                name = {this.props.name3}
-                designation = {this.props.designation3}
-                tickedNo = {this.props.tickedNo3}         
-                dataLoop = {dataLoop}
-            />
-        </tbody></table>);
+                <TemplateMastersheetUserRow
+                    name = {this.props.name1}
+                    designation = {this.props.designation1}
+                    tickedNo = {this.props.tickedNo1}
+                    dataLoop = {dataLoop}
+                />
+                <TemplateMastersheetUserRow
+                    name = {this.props.name2}
+                    designation = {this.props.designation2}
+                    tickedNo = {this.props.tickedNo2}
+                    dataLoop = {dataLoop}
+                />
+                <TemplateMastersheetUserRow
+                    name = {this.props.name3}
+                    designation = {this.props.designation3}
+                    tickedNo = {this.props.tickedNo3}
+                    dataLoop = {dataLoop}
+                />
+                <tr>
+                    <td></td>
+                    <td>H.Q.: {this.props.headquater}</td>
+                    <td></td>
+                    {dataLoop.map((x, i) =>
+                        <td key={i}></td>
+                    )}
+                </tr>
+            </tbody></table>);
     }
 }
 

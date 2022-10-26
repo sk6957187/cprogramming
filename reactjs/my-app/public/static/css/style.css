@@ -1,8 +1,8 @@
 td {
-    width: 30px;
+    width: 40px;
 }
 .table-bordered {
-  border: 1px solid #000;
+  border: 0 solid #000;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > th,
@@ -11,4 +11,16 @@ td {
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
   border: 1px solid #000;
+}
+.no-border > td,
+.no-border > th {
+    border: 0;
+}
+.table > thead > tr.no-border > th,
+.table > tbody > tr.no-border > th,
+.table > tfoot > tr.no-border > th,
+.table > thead > tr.no-border > td,
+.table > tbody > tr.no-border > td,
+.table > tfoot > tr.no-border > td {
+    border: 0;
 }
