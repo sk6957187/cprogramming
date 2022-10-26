@@ -9,17 +9,47 @@ class TemplateMastersheet extends React.Component {
     }
     render() {
         return (<div>
-            <div>{this.props.zone}</div>
-            <div>{this.props.department}</div>
+            <table className="table"><tbody>
+                <tr>
+                    <th className="text-center">{this.props.zone} </th>
+                    <th className="text-right"> G-91 (L)</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td className="text-right"> G-91 (L) </td>
+                </tr>
+            </tbody></table>
+            <table className="table"><tbody>
+                <tr>
+                    <th className="text-center">{this.props.department}</th>
+                    <th className="text-justify">(Bill unit no.: xyz-pqr)</th>
+                </tr>
+
+            </tbody></table>
             <div><h1/></div>
-            <div>{this.props.section}</div>
-            <div>{this.props.neme}</div>
+            <table className="table"><tbody>
+                <tr>
+                    <td>no........</td>
+                    <td>section...........</td>
+                    <td>Office: <b>SSE/MURI</b></td>
+                    <td>Shop NO .................</td>
+                    <td>W.O ..................For....................20....</td>
+                </tr>
+            </tbody></table>
             <TemplateMastersheetRow
-                name="Tanmay Sikaar"
-                designation="Tech(SM)-1"
-                tickedNo="50700770131"
-                date="11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 1 2 3 4 5 6 7 8 9 10"
+                date="11 12 13 14"
+                name1="Username-1"
+                designation1="designation1"
+                tickedNo1="PF-number-1"
+                name2="Username-2"
+                designation2="designation2"
+                tickedNo2="PF-number-2"
+                name3="Username-3"
+                designation3="designation3"
+                tickedNo3="PF-number-3"
             />
+            <div>{this.props.checked}</div>
+            <div>{this.props.division}</div>
         </div>);
     }
 }

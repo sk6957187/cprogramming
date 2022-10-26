@@ -14,8 +14,9 @@ class App extends React.Component {
         return <TemplateMastersheet
                 zone="S.E.R"
                 department=".....S&T.....Department"
-                section="No....Section....Office SSE/MURI Shop NO ...."
-                neme="Name Designation Ticked N0. Date  11.12.2022-10.01.2023  Total NO. of days"
+                section=".1"
+                checked="Checked by ........"
+                division="SER/PP/KGP (DTP)-4-2011"
             />;
     }
 }
