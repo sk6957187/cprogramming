@@ -42,6 +42,7 @@ DataHandler.extend({
             }
             temp[tableData[i]["pageName"]].push(tableData[i]);
         }
+
         for (var pageName in temp) {
             templateData.push(temp[pageName]);
         }

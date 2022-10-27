@@ -36,6 +36,12 @@ class App extends React.Component {
         var result = this.state.items;
         var resultArray = [], i;
         var templateData = DataHandler.getTableData(result);
+        var pageData = [
+            {pageName: 'page-1', username: 'Username-111', designation: 'Designation-11', pf_number: 'Ticket no-1', hq: 'hq', bill_unit_no: "bill-unit-no"},
+            {pageName: 'page-1', username: 'Username-222', designation: 'Designation-1', pf_number: 'Ticket no-1', hq: 'hq', bill_unit_no: "bill-unit-no"},
+            {pageName: 'page-1', username: 'Username-3', designation: 'Designation-1', pf_number: 'Ticket no-1', hq: 'hq', bill_unit_no: "bill-unit-no"}
+        ];
+        pageData = null;
         var printData = [];
         for (i=0; i<templateData.length; i++) {
             printData.push(

@@ -12,18 +12,38 @@ class TemplateMastersheet extends React.Component {
         var pageData = this.props.pageData;
         templateData.zone = this.props.zone;
         templateData.department = this.props.department;
-        templateData.billUnitNo = "xyz-pqr";
-        templateData.username1 = "Username1";
-        templateData.designation1 = "designation1";
-        templateData.tickedNo1 = "PF-number-1";
-        templateData.username2 = "Username-2";
-        templateData.designation2 = "designation2";
-        templateData.tickedNo2 = "PF-number-2";
-        templateData.username3 = "Username-3";
-        templateData.designation3 = "designation3";
-        templateData.tickedNo3 = "PF-number-3";
-        templateData.headquater = "HQ-XYZ";
+        templateData.billUnitNo =  "";
+        templateData.username1 = "";
+        templateData.designation1 = "";
+        templateData.tickedNo1 = "";
+        templateData.username2 = "";
+        templateData.designation2 = "";
+        templateData.tickedNo2 = "";
+        templateData.username3 = "";
+        templateData.designation3 = "";
+        templateData.tickedNo3 = "";
+        if (typeof pageData === "object" && pageData !== null && pageData.length > 0 && typeof pageData[0] === "object" && pageData[0] !== null) {
+            templateData.username1 = pageData[0].username;
+            templateData.designation1 = pageData[0].designation;
+            templateData.tickedNo1 = pageData[0].pf_number;
+            templateData.billUnitNo =  pageData[0].bill_unit_no;
+            templateData.headquater = pageData[0].hq;
+        }
+        // if (DataHandle.isArray(pageData)) {
+        //     if (pageData.length > 0 && DataHandle.isObject(pageData[0])) {
 
+        //     }
+        // }
+        if (typeof pageData === "object" && pageData !== null && pageData.length > 1 && typeof pageData[1] === "object" && pageData[0] !== null) {
+            templateData.username2 = pageData[1].username;
+            templateData.designation2 = pageData[1].designation;
+            templateData.tickedNo2 = pageData[1].pf_number;
+        }
+        if (typeof pageData === "object" && pageData !== null && pageData.length > 2 && typeof pageData[2] === "object" && pageData[0] !== null) {
+            templateData.username3 = pageData[2].username;
+            templateData.designation3 = pageData[2].designation;
+            templateData.tickedNo3 = pageData[2].pf_number;
+        }
         return (<div>
             <table className="table"><tbody>
                 <tr className="no-border">
@@ -67,6 +87,5 @@ class TemplateMastersheet extends React.Component {
         </div>);
     }
 }
-
 export default TemplateMastersheet;
 

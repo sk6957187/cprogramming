@@ -4,6 +4,9 @@ td {
 .table-bordered {
   border: 0 solid #000;
 }
+.user-row {
+    height: 100px;
+}
 .table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > th,
 .table-bordered > tfoot > tr > th,
