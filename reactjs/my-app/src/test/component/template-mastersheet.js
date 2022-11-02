@@ -1,4 +1,5 @@
 import React from 'react';
+import DataHandler from "../common/DataHandler";
 import TemplateMastersheetRow from "./template-mastersheet-row";
 class TemplateMastersheet extends React.Component {
     constructor(props) {
@@ -8,6 +9,7 @@ class TemplateMastersheet extends React.Component {
         };
     }
     render() {
+        console.log("TemplateMastersheet:render");
         var templateData = {};
         var pageData = this.props.pageData;
         templateData.zone = this.props.zone;
@@ -22,27 +24,24 @@ class TemplateMastersheet extends React.Component {
         templateData.username3 = "";
         templateData.designation3 = "";
         templateData.tickedNo3 = "";
-        if (typeof pageData === "object" && pageData !== null && pageData.length > 0 && typeof pageData[0] === "object" && pageData[0] !== null) {
-            templateData.username1 = pageData[0].username;
-            templateData.designation1 = pageData[0].designation;
-            templateData.tickedNo1 = pageData[0].pf_number;
-            templateData.billUnitNo =  pageData[0].bill_unit_no;
-            templateData.headquater = pageData[0].hq;
-        }
-        // if (DataHandle.isArray(pageData)) {
-        //     if (pageData.length > 0 && DataHandle.isObject(pageData[0])) {
-
-        //     }
-        // }
-        if (typeof pageData === "object" && pageData !== null && pageData.length > 1 && typeof pageData[1] === "object" && pageData[0] !== null) {
-            templateData.username2 = pageData[1].username;
-            templateData.designation2 = pageData[1].designation;
-            templateData.tickedNo2 = pageData[1].pf_number;
-        }
-        if (typeof pageData === "object" && pageData !== null && pageData.length > 2 && typeof pageData[2] === "object" && pageData[0] !== null) {
-            templateData.username3 = pageData[2].username;
-            templateData.designation3 = pageData[2].designation;
-            templateData.tickedNo3 = pageData[2].pf_number;
+        if (DataHandler.isArray(pageData)) {
+             if (pageData.length > 0 && DataHandler.isObject(pageData[0])) {
+                templateData.username1 = pageData[0].username;
+                templateData.designation1 = pageData[0].designation;
+                templateData.tickedNo1 = pageData[0].pf_number;
+                templateData.billUnitNo =  pageData[0].bill_unit_no;
+                templateData.headquater = pageData[0].hq;
+            }
+            if (pageData.length > 1 && DataHandler.isObject(pageData[1])) {
+                templateData.username2 = pageData[1].username;
+                templateData.designation2 = pageData[1].designation;
+                templateData.tickedNo2 = pageData[1].pf_number;
+            }
+            if (pageData.length > 2 && DataHandler.isObject(pageData[2])) {
+                templateData.username3 = pageData[2].username;
+                templateData.designation3 = pageData[2].designation;
+                templateData.tickedNo3 = pageData[2].pf_number;
+            }
         }
         return (<div>
             <table className="table"><tbody>

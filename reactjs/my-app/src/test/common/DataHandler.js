@@ -14,10 +14,23 @@ DataHandler.fn = DataHandler.prototype = {
 };
 $S.extendObject(DataHandler);
 DataHandler.extend({
+    isObject: function(pageData) {
+        if(pageData !== null && typeof pageData === "object" && typeof pageData.length !== "number") {
+            return true;
+        }
+        return false;
+    },
+    isArray: function(pageData) {
+        if(pageData !== null && typeof pageData === "object" && typeof pageData.length === "number") {
+            return true;
+        }
+        return false;
+    },
     getTableData: function(apiResponse) {
         var templateData = [];
         var textArray = [], i, j, temp, tableRow;
         var tableData = [];
+
         if (apiResponse) {
             textArray = apiResponse.split("\n");
         }
@@ -42,7 +55,6 @@ DataHandler.extend({
             }
             temp[tableData[i]["pageName"]].push(tableData[i]);
         }
-
         for (var pageName in temp) {
             templateData.push(temp[pageName]);
         }
