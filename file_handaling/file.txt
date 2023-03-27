@@ -1,0 +1,7 @@
+1,Name,Nalanda,Pass
+2,Sumit,Nalanda,pass
+3,Mohan,Nalanda,Pass
+4,Mohan2,Patna,Pass
+
+
+  
