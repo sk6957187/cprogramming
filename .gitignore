@@ -1,4 +1,10 @@
+.a
+*/.a
 a.out
+*.exe
+*/*.exe
+*/*/*.exe
+
 .DS_Store
 */.DS_Store
 python/*.pyc
@@ -23,10 +29,6 @@ java/book/target/*
 
 reactjs/node_modules/*
 
-*.exe
-*/*.exe
-*/*/*.exe
-
 ._.DS_Store
 */._.DS_Store
 */*/._.DS_Store
@@ -35,7 +37,7 @@ reactjs/node_modules/*
 */._Run_program.txt
 */*/._Run_program.txt
 
-c-program/.vscode/*
+*/.vscode/*
 ._Run_program.rtf
 */._Run_program.rtf
 */Run_program.rtf
