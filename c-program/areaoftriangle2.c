@@ -9,7 +9,7 @@ int main()
   scanf("%f%f", &base, &height);
   area = 0.5 * base * height;
 
-  printf("Area of the triangle = %.3f\n", area);  // printing upto two decimal places
+  printf("Area of the triangle = %.3f\n", area);  // printing upto three decimal places
 
   return 0;
 }

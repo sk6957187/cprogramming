@@ -19,7 +19,7 @@ public class BookService {
             }
             String id, title, pages;
             Book tempBook = null;
-            if (csvBook.size() >= 3) {
+            if (csvBook.size() >=3) {
                 id = Integer.toString(bookId);//csvBook.get(0);
                 title = csvBook.get(1);
                 pages = csvBook.get(2);
@@ -30,9 +30,10 @@ public class BookService {
         private void generateBookIdMap() {
             ArrayList<ArrayList<String>> arr = new ArrayList<ArrayList<String>>();
             CSVFileService CSVFileService = new CSVFileService();
-            arr = CSVFileService.readFile("meta-data/book-record.csv", 0);
-//            ReadExcel readExcel = new ReadExcel();
-//            arr = readExcel.readFile("meta-data/book-record.xlsx", 0);
+//            arr = CSVFileService.readFile("meta-data/book-record.csv", 0);
+            ReadExcel readExcel = new ReadExcel();
+            //arr = readExcel.readFile("meta-data/book-record.xlsx", 0);
+            arr = readExcel.readFile("meta-data/Daily-Report-Card.xlsx", 0);
             System.out.println(arr);
             BookIdMap = new HashMap<String, Book>();
             // Creating some objects of book while initializing

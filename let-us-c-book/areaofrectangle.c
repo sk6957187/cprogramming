@@ -1,4 +1,4 @@
-/* C Program to multiple two given numbers */
+4/* C Program to multiple two given numbers */
 #include <stdio.h>
 int main() {
     int number1, number2, area, perimeter;
