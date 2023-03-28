@@ -36,7 +36,6 @@ public class Groups {
         for(int i=0;i<counter;i++)
         {
             System.out.println(employees[i].toString());
-            System.out.println("1");
         }
     }
 }
