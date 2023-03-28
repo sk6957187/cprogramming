@@ -1,4 +1,6 @@
-package Employee;
+package com.project.Employee;
+
+import com.project.mysqlTables.Employee;
 
 import java.util.Scanner;
 

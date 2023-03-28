@@ -1,4 +1,4 @@
-package Employee;
+package com.project.Employee;
 
 import java.util.Scanner;
 
@@ -35,7 +35,6 @@ public class Main {
                 System.out.println("Invalid..");
         }
         A.Display();
-        System.out.println("Program end.");
         System.out.println("Program end.");
     }
 }

@@ -1,4 +1,6 @@
-package Employee;
+package com.project.mysqlTables;
+
+import java.sql.ResultSet;
 
 public class Employee {
     private int employeeId;
@@ -12,6 +14,19 @@ public class Employee {
         this.employeeId = employeeId;
         this.employeeName = employeeName;
         this.salary = salary;
+    }
+
+    public Employee(ResultSet rs) {
+        if (rs == null) {
+            return;
+        }
+        try {
+            employeeId = rs.getInt("studentId");
+            employeeName = rs.getString("studentName");
+            salary = rs.getInt("studentId");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public int getEmployeeId() {
