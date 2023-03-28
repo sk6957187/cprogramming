@@ -26,6 +26,7 @@ java/*/*.iml
 java/book/Book.iml
 java/book/.idea/*
 java/book/target/*
+java/*/dependency-reduced-pom.xml
 
 reactjs/node_modules/*
 
