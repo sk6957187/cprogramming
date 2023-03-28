@@ -36,5 +36,6 @@ public class Main {
         }
         A.Display();
         System.out.println("Program end.");
+        System.out.println("Program end.");
     }
 }
