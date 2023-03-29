@@ -13,7 +13,7 @@ public class MySqlExecutor {
         this.hitDb = mySqlCredential.getBaseUrl() + "/hit??autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true";
     }
     public ArrayList<Employee> getEmployeeData(MySqlExecutor mySqlExecutor) {
-        String query = "SELECT * FROM student;";
+        String query = "SELECT * FROM employee;";
         MySqlConnection mySqlConnection = new MySqlConnection(this.hitDb, mySqlCredential);
         mySqlConnection.Connect();
         ArrayList<Employee> result = mySqlConnection.readStudentData(query);

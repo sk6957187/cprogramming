@@ -21,9 +21,9 @@ public class Employee {
             return;
         }
         try {
-            employeeId = rs.getInt("studentId");
-            employeeName = rs.getString("studentName");
-            salary = rs.getInt("studentId");
+            employeeId = rs.getInt("employeeId");
+            employeeName = rs.getString("employeeName");
+            salary = rs.getInt("salary");
         } catch (Exception e) {
             e.printStackTrace();
         }
