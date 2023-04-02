@@ -1,56 +1,56 @@
 package com.project.rest.representations;
 
 public class Employee {
-    private Integer id;
-    private String firstName;
-    private String lastName;
-    private String email;
+    private Integer personId;
+    private String name;
+    private Integer age;
+    private String recordDate;
 
     public Employee(){
     }
 
-    public Employee(Integer id, String firstName, String lastName, String email) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
+    public Employee(Integer PersonId, String Name, Integer Age, String recordDate) {
+        this.personId = PersonId;
+        this.name = Name;
+        this.age = Age;
+        this.recordDate = recordDate;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getPersonId() {
+        return personId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setPersonId(Integer personId) {
+        this.personId = personId;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getLastName() {
-        return lastName;
+    public Integer getAge() {
+        return age;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setAge(Integer age) {
+        this.age = age;
     }
 
-    public String getEmail() {
-        return email;
+    public String getRecordDate() {
+        return recordDate;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setRecordDate(String recordDate) {
+        this.recordDate = recordDate;
     }
 
     @Override
     public String toString() {
-        return "Employee [id=" + id + ", firstName=" + firstName + ", lastName="
-                + lastName + ", email=" + email + "]";
+        return "Employee [id=" + personId + ", firstName=" + name + ", lastName="
+                + age + ", email=" + recordDate + "]";
     }
 }

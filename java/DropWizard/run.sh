@@ -1,1 +1,1 @@
-java -jar target/*.jar
+java -jar target/DropWizard-1.0-SNAPSHOT.jar server

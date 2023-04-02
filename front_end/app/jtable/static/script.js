@@ -2,28 +2,28 @@ $(document).ready(function () {
    $('#MyTableContainer').jtable({
         title: 'Table of people',
         columnResizable: false,
-        //General options comes here
-
+        sorting: true,
+        paging: true,
         actions: {
-            listAction: '/GettingStarted/PersonList',
-            createAction: '/GettingStarted/CreatePerson',
-            updateAction: '/GettingStarted/UpdatePerson',
-            deleteAction: '/GettingStarted/DeletePerson'
+            listAction: 'http://localhost:8080/employees',
+            createAction: 'http://localhost:8080/GettingStarted/CreatePerson',
+            updateAction: 'http://localhost:8080/GettingStarted/UpdatePerson',
+            deleteAction: 'http://localhost:8080/GettingStarted/DeletePerson'
         },
         fields: {
-            PersonId: {
+            personId: {
                 key: true,
                 list: false
             },
-            Name: {
+            name: {
                 title: 'Author Name',
                 width: '40%'
             },
-            Age: {
+            age: {
                 title: 'Age',
                 width: '20%'
             },
-            RecordDate: {
+            recordDate: {
                 title: 'Record date',
                 width: '30%',
                 type: 'date',

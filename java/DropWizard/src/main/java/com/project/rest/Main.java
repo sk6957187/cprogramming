@@ -1,6 +1,7 @@
 package com.project.rest;
 
 import com.project.rest.controller.EmployeeRESTController;
+import com.project.rest.filter.ResponseFilter;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
@@ -18,6 +19,7 @@ public class Main extends Application<MainConfiguration> {
     @Override
     public void run(MainConfiguration c, Environment e) throws Exception {
         LOGGER.info("Registering REST resources");
+        e.jersey().register(new ResponseFilter());
         e.jersey().register(new EmployeeRESTController());
     }
 
