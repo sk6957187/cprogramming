@@ -88,7 +88,6 @@ void insertnode()
 		}
 		printf("\n1__\t");
 		t->next=temp;
-		
 		printf("2\t");
 	}
 	printf("Final list:-\n");
