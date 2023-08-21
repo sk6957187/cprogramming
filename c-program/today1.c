@@ -65,33 +65,88 @@ void viewlist()
 	else{
 		temp=start;
 		while(temp != NULL){
-			printf("%d",temp->data);
+			printf("%d, ",temp->data);
 			temp=temp->next;
 		}
 	}
 	printf("\n");
 }
 
-void insertnode()
-{
-	struct node *temp,*t;
-	temp = createnode();
-	printf("Enter the number --");
-	scanf("%d",&temp->data);
-	if (start==NULL){
-		start=temp;
+void deletenode(){
+	struct node *temp;
+	int num, prevNum, nextNum;
+	temp=start;
+	if(start==NULL){
+		printf("list is empty...");
 	}
 	else{
-		t=start;
-		while(t !=NULL){
-			t=t->next;
+		viewlist();
+		printf("Which number deleted you-");
+		scanf("%d",&num);
+		printf("previousNum:-");
+		scanf("%d",&prevNum);
+		printf("next number:-");
+		scanf("%d",&nextNum);
+		while(temp != NULL && temp->next !=NULL){
+			if (temp->data == prevNum && temp->next->next->data == nextNum)
+			{
+				temp->next=temp->next->next;
+				viewlist();
+				break; 
+			}
+			temp=temp->next;
 		}
-		printf("\n1__\t");
-		t->next=temp;
-		printf("2\t");
 	}
-	printf("Final list:-\n");
-	viewlist();
+}
+
+void insertnode()
+{
+	struct node *temp,*t,*n;
+	int ch;
+	int newNum, previousNum, nextNum;
+	temp = createnode();
+	printf("1. New number enter \n");
+    printf("2. New number enter between two number\n\n");
+    scanf("%d",&ch);
+    switch(ch) {
+    	case 1:
+    		temp = createnode();
+    		printf("Enter new number --");
+			scanf("%d",&temp->data);
+			if (start==NULL){
+				start=temp;
+			}
+			else{
+				t=start;
+				while(t->next !=NULL){
+					t=t->next;
+				}
+			t->next=temp;
+			}
+			printf("Final list:-\n");
+			viewlist();
+		break;
+	case 2:
+		viewlist();
+		printf("Enter new number, previes number & next number:- \n");
+		scanf("%d",&newNum);
+		scanf("%d",&previousNum);
+		scanf("%d",&nextNum);
+		temp=start;
+		while(temp !=NULL && temp->next !=NULL) {
+			if(temp->data==previousNum && temp->next->data==nextNum){
+				n = createnode();
+				n->data = newNum;
+				n->next = temp->next;
+				temp->next = n;
+				break;
+			}
+			temp=temp->next;
+		}
+		printf("Final list :\n");
+		viewlist();
+	 break;
+	}
 }
 
 int prog(){
@@ -109,15 +164,22 @@ int prog(){
 
 int main()
 {
-	while(1)
-		switch(prog()){
+	while(1) {
+		switch(prog())
+		{
 			case 1:
                 insertnode();
                 break;
+            case 2:
+            	deletenode();
+            	break;
+            case 3:
+            	viewlist();
+            	break;
 	        case 4:
 	                exit(0);
 	         default:
 	                printf("Invalid choice\n");
 		}
-	
+	}
 }
