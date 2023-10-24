@@ -22,6 +22,12 @@ java/calculator/out/
 java/*/target/*
 java/*/.idea/*
 java/*/*.iml
+java/*/.classpath
+java/*/.project
+java/.idea/
+java/.metadata/
+
+
 
 
 java/book/Book.iml
