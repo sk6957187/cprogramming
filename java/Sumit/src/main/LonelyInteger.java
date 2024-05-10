@@ -1,33 +1,7 @@
 package main;
 
 import java.util.*;
-//import java.util.Scanner;
 
-//import java.util.*;
-
-class Result {
-
-    public static int lonelyinteger(List<Integer> a) {
-    int temp=0;
-    int l=a.size();
-    for(int i=0; i<l; i++){
-        for(int j=0; j<l; j++){
-            if(i != j){
-                if(a.get(i).equals(a.get(j))){
-                    break;
-                }
-                //result ^= num;
-            }
-            if(j==l-1){
-                temp=a.get(i);
-            }
-        }
-    }
-    return temp;
-
-    }
-
-}
 
 public class LonelyInteger {
     public static void main(String[] args){
@@ -46,9 +20,29 @@ public class LonelyInteger {
             a.add(aItem);
         }
 
-        int result = Result.lonelyinteger(a);
+        int result = lonelyinteger(a);
 
         System.out.println(result);
         sc.close();
     }
+    
+    public static int lonelyinteger(List<Integer> a) {
+        int temp=0;
+        int l=a.size();
+        for(int i=0; i<l; i++){
+            for(int j=0; j<l; j++){
+                if(i != j){
+                    if(a.get(i).equals(a.get(j))){
+                        break;
+                    }
+                    //result ^= num;
+                }
+                if(j==l-1){
+                    temp=a.get(i);
+                }
+            }
+        }
+        return temp;
+
+        }
 }
