@@ -21,7 +21,7 @@ int main()
 	scanf("%d",&n);
 	printf("Fibbonacci series is :");
 	printf(" 0 1 ");
-	fib(n);
+	fib(n-2);
 	printf("\n");
 
 }
