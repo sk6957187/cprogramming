@@ -18,10 +18,12 @@ java/calculator/Calculator/.idea/
 java/calculator/Calculator/Calculator.iml
 java/calculator/out/
 *.class
+ java/ExcelFile2/.idea/workspace.xml
 
 java/*/target/*
 java/*/.idea/*
 java/*/*.iml
+java/*/*/*.xml
 java/*/.classpath
 java/*/.project
 java/.idea/
