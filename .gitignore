@@ -68,3 +68,5 @@ reactjs/node_modules/*
 */*.jar
 */*/*.jar
 */*/*/*.jar
+
+java/*/.idea/*

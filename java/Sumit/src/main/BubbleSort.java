@@ -12,6 +12,7 @@ public class BubbleSort{
         }
       	int res = minSwaps(n, array);
         System.out.println(res);
+        sc.close();
     }
   
   	static int minSwaps(int n, int[] array) {

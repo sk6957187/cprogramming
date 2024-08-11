@@ -1,7 +1,8 @@
 package main;
 
 public class CallByReference {
-    public static void main(String[] args){
+    @SuppressWarnings("removal")
+	public static void main(String[] args){
         Integer a,b,c;
         a = new Integer(100);
         //a = 100; // Using auto-boxing
@@ -10,7 +11,8 @@ public class CallByReference {
         System.out.println("Sum: "+c.intValue());
     }
 
-    private static Integer findSum(Integer x, Integer y) {
+    @SuppressWarnings("removal")
+	private static Integer findSum(Integer x, Integer y) {
         Integer s = new Integer(x.intValue()+y.intValue());
         //s=x+y;      //using auto unboxing
         return s;

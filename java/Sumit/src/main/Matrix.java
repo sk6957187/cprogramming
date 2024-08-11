@@ -11,6 +11,7 @@ public class Matrix {
 	        for(int i=0; i<6; i++){
 	            numArray[i]=sc.nextLine().split(" ");
 	        }
+	        sc.close();
 	        
 	        for(int i=0;i<=3;i++){
 	            for(int j=0;j<=3;j++){

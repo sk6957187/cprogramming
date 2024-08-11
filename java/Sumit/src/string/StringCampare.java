@@ -46,6 +46,7 @@ public class StringCampare {
         int queriesCount = Integer.parseInt(sc.next());
 
         List<String> queries = new ArrayList<>();
+        List<Integer> arrLi = new ArrayList<>();
 
         for (int i = 0; i < queriesCount; i++) {
             String queriesItem = sc.next();

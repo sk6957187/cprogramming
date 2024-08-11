@@ -1,6 +1,8 @@
 package main;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 
 public class LonelyInteger {
@@ -13,8 +15,8 @@ public class LonelyInteger {
         
         System.out.println("11111");
         String[] aTemp = sc.nextLine().split(" ");
+        //List<Integer> a = new ArrayList<>();
         List<Integer> a = new ArrayList<>();
-
         for (int i = 0; i < n; i++) {
             int aItem = Integer.parseInt(aTemp[i]);
             a.add(aItem);
@@ -43,6 +45,5 @@ public class LonelyInteger {
             }
         }
         return temp;
-
-        }
+    }
 }

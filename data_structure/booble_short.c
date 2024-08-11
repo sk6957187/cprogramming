@@ -11,7 +11,7 @@ int main()
    printf("Enter %d numbers: ",count);
 
    for(i=0;i<count;i++)
-   scanf("%d",&number[i]);
+      scanf("%d",&number[i]);
 
    /* This is the main logic of bubble sort algorithm 
     */

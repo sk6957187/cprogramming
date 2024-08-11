@@ -1,6 +1,6 @@
 package main;
 
-import java.io.*;
+import java.util.ArrayList;
 import java.util.*;
 /*
  * The quick brown fox jumps over the lazy dog --> pangram
