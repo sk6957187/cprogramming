@@ -16,6 +16,7 @@ python/*/*/*/*/*.pyc
 
 java/calculator/Calculator/.idea/
 java/calculator/Calculator/Calculator.iml
+java/*/*/*.iml
 java/calculator/out/
 *.class
 
@@ -68,5 +69,6 @@ reactjs/node_modules/*
 */*.jar
 */*/*.jar
 */*/*/*.jar
+
 
 java/*/.idea/*
