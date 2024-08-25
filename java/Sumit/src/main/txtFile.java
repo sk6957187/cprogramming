@@ -8,13 +8,16 @@ public class txtFile {
 	public static void main(String[] args) {
 		
 		String filePath = "C:\\Users\\SUMIT KUMAR\\OneDrive\\Desktop\\target.txt";
-        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+        try {
+        	BufferedReader br = new BufferedReader(new FileReader(filePath));
             String line;
             while ((line = br.readLine()) != null) {
                 System.out.println(line);
             }
+            br.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
+        
 	}
 }
