@@ -27,3 +27,13 @@ server:
     port: 8080
     type: http
   rootPath: /*
+
+dbSource: "xlsx"
+employeeCsvFilePath: "A:/Sumit/Sumit/study/workspace/cprogramming-2/java/DropWizard/meta-data/test-data/employee.csv"
+employeeXlsxFilePath: "A:/Sumit/Sumit/study/workspace/cprogramming-2/java/DropWizard/meta-data/test-data/employee1.xlsx"
+employeeXlsxSheetName: ""
+employeeXlsxSheetIndex: 0
+
+
+
+

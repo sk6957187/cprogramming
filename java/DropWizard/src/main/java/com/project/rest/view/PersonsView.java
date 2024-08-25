@@ -4,21 +4,17 @@ import io.dropwizard.views.View;
 
 import java.util.ArrayList;
 
-public class PersonView extends View {
+public class PersonsView extends View {
     private final ArrayList<Employee> employees;
 
-    public PersonView(Employee employee) {
+    public PersonsView(ArrayList<Employee> employees) {
         super("employee.ftl");
-        if (employee == null) {
-            employee = new Employee();
-            employee.setName("Employee not found.");
+        if (employees == null) {
+            employees = new ArrayList<>();
         }
-        ArrayList<Employee> employees = new ArrayList<>();
-        employees.add(employee);
         this.employees = employees;
 
     }
-
     public ArrayList<Employee> getEmployees() {
         return employees;
     }

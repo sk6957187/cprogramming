@@ -10,7 +10,6 @@ public class EmployeeService {
     private final EmployeeDB employeeDB;
     public EmployeeService(EmployeeDB employeeDB) {
         this.employeeDB = employeeDB;
-        this.employeeDB.update();
     }
     public HashMap<String, Object> getEmployees() {
         HashMap<String, Object> result = new HashMap<>();
@@ -21,5 +20,13 @@ public class EmployeeService {
         result.put("Records", employees);
         result.put("TotalRecordCount", employees.size());
         return result;
+    }
+    public ArrayList<Employee> getEmployeesAsList() {
+        this.employeeDB.update();
+        return employeeDB.getEmployees();
+    }
+    public Employee getEmployeeById(String employeeId) {
+        this.employeeDB.update();
+        return employeeDB.getEmployee(employeeId);
     }
 }

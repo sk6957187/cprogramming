@@ -1,5 +1,6 @@
 package com.project.rest.dao;
 
+import com.project.rest.MainConfiguration;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -18,13 +19,16 @@ public class EmployeeXlsx extends EmployeeDB {
 //        employees.put(2, new Employee(2, "John", 21, "2023-04-01"));
 //        employees.put(3, new Employee(3, "Mohan", 22, "2023-04-01"));
 //    }
-    public EmployeeXlsx() {}
+    private final MainConfiguration mainConfiguration;
+    public EmployeeXlsx(MainConfiguration mainConfiguration) {
+        this.mainConfiguration = mainConfiguration;
+    }
 
     private ArrayList<ArrayList<String>> getEmployeeDataXlsx() {
         ArrayList<ArrayList<String>> data = new ArrayList<>();
         ArrayList<String> fileData = new ArrayList<>();
         ArrayList<String> row;
-        String csvFile = "A:/Sumit/Sumit/study/workspace/cprogramming-2/java/DropWizard/meta-data/test-data/employee1.xlsx";
+        String csvFile = mainConfiguration.getEmployeeXlsxFilePath();
         String line = "";
         File file = new File(csvFile);
         try {

@@ -39,7 +39,7 @@ public class EmployeeRESTController {
     @GET
     @Path("/{id}")
     public Response getEmployeeById(@PathParam("id") Integer id) {
-        Employee employee = employeeDB.getEmployee(String.valueOf(id));
+        Employee employee = employeeService.getEmployeeById(String.valueOf(id));
         if (employee != null) {
             return Response.ok(employee).build();
         } else {
@@ -89,7 +89,7 @@ public class EmployeeRESTController {
     @DELETE
     @Path("/{id}")
     public Response removeEmployeeById(@PathParam("id") Integer id) {
-        Employee employee = employeeDB.getEmployee(String.valueOf(id));
+        Employee employee = employeeService.getEmployeeById(String.valueOf(id));
         if (employee != null) {
             employeeDB.removeEmployee(id);
             return Response.ok().build();
