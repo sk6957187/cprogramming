@@ -1,8 +1,11 @@
 package com.project.rest.controller;
 
+import com.project.rest.dao.EmployeeCsv;
 import com.project.rest.dao.EmployeeDB;
+import com.project.rest.dao.EmployeeXlsx;
 import com.project.rest.representations.Employee;
 import com.project.rest.service.EmployeeService;
+import com.project.rest.view.PersonView;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -17,9 +20,9 @@ public class EmployeeRESTController {
 
     private final EmployeeService employeeService;
     private final EmployeeDB employeeDB;
-    public EmployeeRESTController() {
+    public EmployeeRESTController(EmployeeDB employeeDB) {
 //        this.validator = validator;
-        this.employeeDB = new EmployeeDB();
+        this.employeeDB = employeeDB;
         this.employeeService = new EmployeeService(employeeDB);
     }
 
@@ -36,13 +39,13 @@ public class EmployeeRESTController {
     @GET
     @Path("/{id}")
     public Response getEmployeeById(@PathParam("id") Integer id) {
-        Employee employee = employeeDB.getEmployee(id);
-        if (employee != null)
+        Employee employee = employeeDB.getEmployee(String.valueOf(id));
+        if (employee != null) {
             return Response.ok(employee).build();
-        else
+        } else {
             return Response.status(Response.Status.NOT_FOUND).build();
+        }
     }
-
 
     @Path("/create")
     @POST
@@ -56,8 +59,7 @@ public class EmployeeRESTController {
                         .build();
             } else {
                 employeeDB.updateEmployee(employee.getPersonId(), employee);
-                return Response.created(new URI("/employees/" + employee.getPersonId()))
-                        .build();
+                return Response.created(new URI("/employees/" + employee.getPersonId())).build();
             }
         }
         return Response.status(Response.Status.NOT_FOUND).build();
@@ -87,7 +89,7 @@ public class EmployeeRESTController {
     @DELETE
     @Path("/{id}")
     public Response removeEmployeeById(@PathParam("id") Integer id) {
-        Employee employee = employeeDB.getEmployee(id);
+        Employee employee = employeeDB.getEmployee(String.valueOf(id));
         if (employee != null) {
             employeeDB.removeEmployee(id);
             return Response.ok().build();

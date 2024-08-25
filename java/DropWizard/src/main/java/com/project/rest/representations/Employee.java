@@ -1,26 +1,34 @@
 package com.project.rest.representations;
 
 public class Employee {
-    private Integer personId;
+    private String personId;
     private String name;
-    private Integer age;
+    private String age;
     private String recordDate;
 
     public Employee(){
     }
 
-    public Employee(Integer PersonId, String Name, Integer Age, String recordDate) {
+//    public Employee(String PersonId, String Name, String Age, String recordDate) {
+//        this.personId = PersonId;
+//        this.name = Name;
+//        this.age = Age;
+//        this.recordDate = recordDate;
+//    }
+    public Employee(String PersonId, String Name, String Age, String recordDate) {
         this.personId = PersonId;
         this.name = Name;
         this.age = Age;
         this.recordDate = recordDate;
     }
 
-    public Integer getPersonId() {
+
+
+    public String getPersonId() {
         return personId;
     }
 
-    public void setPersonId(Integer personId) {
+    public void setPersonId(String personId) {
         this.personId = personId;
     }
 
@@ -32,11 +40,11 @@ public class Employee {
         this.name = name;
     }
 
-    public Integer getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(Integer age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
@@ -53,4 +61,5 @@ public class Employee {
         return "Employee [id=" + personId + ", firstName=" + name + ", lastName="
                 + age + ", email=" + recordDate + "]";
     }
+
 }

@@ -10,10 +10,13 @@ public class EmployeeService {
     private final EmployeeDB employeeDB;
     public EmployeeService(EmployeeDB employeeDB) {
         this.employeeDB = employeeDB;
+        this.employeeDB.update();
     }
     public HashMap<String, Object> getEmployees() {
         HashMap<String, Object> result = new HashMap<>();
+        this.employeeDB.update();
         ArrayList<Employee> employees = employeeDB.getEmployees();
+
         result.put("Result", "OK");
         result.put("Records", employees);
         result.put("TotalRecordCount", employees.size());
