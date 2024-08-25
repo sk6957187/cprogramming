@@ -24,17 +24,16 @@ public class Main extends Application<MainConfiguration> {
     }
 
     @Override
-    public void run(MainConfiguration c, Environment e) throws Exception {
+    public void run(MainConfiguration mainConfiguration, Environment e) throws Exception {
         LOGGER.info("Registering REST resources");
-        String source = "xlsx";
-        //String source = "csv";
+        String dbSource = mainConfiguration.getDbSource();
         EmployeeDB employeeDB;
-        if ("csv".equals(source)) {
-            employeeDB = new EmployeeCsv();
-        } else if ("xlsx".equals(source)) {
-            employeeDB = new EmployeeXlsx();
+        if ("csv".equals(dbSource)) {
+            employeeDB = new EmployeeCsv(mainConfiguration);
+        } else if ("xlsx".equals(dbSource)) {
+            employeeDB = new EmployeeXlsx(mainConfiguration);
         } else {
-            employeeDB = new EmployeeCsv();
+            employeeDB = new EmployeeCsv(mainConfiguration);
         }
         e.jersey().register(new ResponseFilter());
         e.jersey().register(new EmployeeRESTController(employeeDB));
