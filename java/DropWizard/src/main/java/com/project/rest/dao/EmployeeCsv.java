@@ -1,5 +1,7 @@
 package com.project.rest.dao;
 
+import com.project.rest.MainConfiguration;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -12,9 +14,10 @@ public class EmployeeCsv extends EmployeeDB {
 //        employees.put(2, new Employee(2, "John", 21, "2023-04-01"));
 //        employees.put(3, new Employee(3, "Mohan", 22, "2023-04-01"));
 //    }
-
-
-    public EmployeeCsv() {}
+    private final MainConfiguration mainConfiguration;
+    public EmployeeCsv(MainConfiguration mainConfiguration) {
+        this.mainConfiguration = mainConfiguration;
+    }
 
 
 
@@ -22,7 +25,7 @@ public class EmployeeCsv extends EmployeeDB {
         ArrayList<ArrayList<String>> data = new ArrayList<>();
         ArrayList<String> fileData = new ArrayList<>();
         ArrayList<String> row;
-        String csvFile = "A:/Sumit/Sumit/study/workspace/cprogramming-2/java/DropWizard/meta-data/test-data/employee.csv";
+        String csvFile = mainConfiguration.getEmployeeCsvFilePath();
         String line = "";
 
         try {
