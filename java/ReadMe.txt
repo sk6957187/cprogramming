@@ -1,7 +1,11 @@
-//Run program in java
+Run program in java
 1. go to file
 2. Compile file “javac FILENAME.java”
 3. file run “java FILENAME”
+
+-----------------------
+convert in jar file, type in cmd
+--> mvn clan install
 
 -----------------------
 Run jar file on cmd 
