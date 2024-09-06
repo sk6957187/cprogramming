@@ -1,40 +1,37 @@
-package com.project.rest.dao;
+package com.project.mvc.model;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-
+import com.project.mvc.MvcConfiguration;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.DateUtil;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import com.project.rest.MainConfiguration;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 
-public class EmployeeXlsx extends EmployeeDB {
-//    static{
-//        employees.put(1, new Employee(1, "Lokesh", 20, "2023-04-01"));
-//        employees.put(2, new Employee(2, "John", 21, "2023-04-01"));
-//        employees.put(3, new Employee(3, "Mohan", 22, "2023-04-01"));
-//    }
-    private final MainConfiguration mainConfiguration;
-    public EmployeeXlsx(MainConfiguration mainConfiguration) {
-        this.mainConfiguration = mainConfiguration;
+public class EmployeeXlsx extends EmployeeDB{
+    private final MvcConfiguration mvcConfiguration;
+    public EmployeeXlsx(MvcConfiguration mvcConfiguration) {
+        this.mvcConfiguration=mvcConfiguration;
     }
 
-    private ArrayList<ArrayList<String>> getEmployeeDataXlsx() {
+    public ArrayList<ArrayList<String>> getEmployeeDataXlsx(){
         ArrayList<ArrayList<String>> data = new ArrayList<>();
         ArrayList<String> fileData = new ArrayList<>();
         ArrayList<String> row;
-        String csvFile = mainConfiguration.getEmployeeXlsxFilePath();
+        String xlsxFilePath = mvcConfiguration.getEmployeeXlsxFilePath();
         String line = "";
-        File file = new File(csvFile);
-        try {
+        File file = new File(xlsxFilePath);
+        try{
             FileInputStream fis = new FileInputStream(file);
             XSSFWorkbook workbook = new XSSFWorkbook(fis);
-            Sheet sheet = workbook.getSheetAt(0);
+            Sheet sheet = workbook.getSheetAt(0);// Read from sheetName
             for(Row sheetRow: sheet){
                 row = new ArrayList<>();
                 for(Cell cell: sheetRow){
@@ -44,8 +41,15 @@ public class EmployeeXlsx extends EmployeeDB {
                             row.add(cell.getStringCellValue());
                             break;
                         case NUMERIC:
-                            System.out.print(Math.round(cell.getNumericCellValue()) + "\t");
-                            row.add(String.valueOf(Math.round(cell.getNumericCellValue())));
+                            if (DateUtil.isCellDateFormatted(cell)) {
+                                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                                row.add(dateFormat.format(cell.getDateCellValue()));
+                                System.out.print(dateFormat.format(cell.getDateCellValue()));
+                            } else {
+                                row.add(String.valueOf(Math.round(cell.getNumericCellValue())));
+                                System.out.print(Math.round(cell.getNumericCellValue()) + "\t");
+                            }
+                            //row.add(String.valueOf(Math.round(cell.getNumericCellValue())));
                             break;
                         case BOOLEAN:
                             System.out.print(cell.getBooleanCellValue() + "\t");
@@ -62,11 +66,12 @@ public class EmployeeXlsx extends EmployeeDB {
             }
             fis.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
         data = this.convertFileDataToEmployeeData(fileData);
         return data;
     }
+
     private ArrayList<ArrayList<String>> convertFileDataToEmployeeData(ArrayList<String> fileData) {
         ArrayList<ArrayList<String>> employeeData = new ArrayList<>();
         ArrayList<String> row;
@@ -79,13 +84,8 @@ public class EmployeeXlsx extends EmployeeDB {
         return employeeData;
     }
 
-
     public void update() {
         ArrayList<ArrayList<String>> employeeData = this.getEmployeeDataXlsx();
-//        ArrayList<ArrayList<String>> employeeData = this.getEmployeeData();
-//        employees.put(1, new Employee(1, "Lokesh", 20, "2023-04-01"));
-//        employees.put(2, new Employee(2, "John", 21, "2023-04-01"));
-//        employees.put(3, new Employee(3, "Mohan", 22, "2023-04-01"));
         this.updateEmployeeByData(employeeData);
     }
 

@@ -9,10 +9,10 @@ public class MySqlExecutor {
     private final String hitDb;
     public MySqlExecutor(MySqlCredential mySqlCredential) {
         this.mySqlCredential = mySqlCredential;
-        this.hitDb = mySqlCredential.getBaseUrl() + "/hit??autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true";
+        this.hitDb = mySqlCredential.getBaseUrl() + "/student??autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true";
     }
     public ArrayList<Student> getStudentData(MySqlExecutor mySqlExecutor) {
-        String query = "SELECT * FROM student;";
+        String query = "SELECT * FROM studentdata;";
         MySqlConnection mySqlConnection = new MySqlConnection(this.hitDb, mySqlCredential);
         mySqlConnection.Connect();
         ArrayList<Student> result = mySqlConnection.readStudentData(query);

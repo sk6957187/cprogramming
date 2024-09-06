@@ -2,8 +2,7 @@
  * 
  */
 /**
- * @author SUMIT KUMAR
- *
+ * 
  */
-module sumit {
+module MYSQL {
 }
