@@ -1,7 +1,11 @@
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class MysqlConnection {
     public static void main(String[] args) {
+        MysqlService mysqlService = new MysqlService();
+        ArrayList<HashMap<String, Object>> result;
         try {
             String driver = "com.mysql.cj.jdbc.Driver";
             String url = "jdbc:mysql://localhost:3306/student";
@@ -15,6 +19,9 @@ public class MysqlConnection {
             Statement stmt = ((java.sql.Connection) con).createStatement();
             ResultSet rs = stmt.executeQuery("select * from Studentdata");
             // Process the result set
+
+            //result = mysqlService.executeQuery(con,"select * from Studentdata");
+            //System.out.println(result);
             if (rs==null) {
                 System.out.println("File is empty...");
             }

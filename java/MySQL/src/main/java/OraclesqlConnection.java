@@ -1,16 +1,19 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class OraclesqlConnection {
 
+
+
     public static void main(String args[]) {
+        MysqlService mysqlService = new MysqlService();
+        ArrayList<HashMap<String, Object>> result;
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
             System.out.println("Driver loaded..");
-            String url = "jdbc:oracle:thin:@Sumit11:1521:em";
-            String username = "SUMIT";
+            String url = "jdbc:oracle:thin:@Sumit11:1521:xe";
+            String username = "System";
             String password = "tiger";
 
             // Establish connection
@@ -21,16 +24,11 @@ public class OraclesqlConnection {
                 System.out.println("Connection error..");
                 return;
             }
-            Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("select * from Student");
-            if (!rs.isBeforeFirst()) {
-                System.out.println("No data found.");
-            } else {
-                while (rs.next()) {
-                    System.out.println(rs.getInt("SID")+" "+rs.getString("SNAME")+" "+rs.getInt("AGE")+" "+rs.getDate("EDATE")  );
-
-                }
-            }
+            result = mysqlService.executeQuery(con,"select * from Student");
+            System.out.println(result);
+            mysqlService.insertQuery(con, "INSERT INTO student (STUDENT_ID, STUDENT_NAME) VALUES (6, 'Amit Kumar')");
+            result = mysqlService.executeQuery(con,"select * from Student");
+            System.out.println(result);
             con.close();
         } catch (Exception e) {
             System.out.println(e);
