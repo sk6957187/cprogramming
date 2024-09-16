@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King</title>
+</head>
+<body>
+    <h1>Sumit Kumar(Title)</h1>
+    <h2>Tiger</h2>
+    <p>Also goes by the name <b>Mohan Kumar</b></p>
+    <h2>Tiger 2</h2>
+    <p> Also goes by the name <b>Saurabh Kumar</b></p>
+    <ul>
+        <li>Apple</li><button><a href="https://en.wikipedia.org/wiki/Apple">See image</a></button>
+        <li>Ball</li><button><a href="https://en.wikipedia.org/wiki/Ball">See image</a></button>
+        <li>Cat</li>
+    </ul>
+    <ol>
+        <li>Apple</li>
+        <li>Ball</li>
+        <li>Cat</li>
+    </ol>
+    <ol type="A">
+        <li>Apple</li>
+        <li>Ball</li>
+        <li>Cat</li>
+    </ol>
+
+    <h2>Anchor Element</h2>
+    <a href="https://www.google.com/">Google</a>
+    <button><a href="https://www.netflix.com/">Netflix</a></button>
+
+    <h2>br tag</h2>
+    <p>Hii Sumit KUmar from Nalanda Bihar.</p>
+    <p>Hii<br> Sumit Kumar <br> From Nalanda <br> Bihar.</p>
+    <h2><u>Bold, Italic and ulderline tags</u></h2>
+    <p><b>Bold </b><i> Italic </i><u>Underline</u></p>
+
+    <h2><u>Comments</u></h2>
+    <!-- This code not pass in main code -->
+    <hr>
+
+    <h2><u>sup and sup tag</u></h2>
+    <div>(a+b)<sup>2</sup> = a<sup>2</sup> + b<sup>2</sup></div>
+    <div>2H<sub>2</sub> + O<sub>2</sub> = 2H<sub>2</sub>O</div>
+    <hr>
+
+    <h2><u>HTML Entities</u></h2>
+    <div>I &hearts; India.</div>
+    <div>The sky is cloudy &#9729;</div>
+    <div>It will be rain &#9748; today.</div>
+    <hr>
+
+    <h2><u>Table</u></h2>
+    <table border="10" width="500px" style="text-align: center;">
+        <caption>Fruits Menu </caption>
+        <tr>
+            <th>Fruits</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Apple</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Banana</td>
+            <td>20</td>
+        </tr>
+    </table>
+    <hr>
+
+    <h2><u>Table (use calspan and rowspan Attributes)</u></h2>
+    <table border="10" width="500px" style="text-align: center;">
+        <caption>Fruits Menu </caption>
+        <thead>
+            <tr>
+                <th rowspan="2">Fruits</th>
+                <th colspan="2">Price</th>
+            </tr>
+            <tr>
+                <th>INR</th>
+                <th>USD</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Apple</td>
+                <td>10</td>
+                <td>0.14</td>
+            </tr>
+            <tr>
+                <td>Banana</td>
+                <td>20</td>
+                <td>0.28</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+
+    <h2><u>Form in HTML</u></h2>
+    <form action="/action">
+        <label>
+            Username <input type="text" placeholder="Enter Username"> 
+            <br>
+        </label>
+        Password <input type="password">
+        <br>
+        Number <input type="number">
+        <br>
+        Time <input type="time">
+        <br>
+        Colour <input type="color">
+        <br>
+        <label>
+            Tick check box <input type="checkbox">
+        </label>
+        <br>
+        <h3><u>Button Element </u></h3>
+        Button <button>Submit</button> || <!-- By default submit type button. -->
+        Button <button type="submit">Submit</button> ||
+        Do something <button type="button">Button</button> ||
+        Reset <button type="reset">Reset</button>
+    </form>
+    <hr>
+    <form action="https://www.youtube.com/results">
+        <input type="text" placeholder="Search in youtube" name="search_query">
+        <button type="submit">Search</button>
+        <button type="reset">Reset</button>
+    </form>
+    <form action="https://www.google.com/search">
+        <input type="text" placeholder="Search in google" name="q">
+        <button type="submit">search</button>
+        <button type="reset">reset</button>
+        <div>
+            <input type="checkbox" id="age" name="name">
+            <label for="age">I am 18+</label>
+        </div>
+        <div>
+            <input type="checkbox" id="age" name="name" checked> <!-- This is auto checked box create -->
+            <label for="age">I am 18+</label>
+        </div>
+    </form>
+    <hr />
+    <div>radio type button (click only one button)</div>
+    <form action="/server">
+        <input type="radio" name="fruit" id="apple" value="apple">
+        <label for="apple">apple</label>
+        <input type="radio" name="fruit" id="mango" value="mango">
+        <label for="mango">mango</label>
+        <input type="radio" name="fruit" id="banana" value="banana">
+        <label for="banana">banana</label>
+        <br>
+
+        <div>Multiple box check</div>
+        <div>
+            <input type="checkbox" name="sub" id="math" value="math">
+            <label for="math">math</label>
+            <input type="checkbox" name="sub" id="science" value="science">
+            <label for="science">science</label>
+            <input type="checkbox" name="sub" id="hindi" value="hindi">
+            <label for="hindi">hindi</label>
+        </div>
+        <button type="submit">submit</button>
+    </form>
+    <hr>
+    <form action="/server">
+        <div>
+            choose your profession
+            <select name="profession" id="profession">
+                <option>select any one</option>
+                <option value="stu">Student</option>
+                <option value="dev">Developer</option>
+
+            </select>
+        </div>
+        <div>
+            <div>by default select:-</div>
+            choose your profession
+            <select name="profession" id="profession">
+                <option>select any one</option>
+                <option value="stu" selected>Student</option>
+                <option value="dev">Developer</option>
+
+            </select>
+        </div>
+    </form>
+    <hr>
+    <h2>Input Range </h2>
+    <label for="vol">select volume level</label>
+    <input type="range" id="vol" min="0" max="100" name="vol" step="10">
+    <br>
+    <h2><u>Text area</u></h2>
+    <div>
+        <label for="feedback">Please give valuable feedback:-</label>
+        <textarea id="feedback" name="feedback" placeholder="write your feedback here!"></textarea>
+    </div>
+</body>
+</html>
