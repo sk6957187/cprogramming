@@ -12,3 +12,9 @@ Deleted by “command+z”
 
 --> Directary path --
 			C:\git-access
+----------------------
+C-PROGRAM RUN ON CMD
+
+1. GO FILE DIRECTRY
+2. COMPILE THROUGTH:- gcc sum.c
+3. run:- a.exe
