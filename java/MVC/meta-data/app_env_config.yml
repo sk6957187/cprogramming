@@ -28,7 +28,7 @@ server:
     type: http
   rootPath: /*
 
-dbSource: "mysql"
+dbSource: "oraclesql"
 employeeCsvFilePath: "A:/Sumit/Sumit/study/workspace/cprogramming-2/java/MVC/meta-data/text.csv"
 employeeXlsxFilePath: "A:/Sumit/Sumit/study/workspace/cprogramming-2/java/MVC/meta-data/testData.xlsx"
 employeeXlsxSheetName: ""
@@ -38,6 +38,12 @@ mysqlConfig:
   url: "jdbc:mysql://localhost:3306/student"
   username: "root"
   password: "Sumit@123"
+
+oraclesqlConfig:
+  driver: "oracle.jdbc.driver.OracleDriver"
+  url: "jdbc:oracle:thin:@Sumit11:1521:xe"
+  username: "System"
+  password: "tiger"
 
 
 

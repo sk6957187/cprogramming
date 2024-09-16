@@ -1,0 +1,32 @@
+<html lang="en">
+<title>MVC</title>
+<link rel="stylesheet" type="text/css" href="http://localhost:8080/assets/libs/bootstrap-5.0.2-dist/css/bootstrap.css"/>
+<body>
+<div id="container"></div>
+<div>
+	<table id="employeeTable" class="table"></table>
+</div>
+<div id="employeeForm" style="display: none;">
+<form id="employeeFormElement" onsubmit="return false;">
+    <table border="1">
+        <tr>
+            <th>Person ID (max 3 digits)</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Record Date</th>
+        </tr>
+        <tr>
+            <td><input type="text" class="form-control" id="person_id" name="person_id" maxlength="3" required></td>
+            <td><input type="text" class="form-control" id="name" name="name" required></td>
+            <td><input type="number" class="form-control" id="age" name="age" min="0" required></td>
+            <td><input type="date" class="form-control" id="record_date" name="record_date" required></td>
+        </tr>
+    </table>
+    <br>
+    <input type="submit" class="btn btn-primary" onclick='addEmployee()' value="Submit">
+</form>
+</div>
+<script type="text/javascript" src="http://localhost:8080/assets/libs/jquery-3.7.1/jquery-3.7.1.js"></script>
+<script type="text/javascript" src="/ui/javascript/index.js"></script>
+</body>
+</html>

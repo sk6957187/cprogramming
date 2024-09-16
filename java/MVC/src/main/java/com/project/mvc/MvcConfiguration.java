@@ -14,6 +14,8 @@ public class MvcConfiguration extends Configuration {
     private String employeeXlsxSheetName;
     private String employeeXlsxSheetIndex;
     private MysqlConfig mysqlConfig;
+    private MysqlConfig oraclesqlConfig;
+
     public String getEmployeeXlsxFilePath() {
         return employeeXlsxFilePath;
     }
@@ -62,6 +64,14 @@ public class MvcConfiguration extends Configuration {
         this.mysqlConfig = mysqlConfig;
     }
 
+    public MysqlConfig getOraclesqlConfig() {
+        return oraclesqlConfig;
+    }
+
+    public void setOraclesqlConfig(MysqlConfig oraclesqlConfig) {
+        this.oraclesqlConfig = oraclesqlConfig;
+    }
+
     @Override
     public String toString() {
         return "MvcConfiguration{" +
@@ -71,6 +81,7 @@ public class MvcConfiguration extends Configuration {
                 ", employeeXlsxSheetName='" + employeeXlsxSheetName + '\'' +
                 ", employeeXlsxSheetIndex='" + employeeXlsxSheetIndex + '\'' +
                 ", mysqlConfig=" + mysqlConfig +
+                ", oraclesqlConfig=" + oraclesqlConfig +
                 '}';
     }
 }

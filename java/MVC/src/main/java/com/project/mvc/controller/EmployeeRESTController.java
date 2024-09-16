@@ -6,8 +6,10 @@ import com.project.mvc.model.EmployeeService;
 import com.project.mvc.view.EmployeeView;
 import com.project.mvc.view.PersonView;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Validator;
 import javax.ws.rs.*;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -33,7 +35,18 @@ public class EmployeeRESTController {
     public EmployeeView viewEmployees() {
         return new EmployeeView(employeeService.getEmployeesAsList());
     }
-
+    @GET()
+    @Path("/view/add")
+    @Produces(MediaType.TEXT_HTML)
+    public EmployeeView addEmployees(@Context HttpServletRequest request,
+                                     @QueryParam("person_id") String personId,
+                                     @QueryParam("name") String name,
+                                     @QueryParam("age") String age,
+                                     @QueryParam("record_date") String recordDate) {
+        Employee employee = new Employee(personId, name, age, recordDate);
+        System.out.println(employee);
+        return new EmployeeView(employeeService.getEmployeesAsList());
+    }
 
     @POST
     public Response getEmployeesByPost() {

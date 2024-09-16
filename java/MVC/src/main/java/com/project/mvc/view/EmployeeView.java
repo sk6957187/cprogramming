@@ -9,7 +9,7 @@ public class EmployeeView extends View {
     private final ArrayList<Employee> employees;
 
     public EmployeeView(ArrayList<Employee> employees) {
-        super("employee.ftl");
+        super("employee-2.ftl");
         if (employees == null) {
             employees = new ArrayList<>();
         }
