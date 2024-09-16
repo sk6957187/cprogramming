@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Employee Management</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+        <div>
+            <button onclick="showForm()">Add Employee</button>
+
+            <!-- Table for displaying employee data -->
+            <div id="employeeTable" >
+                <h2>Employee List</h2>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Person ID</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Record Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dynamic content will be added here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Form for user input, initially hidden -->
+            <div id="employeeForm" style="display: none;">
+                <h1>Enter Employee Details</h1>
+                <form id="employeeFormElement" onsubmit="addEmployee(event)">
+                    <table border="1">
+                        <tr>
+                            <th>Person ID (max 3 digits)</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Record Date</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="personId" maxlength="3" required></td>
+                            <td><input type="text" name="name" required></td>
+                            <td><input type="number" name="age" min="0" required></td>
+                            <td><input type="date" name="recordDate" required></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+        
+        <script>
+            // Array to store employee data
+            const employees = [];
+
+            // Function to show the form
+            function showForm() {
+                document.getElementById('employeeForm').style.display = 'block';
+            }
+
+            // Function to add employee data to array and display it in the table
+            function addEmployee(event) {
+                event.preventDefault(); // Prevent form submission
+
+                // Get form values
+                const personId = document.getElementsByName('personId')[0].value;
+                const name = document.getElementsByName('name')[0].value;
+                const age = document.getElementsByName('age')[0].value;
+                const recordDate = document.getElementsByName('recordDate')[0].value;
+
+                // Create a new employee object
+                const newEmployee = {
+                    personId: personId,
+                    name: name,
+                    age: age,
+                    recordDate: recordDate
+                };
+
+                // Add new employee to the array
+                employees.push(newEmployee);
+
+                // Update the table to display the new employee
+                const employeeTable = document.getElementById('employeeTable').getElementsByTagName('tbody')[0];
+                const newRow = employeeTable.insertRow();
+                newRow.innerHTML = `<td>${newEmployee.personId}</td>
+                                    <td>${newEmployee.name}</td>
+                                    <td>${newEmployee.age}</td>
+                                    <td>${newEmployee.recordDate}</td>`;
+
+                // Hide the form after submission
+                document.getElementById('employeeForm').style.display = 'none';
+
+                // Clear the form inputs
+                document.getElementById('employeeFormElement').reset();
+            }
+        </script>
+    </body>
+</html>
