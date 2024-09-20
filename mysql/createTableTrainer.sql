@@ -9,3 +9,5 @@ rename trainner to trainer;
 
 insert into TRAINER values(1,'Aman','JAVA',40000,3);
 insert into TRAINER values(2,'Abhishek', 'SQL', 30000,1);
+
+commit;
