@@ -10,3 +10,5 @@ insert into inst_det values(3, 'JLC', 'BTM', '05-SEP-1999', 1234567898);
 insert into inst_det(i_id,I_name,loc,cont) values(4, 'Qspider', 'BTM', 1235675643);
 
 commit;
+select * from inst_det;
+select i_id from inst_det;
