@@ -1,4 +1,4 @@
-package jSpider;
+package main;
 
 public class AreaTrin {
 	public static void main(String[] args) {

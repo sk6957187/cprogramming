@@ -1,4 +1,4 @@
-package jSpider;
+package main;
 
 import java.util.Scanner;
 

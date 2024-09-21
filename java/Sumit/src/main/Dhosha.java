@@ -1,4 +1,4 @@
-package jSpider;
+package main;
 
 public class Dhosha {
 	public static void main(String[] args) {

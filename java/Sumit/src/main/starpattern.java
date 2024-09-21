@@ -1,4 +1,4 @@
-package jSpider;
+package main;
 import java.util.Scanner;
 public class starpattern {
 	public static void main(String[] args) {

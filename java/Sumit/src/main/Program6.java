@@ -1,4 +1,4 @@
-package jSpider;
+package main;
 
 public class Program6 {
 //	static void push(char c) {
