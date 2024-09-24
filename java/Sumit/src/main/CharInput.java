@@ -8,6 +8,7 @@ public class CharInput {
 		System.out.println("Enter value.");
 		char ch = sc.next().charAt(0);
 		System.out.println("Value: "+ch);
+		sc.close();
 	}
 
 }

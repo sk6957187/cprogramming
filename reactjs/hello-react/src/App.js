@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Hello from './componets/Hello';
-import Greet from './componets/Greet';
+import Hello from './hello-world/Hello';
+import Greet from './greet/Greet';
 import Welcome from './componets/Welcome';
 import Message from './componets/Message';
-import Table from './componets/Table';
+import Table from './project/component/Table';
+import Data from './componets/Data';
+import Counter from './componets/Counter'
+
 
 
 class App extends Component {
+
+
   render(){
     return(
       <div className="App">
-        <Table/>
+        <Counter />
+        <Data />
+        {/*<Table/> */}
         {/* <Message /> */}
         {/* <Greet name= "Brush" heroName = "Batman"/>
           <p>This is children props!</p>
@@ -27,5 +34,7 @@ class App extends Component {
     )
   }
 }
+
+
 
 export default App;
