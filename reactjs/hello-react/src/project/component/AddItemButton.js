@@ -10,7 +10,7 @@ class AddItemButton extends Component{
     }
     render() {
         console.log(2);
-        return(<button className='btn btn-primary' onClick={this.props.onClick}>Click for add</button>)
+        return(<button className='btn btn-primary mx-2' onClick={this.props.onClick}>Click for add</button>)
     }
 }
 

@@ -94,8 +94,8 @@ class AddData extends Component {
                             </tr>
                         </tbody>
                     </table>
-                    <button type="submit" onClick={this.handleFormSubmit}>Submit</button>
-                    <button type="button" onClick={this.props.onCancel}>Cancel</button>
+                    <button type="submit" className='btn btn-primary mx-2' onClick={this.handleFormSubmit}>Submit</button>
+                    <button type="button" className='btn btn-primary mx-2' onClick={this.props.onCancel}>Cancel</button>
                 </form>
             </div>
         );
