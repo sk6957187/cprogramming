@@ -2,11 +2,12 @@ import React from 'react';
 //import ReactDOM from 'react-dom/client';
 
 import ReactDOM from 'react-dom';
-// import App from './hello-world/App';
+//import App from './hello-world/App';
 //import App from './greet/App';
-//import App from './project/App';
+import App from './project/App';
 //import App from './functionClick/App';
-import App from './navbar/App'
+//import App from './navbar/App'
+//import App from './App'
 
 import reportWebVitals from './reportWebVitals';
 

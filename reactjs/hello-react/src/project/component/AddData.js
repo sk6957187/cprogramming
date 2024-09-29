@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import Table from "./Table";
 
 class AddData extends Component {
-
     constructor(props) {
         super(props);
         this.state = {
@@ -9,8 +9,8 @@ class AddData extends Component {
             name: '',
             age: '',
             record_date: '',
-           
             errors: {},
+            records: [], // Store submitted data here
         };
     }
 
@@ -33,71 +33,74 @@ class AddData extends Component {
         const errors = this.validateForm();
 
         if (Object.keys(errors).length === 0) {
-            // Pass the form data to the parent component
-            this.props.onSubmit(this.state);
-            // Clear the form
-            this.setState({
+            // Create the new data object
+            const newData = {
+                personId: this.state.person_id,
+                name: this.state.name,
+                age: this.state.age,
+                recordDate: this.state.record_date,
+            };
+
+            // Add new data to the records array
+            this.setState((prevState) => ({
+                records: [...prevState.records, newData],
                 person_id: '',
                 name: '',
                 age: '',
                 record_date: '',
                 errors: {},
-            });
-            this.props.onCancel(); // Close the form
+            }));
+            console.log(newData);
+            this.props.methods.saveData(newData);
         } else {
             this.setState({ errors });
         }
     };
 
-    handleFormSubmit = () => {
-        var currentData = {};
-        currentData["personId"] = this.state.person_id;
-        currentData["name"] = this.state.name;
-        currentData["age"] = this.state.age;
-        currentData["recordDate"] = this.state.record_date;
-        this.props.methods.onSubmit(currentData);
-        console.log(currentData)
-        console.log(this.state);
-    }
     render() {
-        const { person_id, name, age, record_date, errors } = this.state;
+        const { person_id, name, age, record_date, errors, records } = this.state;
+        var recordsData = this.state.records;
         return (
-            <div className="form-container">
-                <form>
-                    <table className='table'>
-                        <thead>
-                            <tr>
-                                <td>PersonId</td>
-                                <td>Name</td>
-                                <td>Age</td>
-                                <td>RecordDate</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <input type="text" name="person_id" maxLength="3" required value={person_id} onChange={this.handleChange} />
-                                    {errors.person_id && <span className="error">{errors.person_id}</span>}
-                                </td>
-                                <td>
-                                    <input type="text" name="name" required value={name} onChange={this.handleChange}/>
-                                    {errors.name && <span className="error">{errors.name}</span>}
-                                </td>
-                                <td>
-                                    <input type="number" name="age" min="0" required value={age} onChange={this.handleChange} />
-                                    {errors.age && <span className="error">{errors.age}</span>}
-                                </td>
-                                <td>
-                                    <input type="date" name="record_date" required value={record_date} onChange={this.handleChange}/>
-                                    {errors.record_date && <span className="error">{errors.record_date}</span>}
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <button type="submit" className='btn btn-primary mx-2' onClick={this.handleFormSubmit}>Submit</button>
-                    <button type="button" className='btn btn-primary mx-2' onClick={this.props.onCancel}>Cancel</button>
-                </form>
-            </div>
+            <>
+                <h3 className='my-3'>Add and View Data</h3>
+                <div className="form-container">
+                    <form onSubmit={this.handleSubmit}>
+                        <table className='table text-center '>
+                            <thead>
+                                <tr>
+                                    <td>PersonId</td>
+                                    <td>Name</td>
+                                    <td>Age</td>
+                                    <td>DOB</td>
+                                </tr>
+                            </thead>
+                            <tbody >
+                                <tr>
+                                    <td>
+                                        <input type="number" name="person_id" maxLength="3" required value={person_id} onChange={this.handleChange} className='text-center' />
+                                        {errors.person_id && <span className="error">{errors.person_id}</span>}
+                                    </td>
+                                    <td>
+                                        <input type="text" name="name" required value={name} onChange={this.handleChange} className='text-center'/>
+                                        {errors.name && <span className="error">{errors.name}</span>}
+                                    </td>
+                                    <td>
+                                        <input type="number" name="age" min="0" required value={age} onChange={this.handleChange} className='text-center'/>
+                                        {errors.age && <span className="error">{errors.age}</span>}
+                                    </td>
+                                    <td>
+                                        <input type="date" name="record_date" required value={record_date} onChange={this.handleChange} className='text-center'/>
+                                        {errors.record_date && <span className="error">{errors.record_date}</span>}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button type="submit" className='btn btn-primary mx-2'>
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </>
         );
     }
 }

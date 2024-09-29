@@ -6,7 +6,7 @@ class App extends Component {
   render(){
     return(
     <>
-        <Navbar title='TextUtil2'/>
+        <Navbar title='TextUtil'/>
         <div className="container my-3">
             <TextForm title='Text here!'/>
         </div>

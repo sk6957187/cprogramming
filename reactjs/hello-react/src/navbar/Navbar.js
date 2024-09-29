@@ -5,7 +5,7 @@ class Navbar extends Component {
   render() {
     return (
     <>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className='container-fluid'>
             <a className="navbar-brand" href="/">{this.props.title}</a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,7 +20,7 @@ class Navbar extends Component {
                     <a className="nav-link disabled" href="/" >About</a>
                 </li>
                 </ul>
-                <form className="d-grid gap-2 d-md-flex justify-content-md-end">
+                <form className="d-grid gap-2 d-md-flex ms-auto">
                 <input className="form-control me-md-2" type="search" placeholder="Search" aria-label="Search"/>
                 <button className="btn btn-outline-success" type="submit">Search</button>
                 </form>

@@ -17,13 +17,13 @@ class App extends Component {
         };
         
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
-        console.log("0-0");
+        this.saveData = this.saveData.bind(this);
+        console.log(this.data);
     }
-    componentDidMount() {
-        console.log("0-0-0");
-        return;
+    loadApiData = () => {
         if (apiDataLoad === "not_starterd") {
             axios.get('http://localhost:8080/api/employees')
+
             .then(response => {
                 console.log(response);
                 this.setState({
@@ -42,8 +42,26 @@ class App extends Component {
             });
             apiDataLoad = "in_progress";
         }
-    }
-
+    };
+    componentDidMount() {
+        this.loadApiData();
+    };
+    saveData = (data) => {
+        console.log(data);
+        var queryParam = "";
+        queryParam += "person_id=" + data["personId"];
+        queryParam += "&name=" + data["name"];
+        queryParam += "&age=" + data["age"];
+        queryParam += "&record_date=" + data["recordDate"];
+        axios.get('http://localhost:8080/api/employees/add?'+queryParam)
+        .then(response => {
+            apiDataLoad = "not_starterd";
+            this.loadApiData();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    };
     handleShowForm = () => {
         this.setState({ showForm: true }); // Show the form when button is clicked
     };
@@ -59,14 +77,12 @@ class App extends Component {
     }
 
     render(){
-        console.log(0);
-        var methods = {onSubmit: this.handleFormSubmit};
+        var methods = {onSubmit: this.handleFormSubmit, saveData: this.saveData};
         return(
             <div className="App">
-                <Table data={this.state.data}/>
                 <AddItemButton onClick={this.handleShowForm} />
                 {this.state.showForm && <AddData onCancel={this.handleFormClose} methods={methods}/>}
-                
+                <Table data={this.state.data}/>
             </div>
         );
   }

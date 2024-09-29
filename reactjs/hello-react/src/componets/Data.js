@@ -2,47 +2,58 @@ import React, { Component } from "react";
 import axios from 'axios';
 
 class Data extends Component {
-    state={
-        data : []
-    }
+    state = {
+        data: []
+    };
 
-    componentDidMount(){
+    componentDidMount() {
         axios.get('https://randomuser.me/api/?results=10')
-        .then(response => {
-            console.log(response.data.results);
-            this.setState({
-                data : response.data.results
+            .then(response => {
+                console.log(response.data.results);
+                this.setState({
+                    data: response.data.results
+                });
             })
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });   
+            .catch(error => {
+                console.error('Error:', error);
+            });
     }
-    
 
     render() {
         return (
             <div>
                 <h1>Welcome</h1>
-                <h3>{this.state.data.map((item, key) => <UserInfo key = {key} {...item} />)}</h3>
+
+                {/* Check if data is available before rendering */}
+                {this.state.data.length > 0 ? (
+                    <table className="table">
+                        <thead>
+                            <tr>
+                                <th>Photo</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Location</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {this.state.data.map((user, index) => (
+                                <tr key={index}>
+                                    <td>
+                                        <img src={user.picture.thumbnail} alt={`${user.name.first} ${user.name.last}`} style={{ borderRadius: '50%' }}/>
+                                    </td>
+                                    <td>{user.name.first} {user.name.last}</td>
+                                    <td>{user.email}</td>
+                                    <td>{user.location.city}, {user.location.country}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                ) : (
+                    <p>Loading data...</p>
+                )}
             </div>
-        )
+        );
     }
 }
 
-function UserInfo({ 
-    name, email, location, dob, phone, picture 
-}) {
-    return (
-        <div >
-            <img src={picture.thumbnail} alt="User Thumbnail" />
-            <p>Name: {name.title}{name.first} {name.last}</p>
-            <p>Email: {email}</p>
-            <p>Location: {location.city}, {location.country}</p>
-            <p>Date of Birth: {new Date(dob.date).toLocaleDateString()}</p>
-            <p>Phone: {phone}</p>
-        </div>
-    );
-}
-
-export default Data
+export default Data;
