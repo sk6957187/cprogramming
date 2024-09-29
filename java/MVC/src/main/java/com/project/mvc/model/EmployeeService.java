@@ -26,4 +26,7 @@ public class EmployeeService {
         this.employeeDB.update();
         return employeeDB.getEmployee(employeeId);
     }
+    public void insertEmployee(Employee employee) {
+        employeeDB.insert(employee);
+    }
 }
