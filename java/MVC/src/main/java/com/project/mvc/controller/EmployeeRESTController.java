@@ -19,10 +19,8 @@ import javax.ws.rs.core.Response;
 public class EmployeeRESTController {
 
     private final EmployeeService employeeService;
-    private final EmployeeDB employeeDB;
     public EmployeeRESTController(EmployeeDB employeeDB) {
-        this.employeeDB = employeeDB;
-        this.employeeService = new EmployeeService(this.employeeDB);
+        this.employeeService = new EmployeeService(employeeDB);
     }
     @GET
     public Response getEmployees() {
@@ -36,16 +34,16 @@ public class EmployeeRESTController {
         return new EmployeeView(employeeService.getEmployeesAsList());
     }
     @GET()
-    @Path("/view/add")
-    @Produces(MediaType.TEXT_HTML)
-    public EmployeeView addEmployees(@Context HttpServletRequest request,
+    @Path("/add")
+    public Response addEmployees(@Context HttpServletRequest request,
                                      @QueryParam("person_id") String personId,
                                      @QueryParam("name") String name,
                                      @QueryParam("age") String age,
                                      @QueryParam("record_date") String recordDate) {
         Employee employee = new Employee(personId, name, age, recordDate);
+        employeeService.insertEmployee(employee);
         System.out.println(employee);
-        return new EmployeeView(employeeService.getEmployeesAsList());
+        return Response.ok().build();
     }
 
     @POST
@@ -84,7 +82,7 @@ public class EmployeeRESTController {
     public Response removeEmployeeById(@PathParam("id") Integer id) {
         Employee employee = employeeService.getEmployeeById(String.valueOf(id));
         if (employee != null) {
-            employeeDB.removeEmployee(id);
+//            employeeDB.removeEmployee(id);
             return Response.ok().build();
         } else
             return Response.status(Response.Status.NOT_FOUND).build();
