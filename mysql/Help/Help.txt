@@ -1,0 +1,7 @@
+1. check inside services oracleServiceORCL is on
+2. launch sql Plus
+3. type username:
+4. type password: tiger
+use command :-set line 200 pages 100;
+
+
