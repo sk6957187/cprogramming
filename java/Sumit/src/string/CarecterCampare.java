@@ -23,7 +23,6 @@ public class CarecterCampare {
 		String s2 = sc.next();
 		
 		HashMap<Character, Integer> freqmap = new HashMap<>();
-		//HashMap<Character, Integer> freqMap = new HashMap<>();
 		for(char c: s1.toCharArray()) {
 			freqmap.put(c, freqmap.getOrDefault(c, 0)+1);
 		}
