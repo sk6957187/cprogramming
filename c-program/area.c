@@ -5,11 +5,8 @@ int main() {
     int n;
     number1 = 16;
     number2 =2;
-    printf("Hii");
-    scanf("%d",&n);
     multiple = number1 * number2; //
     printf("The results is: %d\n", multiple);
-    printf("%d",n);
     return 0;
     
 }
