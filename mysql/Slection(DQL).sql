@@ -1,4 +1,5 @@
 // Selection(DQL)
+DESC EMPLOYEE;
 select * from emp ;
 select ename, job, sal from emp where job='SALESMAN';
 select ename, job, sal, sal*12 ann_sal from emp where sal>=3000;
