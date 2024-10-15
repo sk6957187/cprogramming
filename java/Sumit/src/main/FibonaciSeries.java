@@ -8,7 +8,7 @@ public class FibonaciSeries {
 			return;
 		}
 		int c=a+b;
-		System.out.println(c);
+		System.out.print(c+" ");
 		printFib(b,c,n-1);
 	}
 	
@@ -18,9 +18,10 @@ public class FibonaciSeries {
 		Scanner sc = new Scanner(System.in);
 		int a= 0;
 		int b = 1;
+		System.out.print("Nubers of fabonacis Series: ");
 		int n = sc.nextInt();
-		System.out.println(a);
-		System.out.println(b);
+		System.out.print(a+" ");
+		System.out.print(b+" ");
 		
 		printFib(a,b,n-2);
 		sc.close();
