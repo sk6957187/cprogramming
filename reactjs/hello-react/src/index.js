@@ -8,7 +8,10 @@ import ReactDOM from 'react-dom';
 //import App from './functionClick/App';
 //import App from './navbar/App'
 //import App from './App'
-import App from './data-table/App';
+//import App from './data-table/App';
+// import App from './daily-report';
+import DailyReport from './daily-report';
+
 
 import reportWebVitals from './reportWebVitals';
 

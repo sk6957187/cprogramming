@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
+import React, { useState  } from 'react';
 import Navbar from './Navbar';
 import TextForm from './TextForm';
 
-class App extends Component {
-  render(){
+const App = () => {
+  const [searchValue, setSearchValue] = useState("");
     return(
     <>
-        <Navbar title='TextUtil'/>
+        <Navbar title="TextUtil" setSearchValue={setSearchValue}/>
         <div className="container my-3">
-            <TextForm title='Text here!'/>
+            <TextForm title= "Text here!" searchValue={searchValue}/>
         </div>
     </>
     )
-  }
+  
 }
 
 export default App;
