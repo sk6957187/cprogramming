@@ -5,6 +5,7 @@ a.out
 */*.exe
 */*/*.exe
 /*.exe
+/*.class
 
 .DS_Store
 */.DS_Store
@@ -17,8 +18,7 @@ python/*/*/*/*/*.pyc
 java/calculator/Calculator/.idea/
 java/calculator/Calculator/Calculator.iml
 java/*/*/*.iml
-java/calculator/out/
-*.class
+java/calculator/out/*.class
 
 java/*/target/*
 java/*/.idea/*
@@ -28,8 +28,6 @@ java/*/.classpath
 java/*/.project
 java/.idea/
 java/.metadata/
-
-
 
 
 java/book/Book.iml
