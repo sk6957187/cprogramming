@@ -18,8 +18,6 @@ const DataTable = () => {
     const [searchCol, setSearchCol] = useState("");
     let [filteredData] = useState();
 
-
-
     useEffect(() => {
         loadData();
     }, [refreshKey]);
@@ -285,3 +283,4 @@ const DataTable = () => {
 };
 
 export default DataTable;
+
