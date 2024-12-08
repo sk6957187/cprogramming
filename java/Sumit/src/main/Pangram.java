@@ -3,17 +3,17 @@ package main;
 import java.util.ArrayList;
 import java.util.*;
 /*
- * The quick brown fox jumps over the lazy dog --> pangram
-We promptly judged antique ivory buckles for the prize --> not pangram
-We promptly judged antique ivory buckles for the next prize --> pangram 
+* The quick brown fox jumps over the lazy dog --> pangram
+* We promptly judged antique ivory buckles for the prize --> not pangram
+* We promptly judged antique ivory buckles for the next prize --> pangram 
 */
 
 
 public class Pangram {
     public static void main(String[] args) {
     	Scanner sc = new Scanner(System.in);
+    	System.out.println("Enter string value:-");
         String s = sc.nextLine();
-
         String result = pangrams(s);
 
         System.out.println(result);

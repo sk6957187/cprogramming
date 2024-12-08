@@ -14,6 +14,7 @@ public class PatterPrintf {
 			}
 			System.out.println();
 		}
+		
 		System.out.println("Triangle 1:-");
 		for(int i=0; i<n; i++) {
 			for(int j=0; j<=i; j++) {
@@ -21,6 +22,7 @@ public class PatterPrintf {
 			}
 			System.out.println();
 		}
+		
 		System.out.println("Triangle 2:-");
 		for(int i=0; i<n; i++) {
 			for(int j=0; j<n-1-i; j++) {
@@ -31,6 +33,7 @@ public class PatterPrintf {
 			}
 			System.out.println();
 		}
+		
 		System.out.println("Reverse Triangle 1:-");
 		for(int i=0; i<n; i++) {
 			for(int j=0; j<i; j++) {
@@ -41,6 +44,7 @@ public class PatterPrintf {
 			}
 			System.out.println();
 		}
+		
 		System.out.println("Reverse Triangle 2:-");
 		for(int i=0; i<n; i++) {
 			for(int j=0; j<n-i; j++) {
@@ -48,6 +52,7 @@ public class PatterPrintf {
 			}
 			System.out.println();
 		}
+		
 		System.out.println("Mounten 1:-");
 		for(int i=1; i<=n; i++) {
 			for(int j=1; j<=n-i; j++) {
@@ -58,6 +63,7 @@ public class PatterPrintf {
 			}
 			System.out.println();
 		}
+		
 		System.out.println("Mounten 2:-");
 		for(int i=0; i<n; i++) {
 			for(int j=i; j<n-1; j++) {
@@ -85,6 +91,7 @@ public class PatterPrintf {
 			}
 			System.out.println();
 		}
+		
 		System.out.println("PELLET_DRUM:- ");
 		for(int i=0; i<n-1; i++) {
 			for(int j=0; j<i; j++) {
@@ -115,6 +122,7 @@ public class PatterPrintf {
 			
 			System.out.println();
 		}
+		
 		System.out.println("PELLET_DRUM 2 :-");
 		for(int i=1;i<=n;i++) {
 			
@@ -146,6 +154,7 @@ public class PatterPrintf {
 			}
 			System.out.println();
 		}
+		
 		System.out.println("Diamond Pattern:-");
 		for(int i=1; i<=n; i++) {
 			for(int j=1; j<=n-i; j++) {
