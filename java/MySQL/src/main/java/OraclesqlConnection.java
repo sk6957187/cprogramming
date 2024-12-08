@@ -25,9 +25,11 @@ public class OraclesqlConnection {
                 return;
             }
             result = mysqlService.executeQuery(con,"select * from employee");
-            System.out.println(result);
+
             //mysqlService.insertQuery(con, "INSERT INTO student (STUDENT_ID, STUDENT_NAME) VALUES (6, 'Amit Kumar')");
             //result = mysqlService.executeQuery(con,"select * from Student");
+
+            System.out.println("Table data:-");
             System.out.println(result);
             con.close();
         } catch (Exception e) {

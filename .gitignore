@@ -22,7 +22,7 @@ MySql5/out/production/MySql5/*.class
 
 java/calculator/Calculator/.idea/
 java/calculator/Calculator/Calculator.iml
-java/*/*/*.iml
+java/*/*/*.iml 
 java/calculator/Calculator/target/
 java/calculator/out/
 

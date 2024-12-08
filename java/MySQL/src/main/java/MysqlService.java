@@ -13,14 +13,11 @@ public class MysqlService {
         if (!rs.isBeforeFirst()) {
             System.out.println("No data found.");
         } else {
-//            while (rs.next()) {
-//                temp = new HashMap<>();
-//                temp.put("STUDENT_ID", rs.getInt(1));
-//                temp.put("STUDENT_NAME", rs.getString(2));
-//                result.add(temp);
-//            }
-            while (rs.next()){
-                System.out.println(rs.getInt(1) + "  " + rs.getString(2) + "  " + rs.getString(3) + " " + rs.getDate(4));
+            while (rs.next()) {
+                temp = new HashMap<>();
+                temp.put("STUDENT_ID", rs.getInt(1));
+                temp.put("STUDENT_NAME", rs.getString(2));
+                result.add(temp);
             }
         }
         return result;
