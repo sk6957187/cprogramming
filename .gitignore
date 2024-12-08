@@ -15,10 +15,16 @@ python/*/*/*.pyc
 python/*/*/*/*.pyc
 python/*/*/*/*/*.pyc
 
+java/Sumit/src/*.class
+MySql5/out/*.class
+MySql5/out/production/MySql5/*.class
+
+
 java/calculator/Calculator/.idea/
 java/calculator/Calculator/Calculator.iml
 java/*/*/*.iml
-java/calculator/out/*.class
+java/calculator/Calculator/target/
+java/calculator/out/
 
 java/*/target/*
 java/*/.idea/*
