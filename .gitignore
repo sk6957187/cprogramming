@@ -5,6 +5,7 @@ a.out
 */*.exe
 */*/*.exe
 /*.exe
+/*.class
 
 .DS_Store
 */.DS_Store
