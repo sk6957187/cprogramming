@@ -14,7 +14,6 @@ public class ArrayObject {
 			}
 			if(obj[i] instanceof Integer) {
 				System.out.print(obj[i]+" ");
-				Integer a = (Integer)obj[i];
 				countInt++;
 			}
 			if(obj[i] instanceof Double) {
@@ -26,6 +25,7 @@ public class ArrayObject {
 				countChar++;
 			}
 		}
+		System.out.println();
 		System.out.println("String count "+countStr);
 		System.out.println("Integer count "+countInt);
 		System.out.println("Double count "+countDbl);

@@ -1,21 +1,18 @@
 package main;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class RomanNumberV2 {
 	    public static void main(String[] args) throws IOException {
-	        BufferedReader br =
-	            new BufferedReader(new InputStreamReader(System.in));
-
-	        int tc = Integer.parseInt(br.readLine().trim());
-	        while (tc-- > 0) {
-	            String roman = br.readLine().trim();
-	            //Solution ob = new Solution();
+//	        BufferedReader br =
+//	            new BufferedReader(new InputStreamReader(System.in));
+//
+//	        int tc = Integer.parseInt(br.readLine().trim());
+	    	Scanner sc = new Scanner(System.in);
+	    	String roman = sc.nextLine();
 	            System.out.println(romanToDecimal(roman));
-	        }
 	    }
 
 		private static int romanToDecimal(String str) {
