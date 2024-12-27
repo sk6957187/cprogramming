@@ -13,8 +13,8 @@ import io.dropwizard.views.ViewBundle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class MainApplication extends Application<MainConfiguration> {
-    private static final Logger LOGGER = LoggerFactory.getLogger(MainApplication.class);
+public class DropwizardApplication extends Application<MainConfiguration> {
+    private static final Logger LOGGER = LoggerFactory.getLogger(DropwizardApplication.class);
 
     @Override
     public void initialize(Bootstrap<MainConfiguration> b) {
@@ -41,6 +41,6 @@ public class MainApplication extends Application<MainConfiguration> {
     }
 
     public static void main(String[] args) throws Exception {
-        new MainApplication().run(args);
+        new DropwizardApplication().run(args);
     }
 }

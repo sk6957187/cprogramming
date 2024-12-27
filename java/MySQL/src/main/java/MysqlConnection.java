@@ -8,7 +8,7 @@ public class MysqlConnection {
         ArrayList<HashMap<String, Object>> result;
         try {
             String driver = "com.mysql.cj.jdbc.Driver";
-            String url = "jdbc:mysql://localhost:3306/student";
+            String url = "jdbc:mysql://localhost:3306/studentdata";
             String username = "root";
             String password = "Sumit@123";
 
