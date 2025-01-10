@@ -27,7 +27,7 @@ public class MVCApplication extends Application<MvcConfiguration> {
 
     }
 
-//    @Override
+    //    @Override
 //    public <MVCConfiguration> void run(MVCConfiguration mvcConfiguration, Environment e) throws Exception {
 //        LOGGER.info("Registering REST resources");
 //        String dbSource = "Text.txt";

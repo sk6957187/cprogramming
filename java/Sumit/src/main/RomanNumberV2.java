@@ -11,8 +11,10 @@ public class RomanNumberV2 {
 //
 //	        int tc = Integer.parseInt(br.readLine().trim());
 	    	Scanner sc = new Scanner(System.in);
+	    	System.out.println("Enter:- ");
 	    	String roman = sc.nextLine();
-	            System.out.println(romanToDecimal(roman));
+	        System.out.println(romanToDecimal(roman));
+	        sc.close();
 	    }
 
 		private static int romanToDecimal(String str) {

@@ -52,6 +52,6 @@ public class starpattern {
 			}
 			System.out.println();
 		}
-		
+		sc.close();
 	}
 }

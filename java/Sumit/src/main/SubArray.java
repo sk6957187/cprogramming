@@ -20,7 +20,7 @@ public class SubArray {
 //        			//break;
 //        		}
         		String pair = "(" + arr[i]+","+arr[j]+")";
-        				//String pair = "(" + first + "," + second + ")";
+//				  String pair = "(" + first + "," + second + ")";
 	        	if(sum%2 == 0) {
         			if(map.add(pair)) {
 	        			count++;

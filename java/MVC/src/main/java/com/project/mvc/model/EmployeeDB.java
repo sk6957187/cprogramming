@@ -5,13 +5,17 @@ import java.util.HashMap;
 
 public class EmployeeDB {
     private static ArrayList<Employee> employees = new ArrayList<>();
+
     public EmployeeDB() {}
+
     public ArrayList<Employee> getEmployees(){
         return employees;
     }
+
     public void clearEmployeeList() {
         employees = new ArrayList<>();
     }
+
     public Employee getEmployee(String id){
         return employees.get(Integer.parseInt(id));
     }

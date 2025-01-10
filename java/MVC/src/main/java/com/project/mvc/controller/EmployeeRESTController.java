@@ -13,7 +13,7 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-@Path("/api/employees")
+@Path("/employees")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
 public class EmployeeRESTController {
@@ -23,23 +23,25 @@ public class EmployeeRESTController {
         this.employeeService = new EmployeeService(employeeDB);
     }
     @GET
+    @Path("/view")
     public Response getEmployees() {
         return Response.ok(employeeService.getEmployees()).build();
     }
 
-    @GET()
-    @Path("/view")
-    @Produces(MediaType.TEXT_HTML)
-    public EmployeeView viewEmployees() {
-        return new EmployeeView(employeeService.getEmployeesAsList());
-    }
+//    @GET()
+//    @Path("/view")
+//    @Produces(MediaType.TEXT_HTML)
+//    public EmployeeView viewEmployees() {
+//        return new EmployeeView(employeeService.getEmployeesAsList());
+//    }
+
     @GET()
     @Path("/add")
     public Response addEmployees(@Context HttpServletRequest request,
-                                     @QueryParam("person_id") String personId,
-                                     @QueryParam("name") String name,
-                                     @QueryParam("age") String age,
-                                     @QueryParam("record_date") String recordDate) {
+                                 @QueryParam("person_id") String personId,
+                                 @QueryParam("name") String name,
+                                 @QueryParam("age") String age,
+                                 @QueryParam("record_date") String recordDate) {
         Employee employee = new Employee(personId, name, age, recordDate);
         employeeService.insertEmployee(employee);
         System.out.println(employee);

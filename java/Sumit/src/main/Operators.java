@@ -40,7 +40,7 @@ public class Operators {
 			newNumber = newbitMask & n;
 			System.out.println("For update(Clear)- "+newNumber);
 		}
-
+		sc.close();
 	}
 
 }

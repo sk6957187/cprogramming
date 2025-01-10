@@ -7,6 +7,7 @@ public class MysqlConnection {
         MysqlService mysqlService = new MysqlService();
         ArrayList<HashMap<String, Object>> result;
         try {
+        	syso
             String driver = "com.mysql.cj.jdbc.Driver";
             String url = "jdbc:mysql://localhost:3306/studentdata";
             String username = "root";
@@ -15,11 +16,11 @@ public class MysqlConnection {
 
             Class.forName(driver);
             Connection con = DriverManager.getConnection(url, username, password);
-
+//            Statement stmt = con.createStatement();
             result = mysqlService.executeQuery(con,"select * from Studentdata");
             System.out.println("Table data:- ");
             System.out.println(result);
-//            Statement stmt = (con.createStatement());
+//            Statement stmt = con.createStatement();
 //            ResultSet rs = stmt.executeQuery("select * from Studentdata");
 //            if (rs==null) {
 //                System.out.println("File is empty...");

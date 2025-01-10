@@ -16,6 +16,7 @@ public class StringInput {
 			total += Integer.parseInt(s1[i]);
 		}
 		System.out.println("total "+total);
+		sc.close();
 
 	}
 
