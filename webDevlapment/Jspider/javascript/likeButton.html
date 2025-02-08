@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            
+            height: 200px;
+
+        }
+        button{
+            border: none;
+            font:bold
+
+        }
+        #increase{
+            background-color: green;
+        }
+        #decrease{
+            background-color: red;
+
+        }
+        #reset{
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Hello</h1>
+    <button id="themebtn" onclick="darkMode()" >Dark Mode</button>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis aperiam libero sapiente corrupti quidem aliquid laborum? Aliquam quos numquam ad earum sint vel odit officiis similique animi? Aliquid assumenda praesentium autem sapiente laudantium incidunt. Id earum error velit minima quos laborum sed doloribus repudiandae assumenda aspernatur obcaecati neque reprehenderit ducimus porro tenetur fugit quo nostrum, tempora rem ad? Aperiam omnis reiciendis expedita consectetur quam repellat quo accusamus quae fugiat obcaecati fugit cum, adipisci similique aut unde. Excepturi, dolorem voluptate quisquam ea recusandae consequuntur suscipit voluptatem, distinctio accusantium eum iste quis nam ratione nemo, voluptates commodi reprehenderit consequatur est omnis sapiente?</p>
+
+    <h1 id="likeContainer" onclick="incLike()">🖤</h1>
+
+    <div>
+        <h1 id="counter">🖤</h1>
+        <section>
+            <button id="increase" onclick="inc()">increase</button>
+            <button id="decrease" onclick="dec()">decrease</button>
+            <button id="reset" onclick="reset()">reset</button>
+        </section>
+    </div>
+    
+
+    <script>
+        let bdy=document.querySelector("body");
+        function darkMode(){
+          
+            if(bdy.style.backgroundColor!="black"){
+               bdy.style.backgroundColor="black";
+                bdy.style.color="white";
+                themebtn.innerHTML="Light Mode"
+              
+            } else {
+            bdy.style.backgroundColor="white";
+            bdy.style.color="black";
+            themebtn.innerHTML="Dark Mode";
+            }
+        }
+
+        let likeContainer = document.getElementById("likeContainer");
+        likeContainer.style.cursor = "pointer"
+        let count = 0;
+        function incLike(){
+            count++;
+            likeContainer.innerHTML=`❤️ ${count}`;
+        }
+
+        let num = 0;
+        let counter = document.getElementById("counter");
+        function inc(){
+            num++;
+            counter.innerHTML = `❤️${num}`;
+        }
+        function dec(){
+            if(num>1){
+                num--;
+                counter.innerHTML = `❤️${num}`;
+            } else{
+                counter.innerHTML=`🖤`;
+            }
+        }
+        function reset(){
+            num = 0;
+            counter.innerHTML=`🖤`;
+        }
+    </script>
+</body>
+</html>

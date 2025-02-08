@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let arr = [];
+        console.log(arr);
+        arr[0] = "Sumit";
+        arr[1] = 12;
+        arr[2] = 111111111111111111111111111111111n;
+        arr[3] = 12.00;
+        arr[4] = true;
+        console.log(arr)
+
+        let arr1 = ["RAju", 1234, true, 'a'];
+        console.log(arr1);
+        let arrObj = new Array(4);
+        arrObj[0]=10 
+        arrObj[1]=20 
+        arrObj[3]=30
+        console.log(arrObj); 
+
+        //Push
+        let arr2 = [10,20];
+        console.log(arr2);
+        arr2.push(30);
+        arr2.push(40,50,40,60,70,40);
+        console.log(arr2)
+        
+        //pop
+        arr2.pop();
+        console.log(arr2);
+
+        //unshift
+        arr2.unshift(9);
+        console.log(arr2);
+        arr2.unshift(5,7,8);
+        console.log(arr2);
+        
+        //shift
+        arr2.shift();
+        console.log(arr2);
+
+        //indexOf
+        console.log(arr2.indexOf(40));
+        //lastIndexOf
+        console.log(arr2.lastIndexOf(40));
+
+        //find()
+        let yop = [2020, 2018, 2019, 2024, 2027, 2024];
+        let reqYop = yop.find((ele, index, array) =>{
+            console.log(index);
+            return ele === 2024;
+        })
+        console.log(reqYop);
+
+        // reverse
+        let user = ["Ram","Shayam", "Amit", "Nishant"];
+        console.log(user);
+        console.log("Reverse Array: ",user.reverse());
+
+        //join
+        let user1 = ["Ram","Shayam", "Amit", "Nishant"];
+        console.log(user1);
+        console.log(user1.join(", "));
+
+        //slice
+        let stuMark = [10,20,30.0,40,50];
+        console.log(stuMark.slice(1,4));
+
+        //splice
+        let num = [1,2,4,7,8];
+        //num.splice(2,2,3,4,4,5,6);   //-> in this line delete as well as add
+        num.splice(2,0,3,5);    //-> in this line add at index 2 
+        console.log(num);
+
+        //every()
+        let age = [18,19,19,29];
+        let result = age.every(element => element >= 18);
+        console.log(result);
+
+        //some()
+        let stuAge = [1,4,8,10,19];
+        let res = stuAge.every(element => element >= 18);
+        console.log(res);
+
+        //filter
+        let sal = [1000, 2000, 5000, 4000, 6000];
+        let filSal = sal.filter(salary => salary >= 4000);
+        console.log(filSal);
+
+        //map
+
+        
+        //reduce
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+</head>
+<body>
+    <h1>Employee Details</h1>
+    <div>
+        <button onclick="window.location.href='./AddForm.html'">Add Employee</button>
+        <button onclick="showEmployees()">Show Employee</button>
+    </div>
+
+    <h2>Employee Details</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>EId</th>
+                <th>EName</th>
+                <th>Company</th>
+                <th>Mail</th>
+                <th>Mob.no</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody id="employeeTable">
+            <!-- Employee data will be dynamically added here -->
+        </tbody>
+    </table>
+
+    <!-- <script src="./service.js"></script> -->
+</body>
+</html> {% endcomment %}

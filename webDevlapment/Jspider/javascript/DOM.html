@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id = "content">Hello</h1>
+    <button onclick="changeContent()">change</button>
+
+    <script>
+        console.log(document);
+        console.log(document.body);
+        let htmlTag = document.getElementById("content");
+        console.log(htmlTag);
+        htmlTag.innerText = "Nishant";
+        htmlTag.textContent = "<span>Hello Nishant</span>";
+        function changeContent(){
+            htmlTag.innerHTML = "<span>Hello Sumit</span>"
+        }
+        
+    </script>
+</body>
+</html>
