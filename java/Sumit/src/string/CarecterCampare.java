@@ -2,6 +2,7 @@ package string;
 
 import java.util.HashMap;
 import java.util.Scanner;
+import java.util.Set;
 
 
 /*input:-
@@ -19,7 +20,7 @@ public class CarecterCampare {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		String s1 = sc.next();
+		String s1 = sc.nextLine();
 		String s2 = sc.next();
 		sc.close();
 		HashMap<Character, Integer> freqmap = new HashMap<>();
@@ -30,6 +31,8 @@ public class CarecterCampare {
 		for(char c : s2.toCharArray()) {
 			total += freqmap.getOrDefault(c, 0);
 		}
+		Set<Character> key = freqmap.keySet();
+		System.out.println(key);
 		System.out.println(total);
 		
 		/*

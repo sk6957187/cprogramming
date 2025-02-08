@@ -4,16 +4,11 @@ import java.util.HashMap;
 
 public class Today {
 	public static void main(String[] args) {
-		HashMap<Character, Integer> hm= new HashMap<>();
-		hm.put('a', 1);
-		hm.put('e', 4);
-		hm.put('i', 9);
-		String str = "aeei";
-		int sum =0 ;
-		for(int i=0; i<str.length(); i++) {
-			sum += hm.get(str.charAt(i));
-		}
-		System.out.println(sum);
-
+		int[] arr1 = {3,11,14,16};
+		int[] arr2 = {2,7,12};
+		int[] arr3 = new int[arr1.length+arr2.length];
+		int m=0, n=0, k=0;
+		
 	}
 }
+ 
