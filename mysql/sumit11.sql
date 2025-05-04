@@ -1,0 +1,10 @@
+select ename, sal from emp where sal > (select sal from emp where ename='ADAMS');
+select ename, sal from emp where sal<(select sal from emp where ename = 'KING');
+select ename, deptno from emp where deptno != (select deptno from emp where ename = 'JONES');
+select ename, job from emp where job = (select job from emp where ename='JAMES');
+select Ename, empno, sal*12 as ann_sal from emp where sal*12 > (select sal*12 from emp where ename='WARD');
+select ename, hiredate from emp where hiredate < (select hiredate from emp where ename='SCOTT');
+select ename, hiredate from emp where hiredate > (select hiredate from emp where job = 'PRESIDENT');
+SELECT ENAME, SAL FROM EMP WHERE SAL < (SELECT SAL FROM EMP WHERE EMPNO = 7839);
+SELECT * FROM EMP WHERE HIREDATE < (SELECT HIREDATE FROM EMP WHERE ENAME ='MILLER');
+SELECT ENAME, EMPNO FROM EMP WHERE SAL > (SELECT SAL FROM EMP WHERE ENAME='ALLEN');

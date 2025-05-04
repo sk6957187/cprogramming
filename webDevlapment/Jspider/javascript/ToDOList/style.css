@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: antiquewhite;
+}
+#main{
+    height: 500px;
+    width: 500px;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid;
+    overflow-y: auto;
+    background: radial-gradient(rgb(115, 111, 111), rgb(148, 93, 93));
+    /* overflow-x: hidden; */
+}
+h2{
+    font-family: cursive;
+    background-color: rgb(96, 94, 94);
+    color: rgb(255, 255, 255);
+    border: 0.5px solid;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    position: fixed;
+    top: 0px;
+}
+#container{
+    height: 110px;
+    width: 400px;
+    /* border: 0.5px solid greenyellow; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#container input{
+    height: 40px;
+    width: 400px;
+    border: 2px solid greenyellow;
+    
+
+}
+#listcontainer{
+    height: 150px;
+    width: 400px;
+    /* border: 0.5px solid greenyellow; */
+}
+#listcontainer ul li{
+    height: 50px;
+    width: 400px;
+    background-color: #fff;
+    margin-top: 5px;
+    border: 2px solid greenyellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+#listcontainer ul li p{
+    overflow: hidden;
+}#listcontainer ul li div{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding-right: 3px
+}
+
+#btnContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#container button{
+    height: 40px;
+    width: 50px;
+    background-color: #979393;
+    border: 2px solid greenyellow;
+    
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // let arr1 = [1,2,3,4,5];
+        // let arr2 = [6,7,8,9,0];
+        // let(a,b,c,...rest) = arr1;
+        // console.log({...arr1});
+
+        let obj = {
+            id: 1,
+            name: "Sumit",
+            place: "Bangalore",
+            job: false
+        }
+        let obj2 = {
+            add: "Bihar",
+            status: "Student"
+        }
+        let (name,id,...rest) = obj;
+        console.log({...rest});
+    </script>
+</body>
+</html>

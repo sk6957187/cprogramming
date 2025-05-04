@@ -1,0 +1,49 @@
+logging:
+  level: INFO
+  loggers:
+    com.todo: INFO
+  appenders:
+    - type: console
+      logFormat: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [%X{X-Session-Id} - %X{X-Request-Id}] - %c{15} - %msg%n%rEx"
+      threshold: ALL
+      timeZone: UTC
+    - type: file
+      threshold: ALL
+      timeZone: UTC
+      archive: true
+      logFormat: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level [%X{X-Session-Id} - %X{X-Request-Id}] - %c{15} - %msg%n%rEx"
+      archivedLogFilenamePattern: C:/log/java/application-%d{yyyy-MM-dd}.log
+      currentLogFilename: C:/log/java/application.log
+      #      archivedLogFilenamePattern: C:/log/java/application-%d{yyyy-MM-dd}-%i.log
+      #      maxFileSize: 1MB
+      archivedFileCount: 5 #Number of day archived file to be present
+
+
+server:
+  type: simple
+  applicationContextPath: /
+  adminContextPath: /admin
+  connector:
+    port: 8080
+    type: http
+  rootPath: /*
+
+dbSource: "oraclesql"
+employeeCsvFilePath: "A:/Sumit/Sumit/study/workspace/cprogramming-2/java/MVC/meta-data/text.csv"
+employeeXlsxFilePath: "A:/Sumit/Sumit/study/workspace/cprogramming-2/java/MVC/meta-data/testData.xlsx"
+employeeXlsxSheetName: ""
+employeeXlsxSheetIndex: 0
+mysqlConfig:
+  driver: "com.mysql.cj.jdbc.Driver"
+  url: "jdbc:mysql://localhost:3306/student"
+  username: "root"
+  password: "Sumit@123"
+
+oraclesqlConfig:
+  driver: "oracle.jdbc.driver.OracleDriver"
+  url: "jdbc:oracle:thin:@Sumit11:1521:xe"
+  username: "System"
+  password: "tiger"
+
+
+

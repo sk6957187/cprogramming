@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function funNormal() {
+        //     console.log("I am normal function.");
+        //     console.log("I am executed now");
+        // }
+        // funNormal();
+
+        // function fullName(firstName, lastName){
+        //     let name = `Full name: ${firstName} ${lastName}`;
+        //     // return `Full name: ${firstName} ${lastName}`;
+        //     return name;
+        // }
+        // /*
+        // let fName = prompt("Enter first name"); 
+        // let lName = prompt("Enter last name");
+        // let name = fullName(fName,lName);
+        // console.log(name); 
+        // */
+
+        // var sum = function (a,b){
+        //     // console.log(arguments);
+        //     // console.log(arguments[1]);    
+        //     console.log("Hello");
+        //     return arguments[0] * arguments[1];
+        //     // return a+b;
+        // }
+        // console.log(sum(2,3));
+        // console.log(sum1());
+        
+        // //anonymous function
+        // let anonymFun = function(){
+        //     console.log("I am anonymous function")
+        // } 
+        // anonymFun();
+
+        // //Arrow Function
+        // // let sqr = (a) =>{
+        // //     return a*a;
+        // // }
+        // // let sqr = a =>{
+        // //     return a*a;
+        // // }
+        // let sqr = a => a*a;
+        // let res = sqr(5);
+        // console.log(res);
+
+
+        // function op(p1, p2,p3){
+        //     p1(p2,p3);
+        // }
+        // op(function(a,b){
+        //     console.log(a*b);
+        //     // return a*b;
+        // }, 10, 20);
+
+
+        // function greet(name, bye){
+        //     console.log(`Hey GoodMorning, ${name}`);
+        //     bye();
+        // }
+
+        // function goodBye(){
+        //     console.log(`Good bye !!`)
+        // }
+        // greet("Sumit", goodBye);
+
+        function outer(){
+            console.log("Outer fun")
+            inner();
+            function inner(){
+                console.log("Inner fun")
+            }
+        }
+        outer();
+        
+    </script>
+</body>
+</html>

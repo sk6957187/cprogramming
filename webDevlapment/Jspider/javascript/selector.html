@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="content">Hello</h1>
+
+    <!-- <p class="para">1</p>
+    <p class="para">2</p>
+    <p class="para">3</p> -->
+    
+    <!-- <div>1</div>
+    <div>1</div>
+    <div>1</div>
+    <div>1</div> -->
+
+    <!-- <div id="first" class="cont">1</div>
+    <div class="cont">1</div>
+    <div class="cont">1</div>
+    <div class="cont">1</div> -->
+
+    <div id="first" class="cont">1</div>
+    <div class="cont">1</div>
+    <div class="cont">1</div>
+    <div class="cont">1</div>
+
+
+    <script>
+        let h1tag = document.getElementById("content");
+        console.log(h1tag)
+        h1tag.innerText="Sumit";
+
+        // 2.
+        // function changeContent(){
+        //     h1tag.innerText = "<p> good morning<p>"
+        // }
+        // let paraTag = document.getElementsByClassName("para");
+        // console.log(paraTag);
+        // for(let i=0; i<paraTah.length; i++){
+        //     paraTag[i].innerHTML=i;
+        // } 
+        
+//  3. getElementsByTagName  
+        // let divTag=document.getElementsByTagName("div");
+        // console.log(divTag);
+        // for(let i=0; i<divTag.length;i++){
+        //     divTag[i].innerHTML= '<h1> Good Morning</h1>'
+        // }
+
+//  4.querySelector
+            // let firstDiv=document.querySelector("div");
+            // console.log(firstDiv);
+            // firstDiv.innerText="I'm targeted."
+
+//  5.querySelectorAll
+            // let allElements = document.querySelectorAll("#first");
+            let allElements = document.querySelectorAll(".cont");
+            console.log(allElements);
+            allElements[0].innerText="Hello";
+            allElements.forEach(node => node.innerText="I'm changed");
+            
+    </script>
+</body>
+</html>

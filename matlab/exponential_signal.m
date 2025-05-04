@@ -1,0 +1,1 @@
+A = 3;B = 2;t = -2:0.1:5;x = A * exp(0.4*t);y = B * exp(-0.9 * t);plot ( t,x,t,y,'.');legend('x(t)', 'y(t)');

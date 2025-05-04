@@ -1,0 +1,26 @@
+h1{
+    color: red;
+    background-color: black;
+    text-align: center;
+}
+
+h2 {
+    color: #ffffff;
+    background-color: pink;
+}
+
+h3 {
+    color: rgb(29, 236, 167);
+    background-color: rgb(169, 121, 32);
+}
+
+button {
+    color: rgb(23, 23, 224);
+    background: rgb(104, 244, 104);
+}
+p2 {
+    text-align: justify;
+    font-weight: 500;
+    line-height: 2;
+    letter-spacing: 1.5px;
+}
