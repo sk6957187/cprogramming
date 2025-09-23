@@ -1,4 +1,4 @@
-package DSA;
+package dsa;
 
  class Node3{
 	 int data;
@@ -40,7 +40,6 @@ package DSA;
 			if(head == null) {
 				System.out.println("Empty...!!");
 			} else {
-				Node temp2 = head;
 				head = tail;
 				Node temp = tail;
 				while(temp.next != null) {
