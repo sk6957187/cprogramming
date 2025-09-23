@@ -1,13 +1,16 @@
 package org.example;
 
+
+
+import java.util.ArrayList;
+
 import org.example.mysql.MySqlCredential;
 import org.example.mysql.MySqlExecutor;
 import org.example.tables.Student;
 
-import java.util.ArrayList;
-
 public class Main {
     public static void main(String[] args) {
+//    	System.out.println("dfghjk");
 
         String baseUrl = "jdbc:mysql://localhost:3306";
         String username = "root";
