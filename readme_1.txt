@@ -14,6 +14,7 @@ Deleted by “command+z”
 			C:\git-access
 ## Add to git
 ------------------------------------------------------------------------------------------------------
+git diff dictionary.c (check what is updated in file)
 git add dictionary.c (dictionary.c is file name)
 git add -u      //all file in 
 git reset -- main/dontcheckmein.txt     //for ignoring or use .gitignor
@@ -92,4 +93,28 @@ ALTER table student modify column roll_num varchar(20) not null unique;
 UPDATE student set roll_num = "178" where roll_num = "177" limit 1;
 ALTER TABLE student ADD s_no int not null unique AUTO_INCREMENT FIRST;
 delete from student where roll_num="178";
+
+--------------------------------------------------------------------
+To build project -->
+	mvn clean install (java file)
+	npm run build (react file)
+	npx create-react-app hello (create new project )
+
+To run build jar files (run at jdk17 or +) -->
+	Go to current directory and run following command
+	java -jar target/weather-monitoringV2-1.0.0-SNAPSHOT.jar server meta-data/app_env_config.yml
+
+	When just double click on .jar file then open at port at 8080(default port)
+	java -jar Hellow-World-Spring-0.0.1-SNAPSHOT.jar --server.port=9090
+	java -jar your-app.jar --spring.config.location=file:C:/config/application.yml
+	java -jar your-app.jar --spring.config.location=file:C:/config/,file:C:/custom-config/application.yml (load multiple config)
+
+Stop the Process by Port -->
+	netstat -ano | findstr :8080
+	taskkill /F /PID 17031
+	or
+	ps -ef | grep your-app.jar
+	kill <PID>
+
+-------------------------------------------------------------------
 
