@@ -15,6 +15,8 @@ python/*/*/*.pyc
 python/*/*/*/*.pyc
 python/*/*/*/*/*.pyc
 
+sap/
+
 java/Sumit/src/*.class
 MySql5/out/*.class
 MySql5/out/production/MySql5/*.class
