@@ -1,0 +1,12 @@
+.app{
+    background-color: aquamarine;
+    display: grid;
+    grid-template-columns: auto auto auto; 
+    align-content: space-evenly;
+    justify-content: space-evenly;
+    gap: 10px 10px;
+}
+
+.box{
+    border: 1px dotted rebeccapurple;
+}
