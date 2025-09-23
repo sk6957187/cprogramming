@@ -1,5 +1,7 @@
 package main;
 
+import java.util.HashMap;
+
 public class CountDigitV2 {
 	public static int count(int n) {
 		if(n==0) {

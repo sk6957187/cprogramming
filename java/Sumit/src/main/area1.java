@@ -5,3 +5,4 @@ public class area1 {
 		System.out.println("Hello");
 	}
 }
+//this file open from linux.
