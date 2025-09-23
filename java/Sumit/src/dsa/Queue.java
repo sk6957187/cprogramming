@@ -1,4 +1,4 @@
-package DSA;
+package dsa;
 
 import java.util.Scanner;
 
@@ -104,6 +104,7 @@ public class Queue {
 			default:
 				System.out.println("Worng input..!!");
 			}
+			sc.close();
 		}
 		
 		

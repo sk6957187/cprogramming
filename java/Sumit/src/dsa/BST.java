@@ -1,4 +1,4 @@
-package DSA;
+package dsa;
 
 class Node2{
 	int data;

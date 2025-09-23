@@ -1,4 +1,4 @@
-package DSA;
+package dsa;
 
 class Node1 {
     int data;
@@ -25,7 +25,7 @@ class LinkedImpl1 {
             tail = n;
 //            System.out.println(n.prev + " "+tail);
         }
-        System.out.println(ele + " has been inserted into the doubly linked list!");
+         
     }
 
     void display() {

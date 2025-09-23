@@ -1,4 +1,4 @@
-package DSA;
+package dsa;
 
 import java.util.Scanner;
 
@@ -39,6 +39,6 @@ public class BaracketBalanced {
 //				
 //			}
 //		}
-		
+		sc.close();
 	}
 }
