@@ -3,7 +3,7 @@ package main;
 import java.util.*;
 import java.util.Collections;
 
-public class ArrayList {
+public class Arraylist {
 	public static void main(String[] args) {
 		int[] arr = {1, 2, 3};
 	    Collections.reverse(Arrays.asList(arr));

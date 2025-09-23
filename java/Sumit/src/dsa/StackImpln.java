@@ -1,4 +1,4 @@
-package DSA;
+package dsa;
 
 import java.util.Scanner;
 
@@ -69,7 +69,6 @@ public class StackImpln {
 		System.out.println("Enter the size of stack: ");
 		int size = sc.nextInt();
 		createStack(size);
-		boolean flag = true;
 		while(true) {
 			System.out.println("-----------------Menu-------------------");
 			System.out.println("1.Push\n2.Pop\n3.Display\n4.Peek\n5.Clear\n6.IsFull\n7.IsEmpty\n8.Exit");
@@ -107,6 +106,7 @@ public class StackImpln {
 			default:
 				System.out.println("Wrong input..!!");
 			}
+			sc.close();
 		}
 //		System.out.println("------------Program End--------------");
 		

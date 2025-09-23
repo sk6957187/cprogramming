@@ -1,23 +1,42 @@
 package main;
 
+import java.time.LocalDate;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 public class Practice {
 	
 	public static void main(String[] args) {
-		int[] arr = {30, 35,35,5,10};
+		String s = "abacb";
+		char[] str = s.toCharArray();
+		System.out.println(s);
+		String temp="";
+		Set<Character> set = new HashSet<Character>();
+		for(int i=0; i<s.length(); i++) {
+			set.add(s.charAt(i));
+		}
+		int l=0; 
+		System.out.println(set);
 		
-		for(int i=0;i<arr.length-1; i++) {
-			int temp =arr[i];
-			boolean flag = true;
-			for(int j=i+1; j<arr.length; j++) {
-				if(temp <= arr[j]) {
-					flag = false;
+		for(char ch : set) {
+			int n=0;
+			boolean flag = false;
+			for(int i=0; i<s.length(); i++) {
+				if(ch == s.charAt(i)) {
+					l=i;
+//					n++;
+					flag=true;
 					break;
+					
 				}
 			}
-			if(flag == true) {
-				System.out.println(temp + " ");
+			if(flag) {
+				str[l]='$';
+				
 			}
+			
 		}
-		System.out.print(arr[arr.length-1]);
+		System.out.println(Arrays.toString(str));
 	}
 }
