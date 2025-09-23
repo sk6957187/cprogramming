@@ -1,0 +1,10 @@
+Run MongoDB on the window: mongosh
+show data- show dbs
+test> use school //Switch to db school (1st check school file then not found create school file)
+school> db.student.insertOne({"name":"Sumit", "age":22})
+	db.student.insertOne({"name":"Sumit Kumar", "age":22, "mob.no": 9955})
+//data shown in a file
+-> db.student.find()
+
+//data delete
+-> db.student.deleteMany({})
