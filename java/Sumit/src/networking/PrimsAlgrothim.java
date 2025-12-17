@@ -1,7 +1,5 @@
 package networking;
 
-import java.util.Scanner;
-
 public class PrimsAlgrothim {
 	
 	static int minKey(int[] key, boolean[] markSet) {
