@@ -2,48 +2,48 @@ package networking;
 
 public class PrimsAlgrothim {
 	
-	static int minKey(int[] key, boolean[] markSet) {
-		int min = Integer.MAX_VALUE;
-		int index = -1;
-		
-		for(int i = 0; i < key.length; i++) {
-			if(!markSet[i] && key[i] < min) {
-				min = key[i];
-				index = i;
-			}
-		}
-		
-		return index;
-	}
-	
-	private static int[] primsMST(int[][] graph) {
-	int l = graph.length;
-		
-		boolean[] markSet = new boolean[l];
-		int[] parent = new int[l];
-		int[] key = new int[l];
-		
-		for (int i = 0; i < l; i++) {
-            key[i] = Integer.MAX_VALUE;
-        }
-		
-		key[0] = 0;
-		parent[0] = -1;
-		for(int i=0; i<l-1; i++) {
-			int min = minKey(key, markSet);
-			markSet[i] = true;
-			
-			for(int j = i+1; j<l; j++) {
-				if(graph[i][j] != 0 && !markSet[j] && graph[i][j] < key[j]) {
-					parent[j] = min;
-					key[j] = graph[i][j];
-				}
-			}
-			
-		}
-		
-		return parent;
-	}
+//	static int minKey(int[] key, boolean[] markSet) {
+//		int min = Integer.MAX_VALUE;
+//		int index = -1;
+//		
+//		for(int i = 0; i < key.length; i++) {
+//			if(!markSet[i] && key[i] < min) {
+//				min = key[i];
+//				index = i;
+//			}
+//		}
+//		
+//		return index;
+//	}
+//	
+//	private static int[] primsMST(int[][] graph) {
+//	int l = graph.length;
+//		
+//		boolean[] markSet = new boolean[l];
+//		int[] parent = new int[l];
+//		int[] key = new int[l];
+//		
+//		for (int i = 0; i < l; i++) {
+//            key[i] = Integer.MAX_VALUE;
+//        }
+//		
+//		key[0] = 0;
+//		parent[0] = -1;
+//		for(int i=0; i<l-1; i++) {
+//			int min = minKey(key, markSet);
+//			markSet[i] = true;
+//			
+//			for(int j = i+1; j<l; j++) {
+//				if(graph[i][j] != 0 && !markSet[j] && graph[i][j] < key[j]) {
+//					parent[j] = min;
+//					key[j] = graph[i][j];
+//				}
+//			}
+//			
+//		}
+//		
+//		return parent;
+//	}
 	
 	
 
@@ -62,7 +62,48 @@ public class PrimsAlgrothim {
 	            System.out.println(result[i] + " - " + i + "\t" + graph[i][result[i]]);
 	        }
 	}
+	
+	static int[] primsMST(int[][] graph) {
+		int l = graph.length;
+		boolean[] markSet = new boolean[l];
+		int[] parent = new int[l];
+		int[] keys = new int[l];
+		
+		for(int i=0; i<l; i++) {
+			keys[i] = Integer.MAX_VALUE;
+		}
+		
+		keys[0] = 0;
+		parent[0] = -1;
+		
+		for(int i=0; i<l-1; i++) {
+			int min = minKey(keys, markSet);
+			markSet[i] = true;
+			
+			for(int j=i+1; j<l; j++) {
+				if(graph[i][j] != 0 && !markSet[j] && graph[i][j] < keys[j]) {
+					parent[j] = min;
+					keys[j] = graph[i][j];
+				}
+			}
+		}
+		
+		return parent;
+	}
 
+	private static int minKey(int[] keys, boolean[] markSet) {
+		int min = Integer.MAX_VALUE;
+		int index = -1;
+		
+		for(int i=0; i<keys.length; i++) {
+			if(!markSet[i] && keys[i] < min) {
+				min = keys[i];
+				index=i;
+			}
+		}
+		
+		return index;
+	}
 
 
 }
