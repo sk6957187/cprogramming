@@ -1,0 +1,19 @@
+.main{
+    width: 100vp;
+    height: 900px;
+    /* border: 1px solid; */
+    display: grid;
+    /* grid-template-rows: auto auto; */
+    grid-template-columns: auto auto auto; 
+    /* align-items:end; */
+    /* align-content:center; */
+    /* justify-content: center; */
+    align-content:space-evenly;
+    justify-content: space-evenly; 
+    gap: 10px 10px;
+}
+.sec{
+    border: 1px dotted black;
+    
+
+}

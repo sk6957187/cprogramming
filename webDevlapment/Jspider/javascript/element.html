@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <table>
+        <thead>
+            <tr>
+                <th>pId</th>
+                <th>pName</th>
+                <th>price</th>
+                <th>Brand</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>AMB</td>
+                <td>1222</td>
+                <td>ABc</td>
+            </tr>
+        </tbody>
+    </table>
+     -->
+    
+
+    <script>
+        // let h1Tag = document.createElement("h1");
+        // console.log(h1Tag);
+        // h1Tag.innerHTML="Good Morning";
+        // document.body.appendChild(h1Tag);
+        // // h1Tag.remove();
+        // console.log(h1Tag);
+
+
+
+        let tableTag=document.createElement("tableTag");
+        
+        let tHeadTag=document.createElement("thead");
+        let trTag=document.createElement("tr");
+        let thTag1=document.createElement("th");
+        let thTag2=document.createElement("th");
+        let thTag3=document.createElement("th");
+        let thTag4=document.createElement("th");
+
+        tHeadTag.appendChild(trTag);
+        trTag.appendChild(thTag1);
+        trTag.appendChild(thTag2);
+        trTag.appendChild(thTag3);
+        trTag.appendChild(thTag4);
+        tHeadTag.appendChild(trTag);
+        thTag1.innerHTML="pid";
+        thTag2.innerHTML="pName";
+        thTag3.innerHTML="price";
+        thTag4.innerHTML="Brand";
+
+        // table body
+        let tBody=document.createElement("tBody");
+        let tr1 = document.createElement("tr");
+        let td1=document.createElement("td")
+        let td2=document.createElement("td")
+        let td3=document.createElement("td")
+        let td4=document.createElement("td")
+        
+        tr1.appendChild(td1);
+        tr1.appendChild(td2);
+        tr1.appendChild(td3);
+        tr1.appendChild(td4);
+        tBody.appendChild(tr1);
+        td1.innerText=1;
+        td2.innerText="phone";
+        td3.innerText=20000;
+        td4.innerText="Oppo";
+        
+        let tr2=document.createElement("tr");
+        let td21=document.createElement("td");
+        let td22=document.createElement("td");
+        let td23=document.createElement("td");
+        let td24=document.createElement("td");
+        tr2.appendChild(td21);
+        tr2.appendChild(td22);
+        tr2.appendChild(td23);
+        tr2.appendChild(td24);
+        tBody.appendChild(tr2);
+        td21.innerText=2;
+        td22.innerText="Moble";
+        td23.innerText=20000;
+        td24.innerText="ABC";
+
+        tableTag.appendChild(tHeadTag);
+        tableTag.appendChild(tBody);
+        document.body.appendChild(tableTag);
+
+    </script>
+</body>
+</html>

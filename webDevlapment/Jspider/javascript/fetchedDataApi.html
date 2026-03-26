@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- fetch(), await() -->
+    <script>
+        let fetchedPromise=fetch("https://fakestoreapi.com/products");
+        fetchedPromise.then((res)=>{
+            res.json().then((data)=>{
+                let prodTitle=data.map(t=>t.title)
+                console.log(prodTitle);
+            }).catch(err=>{
+                console.log("Data not found")
+            })
+        }).catch(rej => {
+            console.log("Oops!! something went wrong");
+        })
+    </script>
+</body>
+</html>

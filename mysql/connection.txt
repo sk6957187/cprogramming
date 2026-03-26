@@ -1,0 +1,19 @@
+
+
+*
+
+
+mysqlConfig:
+  driver: "com.mysql.cj.jdbc.Driver"
+  url: "jdbc:mysql://localhost:3306/student"
+  username: "root"
+  password: "Sumit@123"
+
+oraclesqlConfig:
+  driver: "oracle.jdbc.driver.OracleDriver"
+  url: "jdbc:oracle:thin:@Sumit11:1521:xe"
+  username: "System"
+  password: "tiger"
+
+
+

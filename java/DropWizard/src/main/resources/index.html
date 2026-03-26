@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Data</title>
+</head>
+<body>
+<h1>Employee List</h1>
+<table id="employeeTable" border="1">
+    <thead>
+    <tr>
+        <th>Person ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Record Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Data will be inserted here -->
+    </tbody>
+</table>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        fetch('http://localhost:8080/employees')
+            .then(response => response.json())
+            .then(data => {
+                const employeeTable = document.getElementById('employeeTable').getElementsByTagName('tbody')[0];
+                data.Records.forEach(employee => {
+                    const row = employeeTable.insertRow();
+                    row.insertCell(0).textContent = employee.personId;
+                    row.insertCell(1).textContent = employee.name;
+                    row.insertCell(2).textContent = employee.age;
+                    row.insertCell(3).textContent = employee.recordDate;
+                });
+            })
+            .catch(error => console.error('Error fetching employee data:', error));
+    });
+</script>
+</body>
+</html>

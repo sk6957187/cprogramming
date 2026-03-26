@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1.
+        #parent h1{
+            background-color: aqua;
+        } */
+         /* 2
+        #parent #hlo2{
+            background-color: blanchedalmond;
+        }
+        #parent > h1{
+            background-color: aquamarine;
+        } */
+         /* 3 */
+        #hlo2+h1{
+            background-color: aqua;
+        }
+         /* 4
+         #hlo2~h1{
+            background-color: aqua;
+         } */
+    </style>
+</head>
+<body>
+    <!-- 1.
+     <div id="parent">
+        <h1>Hello</h1>
+        <h1>Hello</h1>
+        <div>
+            <h1>Good Morning</h1>
+        </div>
+        <p>Today raining day.</p>
+    </div> -->
+    <!-- 2
+    <div id="parent">
+        <h1>Hello</h1>
+        <h1 id="hlo2">Hello</h1>
+        <h1>Hello</h1>
+        <div>
+            <h1>Good Morning</h1>
+            <h1 >Good Morning2</h1>
+        </div>
+        <p>Today raining day.</p>
+    </div> -->
+    3
+    <div id="parent">
+        <h1>Hello</h1>
+        <h1 id="hlo2">Hello</h1>
+        <h1>Hello</h1>
+        <div>
+            <h1>Good Morning</h1>
+            <h1 >Good Morning2</h1>
+        </div>
+        <p>Today raining day.</p>
+    </div>
+    4
+    <!-- <div id="parent">
+        <h1>Hello</h1>
+        <h1 id="hlo2">Hello</h1>
+        <h1>Hello</h1>
+        <div>
+            <h1>Good Morning</h1>
+            <h1 >Good Morning2</h1>
+        </div>
+        <p>Today raining day.</p>
+    </div> -->
+    
+
+</body>
+</html>

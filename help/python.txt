@@ -1,0 +1,7 @@
+Step-1]
+Install python
+
+which python
+python --version
+
+python -m http.server 8000 (create a server for exiting folder)

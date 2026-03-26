@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+</head>
+<body style="background-color: aqua;">
+    <h3>Add Details of Employee</h3>
+    <form id="employeeForm">
+        <fieldset>
+            <legend>Employee Form</legend>
+            <label for="eName">Employee Name</label>
+            <input type="text" id="eName" >
+            <br><br>
+            <label for="company">Company</label>
+            <input type="text" id="company" >
+            <br><br>
+            <label for="eEmail">Email</label>
+            <input type="text" id="eEmail" >
+            <br><br>
+            <label for="mobNo">Mobile No</label>
+            <input type="number" id="mobNo" >
+            <br><br>
+            <label for="add">Address</label>
+            <textarea id="add" cols="50" rows="5" placeholder="Enter address" ></textarea>
+            <br><br>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <h3>Employee List</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>EId</th>
+                <th>EName</th>
+                <th>Company</th>
+                <th>Mail</th>
+                <th>Mob.no</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody id="employeeTable">
+            <!-- Employee data will be dynamically added here -->
+        </tbody>
+    </table>
+
+    <script src="./service.js"></script>
+</body>
+</html>
