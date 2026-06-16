@@ -1,6 +1,8 @@
 package networking;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 class Edge implements Comparable<Edge> {
     int src, dest, weight;
@@ -30,8 +32,9 @@ class DisjointSet {
     }
 
     int find(int x) {
-        if (parent[x] != x)
-            parent[x] = find(parent[x]);
+        if (parent[x] != x) {
+			parent[x] = find(parent[x]);
+		}
         return parent[x];
     }
 
@@ -39,7 +42,9 @@ class DisjointSet {
         int xRoot = find(x);
         int yRoot = find(y);
 
-        if (xRoot == yRoot) return;
+        if (xRoot == yRoot) {
+			return;
+		}
 
         if (rank[xRoot] < rank[yRoot]) {
             parent[xRoot] = yRoot;
