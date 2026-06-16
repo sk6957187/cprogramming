@@ -1,7 +1,9 @@
 package string;
 
-import java.io.*;
-import java.util.*;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 class Result {
 
@@ -16,16 +18,16 @@ class Result {
 
     public static List<Integer> matchingStrings(List<String> strings, List<String> queries) {
     ArrayList<Integer> arr = new ArrayList<>();
-    for(int i=0; i<queries.size(); i++){
+    for (String element : queries) {
         int count=0;
-        for(int j=0; j<strings.size(); j++){
-            if(queries.get(i).equals(strings.get(j))){
+        for (String string : strings) {
+            if(element.equals(string)){
                 count++;
             }
         }
         arr.add(count);
     }
-    
+
     return arr;
 
     }
@@ -55,8 +57,8 @@ public class StringCampare {
 
         List<Integer> res = Result.matchingStrings(strings, queries);
 
-        for (int i = 0; i < res.size(); i++) {
-            System.out.println(res.get(i));
+        for (Integer re : res) {
+            System.out.println(re);
         }
         sc.close();
     }

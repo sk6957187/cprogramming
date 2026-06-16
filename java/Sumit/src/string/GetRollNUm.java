@@ -21,7 +21,7 @@ public class GetRollNUm {
 		String result= getRoll(n,roll,name);
 		System.out.println(result);
 		sc.close();
-		
+
 	}
 
 	private static String getRoll(int n, int[] roll, String[] name) {

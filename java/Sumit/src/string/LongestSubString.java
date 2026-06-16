@@ -12,9 +12,9 @@ public class LongestSubString {
 			j--;
 		}
 		return true;
-		
+
 	}
-	
+
 	public static void main(String[] args) {
 		String str = "";
 //		str = "a";
@@ -49,8 +49,8 @@ public class LongestSubString {
 		} else {
 			System.out.println("Longest substring: "+str);
 		}
-		
-		
+
+
 	}
  }
 

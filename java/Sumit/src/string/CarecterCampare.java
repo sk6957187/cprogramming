@@ -10,7 +10,7 @@ s1 = "hello world"
 s2 = "do"
 Output 3 (d=1, o=2)
 
-input:- 
+input:-
 s1 = "developer"
 s2 = "dev"
 output:- 5 (d=1, e=3, v=1)
@@ -34,7 +34,7 @@ public class CarecterCampare {
 		Set<Character> key = freqmap.keySet();
 		System.out.println(key);
 		System.out.println(total);
-		
+
 		/*
 		int count=0;
 		for(int j=0; j<s2.length(); j++) {

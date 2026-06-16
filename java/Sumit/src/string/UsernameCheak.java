@@ -13,20 +13,23 @@ public class UsernameCheak {
 		System.out.print("Enter numbers of name: ");
 		int total = sc.nextInt();
 		while(count<total){
-			System.out.println("Enter "+ (count+1) +" user name");  
+			System.out.println("Enter "+ (count+1) +" user name");
 			String s= sc.next();
 		    Matcher match = search.matcher(s);
 
-		     if(s.length()<8 || s.length()>30 )
-		      System.out.println("Invalid");
+		     if(s.length()<8 || s.length()>30 ) {
+				System.out.println("Invalid");
+			 }
 
 
 
-		     if(s.length()>=8 && s.length()<=30) 
-		    	 if((Character.isUpperCase(s.charAt(0))||Character.isLowerCase(s.charAt(0))) && !match.find())
-		    		 System.out.println("Valid"); 
-		    	 else
-		    		 System.out.println("Invalid");
+		     if(s.length()>=8 && s.length()<=30) {
+				if((Character.isUpperCase(s.charAt(0))||Character.isLowerCase(s.charAt(0))) && !match.find()) {
+					System.out.println("Valid");
+				 } else {
+					System.out.println("Invalid");
+				 }
+			 }
 		    count++;
 		    }
 		sc.close();

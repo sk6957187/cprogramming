@@ -1,19 +1,20 @@
 package string;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class AddString {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		
+
 		 //List<String> list = Arrays.asList("hi", "hello", "bye");
 		  //  ArrayList<String> al = new ArrayList<String>();
 		  //  al.addAll(list);
 		int n = sc.nextInt();
 		sc.nextLine();
-		ArrayList<String> str = new ArrayList<String>();
+		ArrayList<String> str = new ArrayList<>();
 		for(int i=0; i<n; i++) {
 			String temp = sc.nextLine();
 			str.add(temp);
@@ -22,8 +23,8 @@ public class AddString {
 		System.out.println("Enter integer number with space seprated: ");
 		arr = sc.nextLine().split(" ");
 		Arrays.sort(arr);
-		for(int i=0; i<arr.length; i++) {
-			System.out.print(arr[i]);
+		for (String element : arr) {
+			System.out.print(element);
 		}
 		System.out.println();
 		System.out.println(str);

@@ -9,8 +9,8 @@ public class StringExp {
 		System.out.println(str.charAt(2));
 		System.out.println(str.charAt(4));
 		System.out.println(str.charAt(6));
-//		System.out.println(str.charAt(12)); --> StringIndexOfBoundException but program compile and run		
-		
+//		System.out.println(str.charAt(12)); --> StringIndexOfBoundException but program compile and run
+
 //	2.length()-->
 		System.out.println("length()-->");
 		String s1 = "BTM";
@@ -19,13 +19,13 @@ public class StringExp {
 		System.out.println(s2.length());
 		String s3 = "Software Engineer";
 		System.out.println(s3.length());
-	
+
 //	3.toCharArray()-->
 		System.out.println("toCharArray-->");
 		String s4="Tiger";
 		char[] ch = s4.toCharArray();
-		for(int i =0; i<ch.length; i++) {
-			System.out.print(ch[i]+" ");
+		for (char element : ch) {
+			System.out.print(element+" ");
 		}
 		System.out.println();
 //	4.indexOf()-->
@@ -40,7 +40,7 @@ public class StringExp {
 		System.out.print(a+" ");
 		System.out.print(b+" ");
 		System.out.print(c+" \n");
-	
+
 //	5.lastIndexOf()-->
 		System.out.println("lastIndexOf-->");
 		String s51="Developer";
@@ -54,7 +54,7 @@ public class StringExp {
 		System.out.print(x+" ");
 		System.out.print(y+" ");
 		System.out.print(z+" \n");
-		
+
 //	6. contains(), startsWith(), endsWith()-->
 		System.out.println("contains(), startsWith(), endsWith()-->");
 		String s6= "Engineering";
@@ -64,7 +64,7 @@ public class StringExp {
 		System.out.println(s6.contains("Eng"));	//t
 		System.out.println(s6.contains("i ng"));	//f
 		System.out.println(s6.contains("ring"));	//t
-		
+
 //	7.equals(), equalsIgnoreCase()-->
 		System.out.println("equals(), equalsIgnoreCase()-->");
 		String s7 = "j2ee";
@@ -74,14 +74,14 @@ public class StringExp {
 		System.out.println(s7.equalsIgnoreCase("J2ee"));	//t
 		System.out.println(s7.equalsIgnoreCase("j2ee"));	//t
 		System.out.println(s7.equalsIgnoreCase("adv java"));	//f
-		
+
 //	8.toupperCase(), toLowerCase()-->
 		System.out.println("toupperCase(), toLowerCase()-->");
 		String s8="Java_SE22";
 		System.out.println(s8.toUpperCase());
 		System.out.println(s8.toLowerCase());
 		System.out.println(s8);
-		
+
 //	9.sustring()-->
 		System.out.println("substring()-->");
 		String s9 = "Developer";
@@ -89,22 +89,22 @@ public class StringExp {
 		System.out.println(s9.substring(4));
 		System.out.println(s9.substring(3,8));
 		System.out.println(s9.substring(0,7));
-	
+
 //	10. trim()-->
 		System.out.println("trim()");
 		String s10="     core    java    ";
 		System.out.println("-->"+s10+"<--");
 		System.out.println("-->"+s10.trim()+"<--");
-		
+
 //	11. split()-->
 		System.out.println("split()-->");
 		String s11 = "Java is an object oriented programming langauage";
 		String[] arr=s11.split(" ");
-		for(int i=0; i<arr.length; i++) {
-			System.out.println(arr[i]);
+		for (String element : arr) {
+			System.out.println(element);
 		}
 		System.out.println(arr.getClass().getSimpleName());
-		
+
 	}
 
 }

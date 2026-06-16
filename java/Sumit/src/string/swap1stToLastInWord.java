@@ -14,7 +14,7 @@ public class swap1stToLastInWord {
 				ch[k]=ch[i];
 				ch[i]=temp;
 			}
-			
+
 		}
 		System.out.println(ch);
 	}

@@ -1,7 +1,7 @@
 package string;
 
 public class firstCharIsUpper {
-	
+
 	public static void main(String[] args) {
 		String str ="Ram is a goAd man";
 		char ch[] = str.toCharArray();
@@ -10,7 +10,7 @@ public class firstCharIsUpper {
 				ch[i] = (char)(ch[i]+32);
 			}
 			if((i==0 && ch[i]!='c') || (ch[i]!=' ' && ch[i-1]==' ')) {
-				ch[i] = (char)(ch[i]-32);  
+				ch[i] = (char)(ch[i]-32);
 			}
 		}
 		System.out.println(ch);

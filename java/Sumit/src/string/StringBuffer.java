@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 
 /*
- Output:- 
+ Output:-
  Word1 word2    output
  abc   def  ->  adbecf
  ab    defg ->  adbefg
@@ -34,7 +34,7 @@ public class StringBuffer {
 
 	private void append(char charAt) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	public static void main(String[] args) {

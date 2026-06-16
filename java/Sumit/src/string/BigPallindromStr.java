@@ -12,9 +12,9 @@ public class BigPallindromStr {
 			j--;
 		}
 		return true;
-		
+
 	}
-	
+
 	public static void main(String[] args) {
 		String str = "";
 //		str = "bccbkhkaba";
@@ -43,7 +43,7 @@ public class BigPallindromStr {
 			}
 		}
 		System.out.println("Longest substring pallindrom: "+strSplit[index]);
-		
+
 	}
  }
 
