@@ -1,7 +1,7 @@
 package main;
 
 public class ternaryOperator {
-	public static void main(String[] args) { 
+	public static void main(String[] args) {
 		int a=10, b=2, c=1, d=50;
 		int res = (a<b) ? a:b;
 		System.out.println("Smallest number in 2 numbers: "+res);

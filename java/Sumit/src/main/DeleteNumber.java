@@ -1,6 +1,6 @@
 package main;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class DeleteNumber {
 
@@ -25,10 +25,11 @@ public class DeleteNumber {
 		//Arrays.sort(arr);
 		int count =0;
 		for(int i=0; i<len; i++) {
-			if(arr[i]==del)
+			if(arr[i]==del) {
 				count++;
-			else
+			} else {
 				System.out.print(arr[i]+" ");
+			}
 		}
 		System.out.println("Length:- "+ (len - count));
 //		int tempArrSize = len - count;
@@ -44,8 +45,8 @@ public class DeleteNumber {
 //		for(int a: tempArr) {
 //			System.out.print(a+" ");
 //		}
-		
-		
+
+
 	}
 
 }

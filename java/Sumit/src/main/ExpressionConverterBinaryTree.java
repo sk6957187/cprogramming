@@ -20,7 +20,9 @@ public class ExpressionConverterBinaryTree {
     }
 
     public static boolean isValidExpression(String expr) {
-        if (expr.length() < 3) return false;
+        if (expr.length() < 3) {
+			return false;
+		}
 
         for (int i = 0; i < expr.length(); i++) {
             if ("abcdefghijklmnopqrstuvwxyz*()/+-".indexOf(expr.charAt(i)) == -1) {
@@ -32,7 +34,9 @@ public class ExpressionConverterBinaryTree {
             while (expr.startsWith("(") && expr.endsWith(")")) {
                 if (isBracketed(expr)) {
                     expr = expr.substring(1, expr.length() - 1);
-                } else break;
+                } else {
+					break;
+				}
             }
             // Placeholder for actual expression parsing logic; return true for valid simplified check
             return true; // Replace with proper evaluation if needed

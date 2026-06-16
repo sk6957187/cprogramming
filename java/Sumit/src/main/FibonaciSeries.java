@@ -11,8 +11,8 @@ public class FibonaciSeries {
 		System.out.print(c+" ");
 		printFib(b,c,n-1);
 	}
-	
-	
+
+
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -22,7 +22,7 @@ public class FibonaciSeries {
 		int n = sc.nextInt();
 		System.out.print(a+" ");
 		System.out.print(b+" ");
-		
+
 		printFib(a,b,n-2);
 		sc.close();
 	}

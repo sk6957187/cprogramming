@@ -59,10 +59,9 @@ public class RomanToNum {
         //String str = "IX";
         String str = sc.next();
     	int res = romToNum(str);
-    
+
         System.out.println("The Integer value of given Roman number is: "+res);
         sc.close();
     }
 }
 
- 

@@ -12,11 +12,11 @@ class Node{
 }
 
 public class Tree {
-	
+
 	public static boolean isOperator(String c) {
 		return c.equals("+") || c.equals("-") || c.equals("*") || c.equals("/");
 	}
-	
+
 	public static Node constructTree(String[] postfix) {
 		Stack<Node> stack = new Stack<>();
 		for(String token: postfix) {
@@ -31,7 +31,7 @@ public class Tree {
 		}
 		return stack.peek();
 	}
-	
+
 	public static void inOrder(Node root) {
 		if(root != null) {
 			inOrder(root.left);

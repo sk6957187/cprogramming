@@ -2,9 +2,9 @@ package main;
 
 public class BinarySearch {
 	public static int search(int[] arr, int key) {
-		int l=0; 
+		int l=0;
 		int h=arr.length-1;
-		
+
 		while(l<=h) {
 			int mid = (l+h)/2;
 			if(arr[mid] == key) {
@@ -17,7 +17,7 @@ public class BinarySearch {
 		}
 		return -1;
 	}
-	
+
 	public static void main(String[] args) {
 		int arr[] = {1,2,4,5,7,9,10,12,14};
 		int key = 12;

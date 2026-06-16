@@ -6,14 +6,14 @@ import java.util.List;
 import java.util.Scanner;
 
 public class IntegerToDigit {
-	
+
 	private static void collectDigit(int n, List<Integer> digitList) {
 		// TODO Auto-generated method stub
 		if(n/10>0) {
 			collectDigit(n/10,digitList);
 		}
 		digitList.add(n%10);
-		
+
 	}
 
 	public static void main(String[] args) {
@@ -47,6 +47,6 @@ public class IntegerToDigit {
 
 	}
 
-	
+
 
 }

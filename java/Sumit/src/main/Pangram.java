@@ -1,12 +1,16 @@
 package main;
 
-import java.util.ArrayList;
-import java.util.*;
 /*
 * The quick brown fox jumps over the lazy dog --> pangram
 * We promptly judged antique ivory buckles for the prize --> not pangram
-* We promptly judged antique ivory buckles for the next prize --> pangram 
+* We promptly judged antique ivory buckles for the next prize --> pangram
 */
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Scanner;
+import java.util.Set;
 
 
 public class Pangram {
@@ -19,12 +23,12 @@ public class Pangram {
         System.out.println(result);
         sc.close();
     }
-    
+
     public static String pangrams(String s) {
         String result="";
         Set<Character> set = new HashSet<>();
         for(char ch:s.toLowerCase().toCharArray()){
-        	
+
             if(ch >= 'a' && ch <='z'){
                 set.add(ch);
             }
@@ -36,13 +40,13 @@ public class Pangram {
         for(char a:list) {
         	i++;
         	System.out.print(i+""+a+" ");
-        	
+
         }
-        if(set.size()==26) { 
-            result= "pangram"; 
-            } else { 
-                result= "not pangram"; 
-            } 
+        if(set.size()==26) {
+            result= "pangram";
+            } else {
+                result= "not pangram";
+            }
             return result;
 
         }

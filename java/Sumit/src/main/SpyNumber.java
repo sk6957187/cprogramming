@@ -22,7 +22,7 @@ public class SpyNumber {
 			System.out.println("Not spy number");
 		}
 
-		
+
 	}
 
 }

@@ -7,7 +7,7 @@ public class Program6 {
 //	static void play(double d) {
 //		System.out.println("Value: "+d);
 //	}
-//	
+//
 //	public static void main(String[] args) {
 //		System.out.println("Program Start");
 //		play(3.45);

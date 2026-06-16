@@ -1,7 +1,7 @@
 package main;
 
 public class CheckPassword {
-	
+
 	public static boolean checkPass(String s) {
 		if(s.length()<8) {
 			return false;

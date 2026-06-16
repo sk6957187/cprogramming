@@ -1,12 +1,14 @@
 package main;
 
 public class PathCount {
-	
+
 	public static int countPaths(int i, int j, int n,int m) {
-		if(i==n || j==m || j==-1)
+		if(i==n || j==m || j==-1) {
 			return 0;
-		if(i==n-1 && j==m-1)
+		}
+		if(i==n-1 && j==m-1) {
 			return 1;
+		}
 		int downCount=countPaths(i+1, j, n, m);
 		int rightCount=countPaths(i,j+1,n,m);
 		return rightCount + downCount ;

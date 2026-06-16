@@ -15,7 +15,7 @@ public class Sudoko {
 			}
 		}
 		//hii
-		
+
 		for(int i = 0; i < r; i++) {
             for(int j = 0; j < c; j++) {
                 System.out.print(board[i][j] + " ");
@@ -38,13 +38,14 @@ public class Sudoko {
 		} else {
 			System.out.println("False");
 		}
-		
+
 	}
 
 	private static boolean helper(char[][] board, int row, int col) {
-		if(row == board.length)
+		if(row == board.length) {
 			return false;
-		
+		}
+
 		int nrow = 0;
 		int ncol = 0;
 		if(col==board.length) {
@@ -62,20 +63,21 @@ public class Sudoko {
 			for(int i=1; i<=9; i++) {
 				if(isSafe(board, row, col, i)) {
 					board[row][col]=(char)(i+'0');
-					if(helper(board,nrow,ncol))
+					if(helper(board,nrow,ncol)) {
 						return true;
-					else 
+					} else {
 						board[row][col]='.';
+					}
 				}
 			}
 		}
-		return false;	
+		return false;
 	}
-	
+
 	public static boolean isSafe(char[][] board, int row, int col, int num) {
 		//column
-		for(int i=0; i < board.length; i++) {
-			if(board[i][col]==(char)(num+'0')) {
+		for (char[] element : board) {
+			if(element[col]==(char)(num+'0')) {
 				return false;
 			}
 		}	//row

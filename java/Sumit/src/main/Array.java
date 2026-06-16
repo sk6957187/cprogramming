@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Array {
 
-	
+
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int[] arr;
@@ -17,8 +17,8 @@ public class Array {
 			arr[i] = scan.nextInt();
 		}
 		System.out.println("Enter element:");
-		for(int i=0; i<arr.length; i++) {
-			System.out.print(arr[i]+" ");
+		for (int element : arr) {
+			System.out.print(element+" ");
 		}
 		System.out.println();
 		int sm=0;
@@ -31,9 +31,9 @@ public class Array {
 			System.out.print(a1+" ");
 		}
 		System.out.println();
-		
+
 		scan.close();
-		
+
 	}
 
 }

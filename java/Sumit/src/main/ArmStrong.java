@@ -26,7 +26,7 @@ public class ArmStrong {
 		}
 		return false;
 	}
-	
+
 	public static void main(String[] args) {
 		int num =153;
 		boolean res = isArmStr(num);
@@ -34,8 +34,7 @@ public class ArmStrong {
 			System.out.println(num+" Armstrong number.");
 		}else {
 			System.out.println(num+" Not Armstrong number.");
-		}	
+		}
 	}
 }
 
- 

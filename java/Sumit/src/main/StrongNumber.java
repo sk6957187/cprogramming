@@ -11,7 +11,7 @@ public class StrongNumber {
 		fact = fact * rem;
 		return factorial((rem-1),fact);
 	}
-	
+
 	public static void main(String[] args) {
 		StrongNumber sn = new StrongNumber();
 		int n =145;

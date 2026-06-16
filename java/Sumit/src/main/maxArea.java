@@ -21,27 +21,27 @@ public class maxArea {
         //     }
         // }
         // return max;
-        
+
         int l = 0;
         int r = height.length -1;
         int area = 0;
-     
+
         while (l < r)
         {
             // Calculating the max area
-            area = Math.max(area, 
+            area = Math.max(area,
                         Math.min(height[l], height[r]) * (r - l));
-                         
-            if (height[l] < height[r])
-                l += 1;
-                 
-            else
-                r -= 1;
+
+            if (height[l] < height[r]) {
+				l += 1;
+			} else {
+				r -= 1;
+			}
         }
         return area;
 
     }
-	
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
@@ -53,7 +53,7 @@ public class maxArea {
 		System.out.println("Max area filled by water: "+maxArea(height));
 		sc.close();
 		// len=9
-//		height = [1,8,6,2,5,4,8,3,7],     
+//		height = [1,8,6,2,5,4,8,3,7],
 //		Output: 49
 	}
 

@@ -22,7 +22,7 @@ public class area {
 //}
 //public class Today{
 //	public static void main(String[] args) {
-//		
+//
 //		Math m = (n) -> {
 //			System.out.println("square: "+n*n) ;
 //			System.out.println("cube: "+n*n*n);

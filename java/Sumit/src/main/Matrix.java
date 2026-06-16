@@ -12,7 +12,7 @@ public class Matrix {
 	            numArray[i]=sc.nextLine().split(" ");
 	        }
 	        sc.close();
-	        
+
 	        for(int i=0;i<=3;i++){
 	            for(int j=0;j<=3;j++){
 	                int sum = Integer.parseInt(numArray[i][j])+Integer.parseInt(numArray[i][j+1])+Integer.parseInt(numArray[i][j+2])+Integer.parseInt(numArray[i+1][j+1])+Integer.parseInt(numArray[i+2][j])+Integer.parseInt(numArray[i+2][j+1])+Integer.parseInt(numArray[i+2][j+2]);
@@ -27,5 +27,5 @@ public class Matrix {
 	        }
 	        System.out.println(largestSum);
 	    }
-	
+
 }

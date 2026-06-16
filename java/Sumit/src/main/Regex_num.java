@@ -16,7 +16,7 @@ Output:-
     true
     false
     false
-    false 
+    false
 */
 
 

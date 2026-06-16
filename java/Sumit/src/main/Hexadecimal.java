@@ -1,7 +1,7 @@
 package main;
 
 public class Hexadecimal {
-	
+
 	public static String decToHexDcm(int n) {
 		int sum = 0;
 		String str = "";

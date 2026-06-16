@@ -4,9 +4,9 @@ package main;
 
 public class BinaryToDec {
 
-        
+
     public static void main(String []args) {
-    
+
 	    int n=1101;
 	    int count = 0;
 	    double sum = 0;
@@ -33,4 +33,3 @@ public class BinaryToDec {
     }
 }
 
- 

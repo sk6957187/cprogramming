@@ -24,5 +24,5 @@ public class HappyNum {
 			System.out.println(temp + " is not Happy Number.");
 		}
 	}
-	
+
 }

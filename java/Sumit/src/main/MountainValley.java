@@ -1,13 +1,13 @@
 package main;
 
 public class MountainValley {
-	
+
 	static boolean checkMontvaly(int[] arr) {
 		if (arr.length < 2 || arr[0] == arr[1]) {
 		    return false;
 		}
 		boolean mount = arr[1] < arr[0];
-		
+
 		for(int i=1 ;i<arr.length; i++) {
 			if(mount && (arr[i] >= arr[i-1])) {
 				return false;
@@ -15,7 +15,7 @@ public class MountainValley {
 				return false;
 			}
 				mount = !mount;
-			
+
 		}
 		return true;
 	}

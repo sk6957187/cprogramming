@@ -14,8 +14,8 @@ public class UniqueNumber {
 		while(n>0) {
 			int rem = n%10;
 			int flag = 0;
-			for(int i=0; i<arr.size(); i++) {
-				if(rem == arr.get(i)) {
+			for (Integer element : arr) {
+				if(rem == element) {
 					flag++;
 				}
 			}
@@ -24,7 +24,7 @@ public class UniqueNumber {
 			}
 			n = n/10;
 		}
-		
+
 		return true;
 	}
 	public static void main(String[] args) {

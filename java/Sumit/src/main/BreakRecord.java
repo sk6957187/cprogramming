@@ -1,9 +1,10 @@
 package main;
-	import java.io.*;
-	import java.util.*;
-	import java.util.ArrayList;
+	import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
-	
+
 	public class BreakRecord {
 	    public static void main(String[] args) throws IOException {
 	    	Scanner sc =new Scanner(System.in);
@@ -12,7 +13,7 @@ package main;
 	    	sc.nextLine();
 	        String scoresTemp = sc.nextLine();
 	        String[] val=scoresTemp.split(" ");
-	        
+
 
 	        List<Integer> scores = new ArrayList<>();
 
@@ -20,14 +21,14 @@ package main;
 	            int scoresItem = Integer.parseInt(val[i]);
 	            scores.add(scoresItem);
 	        }
-	        
+
 	        List<Integer> result = breakingRecords(scores);
-	        
+
 	        System.out.println("Break Max record "+ result.get(0)+" times");
 	        System.out.println("Break min record "+result.get(1)+" Times");
 	        sc.close();
 	    }
-	    
+
 	    public static List<Integer> breakingRecords(List<Integer> scores) {
 	        int min=0;
 	        int max=0;
@@ -49,7 +50,7 @@ package main;
 	        list.add(max);
 	        list.add(min);
 	        return list;
-	        
+
 
 	    }
 	}

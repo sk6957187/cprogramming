@@ -9,7 +9,7 @@ public class MissingElement {
 		}
 		return true;
 	}
-	
+
 	public static void main(String[] args) {
 		int x[] = {1,3,2,8,4};
 		int big=x[0], small=x[0];
@@ -23,7 +23,7 @@ public class MissingElement {
 		}
 		for(int i=small; i<=big; i++) {
 			boolean res = isMissing(i,x);
-			if(res == true) {
+			if(res) {
 				System.out.println(i);
 			}
 		}

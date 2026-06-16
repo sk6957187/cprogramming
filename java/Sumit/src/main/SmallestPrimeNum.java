@@ -28,7 +28,7 @@ public class SmallestPrimeNum {
 		}
 
 	}
-	
+
 	public static boolean primeNu(int num) {
 		  if (num <= 1) {
 	            return false;
@@ -40,8 +40,8 @@ public class SmallestPrimeNum {
 	            }
 	        }
 	        return true;
-	    
-		
+
+
 	}
 
 }

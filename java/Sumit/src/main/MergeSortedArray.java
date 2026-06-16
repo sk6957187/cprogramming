@@ -21,7 +21,7 @@ public class MergeSortedArray {
 		while(n < arr2.length) {
 			arr3[k++] = arr2[n++];
 		}
-		
+
 		System.out.println(Arrays.toString(arr3));
 	}
 }

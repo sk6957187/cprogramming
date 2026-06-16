@@ -1,7 +1,5 @@
 package main;
 
-import java.util.HashMap;
-
 public class CountDigitV2 {
 	public static int count(int n) {
 		if(n==0) {
@@ -14,11 +12,11 @@ public class CountDigitV2 {
 		int res = count(n);
 		System.out.println(res);
 	}
-	
-	
+
+
 //	static int count=0;
 //	public static void count(int n) {
-//		
+//
 //		if(n==0) {
 //			return;
 //		}
@@ -29,7 +27,7 @@ public class CountDigitV2 {
 //		int n=1234;
 //		count(n);
 //		System.out.println(count);
-//	}	
+//	}
 }
 
 

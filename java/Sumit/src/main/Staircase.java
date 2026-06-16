@@ -1,7 +1,7 @@
 package main;
 
-import java.io.*;
-import java.util.*;
+import java.io.IOException;
+import java.util.Scanner;
 
 public class Staircase {
     public static void main(String[] args) throws IOException {
@@ -10,15 +10,16 @@ public class Staircase {
         	staircase(n);
 	        sc.close();
 	    }
-	    
+
     public static void staircase(int n) {
 	    // Write your code here
     	for(int i=1; i<=n; i++){
     		for(int j=n; j>0; j--){
-    			if(j==i || j<i)
-    				System.out.print("#");
-		        else 
-		            System.out.print(" ");
+    			if(j==i || j<i) {
+					System.out.print("#");
+				} else {
+					System.out.print(" ");
+				}
             }
     		System.out.println();
 	    }

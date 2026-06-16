@@ -14,8 +14,7 @@ public class ChessBoard {
 		System.out.println("Enter multiple move with seprat space: ");
 		String[] steps = sc.nextLine().split(" ");
 		sc.close();
-		for(int i=0; i<steps.length; i++) {
-			String step = steps[i];
+		for (String step : steps) {
 			char dirn = step.charAt(0);
 			int move = step.charAt(1)-'0';
 			switch(dirn)
@@ -27,7 +26,7 @@ public class ChessBoard {
 					return;
 				}
 				break;
-				
+
 			case 'd':
 				curRow -= move;
 				if(curRow<0) {
@@ -35,7 +34,7 @@ public class ChessBoard {
 					return;
 				}
 				break;
-			
+
 			case 'l':
 				curCol -= move;
 				if(curCol < 'a') {
@@ -53,6 +52,6 @@ public class ChessBoard {
 			}
 		}
 		System.out.println("New position: "+ String.valueOf(curCol)+String.valueOf(curRow));
-	
+
 	}
 }

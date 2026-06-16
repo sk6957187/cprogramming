@@ -1,7 +1,7 @@
 package main;
 
 public class TowerOfHanoi {
-	
+
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -18,6 +18,6 @@ public class TowerOfHanoi {
 		System.out.println("Transfer disk "+n+"from "+src+" to "+dest);
 		towerOfHanoi(n-1, help, src, dest);
 	}
-	
+
 
 }

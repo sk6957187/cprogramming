@@ -12,7 +12,7 @@ public class LonelyInteger {
         int n = Integer.parseInt(sc.next());
         sc.nextLine();
         System.out.println("Enter element ");
-        
+
         System.out.println("11111");
         String[] aTemp = sc.nextLine().split(" ");
         //List<Integer> a = new ArrayList<>();
@@ -27,7 +27,7 @@ public class LonelyInteger {
         System.out.println(result);
         sc.close();
     }
-    
+
     public static int lonelyinteger(List<Integer> a) {
         int temp=0;
         int l=a.size();

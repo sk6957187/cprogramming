@@ -46,8 +46,9 @@ public class Comparing {
 				}
 			}
 			System.out.println(large);
-		} else
+		} else {
 			System.out.println("0");
+		}
 	}
 
 }

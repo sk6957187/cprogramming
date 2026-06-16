@@ -7,21 +7,21 @@ public class ArrayObject {
 		int countInt =0;
 		int countChar = 0;
 		int countDbl = 0;
-		for(int i=0; i<obj.length; i++) {
-			if(obj[i] instanceof String) {
-				System.out.print(obj[i]+" ");
+		for (Object element : obj) {
+			if(element instanceof String) {
+				System.out.print(element+" ");
 				countStr++;
 			}
-			if(obj[i] instanceof Integer) {
-				System.out.print(obj[i]+" ");
+			if(element instanceof Integer) {
+				System.out.print(element+" ");
 				countInt++;
 			}
-			if(obj[i] instanceof Double) {
-				System.out.print(obj[i]+" ");
+			if(element instanceof Double) {
+				System.out.print(element+" ");
 				countDbl++;
 			}
-			if(obj[i] instanceof Character) {
-				System.out.print(obj[i]+" ");
+			if(element instanceof Character) {
+				System.out.print(element+" ");
 				countChar++;
 			}
 		}

@@ -11,7 +11,7 @@ public class firstPrimeNum {
 		}
 		return true;
 	}
-	
+
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter number: ");
@@ -31,11 +31,10 @@ public class firstPrimeNum {
 			}
 			i+= 2 ;
 		}
-		
+
 	}
 
-	
+
 
 }
 
- 

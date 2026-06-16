@@ -1,16 +1,18 @@
 package main;
 public class PallindromUseRecursion {
 	static boolean check(int i, String str,int j) {
-		if(i==str.length()-1)
+		if(i==str.length()-1) {
 			return true;
-		if(str.charAt(i)!= str.charAt(j))
+		}
+		if(str.charAt(i)!= str.charAt(j)) {
 			return false;
+		}
 		return check(i+1,str,j-1);
-		
-		
-		
-		
-//		
+
+
+
+
+//
 //		if(n>str.length()/2) {
 //			return true;
 //		}

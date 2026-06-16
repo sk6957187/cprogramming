@@ -12,14 +12,14 @@ public class day6 {
 		Pentagon();
 		Semicircular();
 		CirclePer();
-		
+
 	}
-	
+
 	private static void AreaParallogram() {
 		int b=10; int h=20;
 		int area = b*h;
 		System.out.println("Area of parallogram is: "+ area);
-		
+
 	}
 	public static void Cube() {
 		int a = 10;
@@ -60,7 +60,7 @@ public class day6 {
 		System.out.println("Area of pentagon is "+area);
 	}
 	public static void Semicircular() {
-		int r=10; 
+		int r=10;
 		float pi = 22.0f/7.0f;
 		float area = pi*r*r/2;
 		System.out.println("Area of Semicircular is: "+area);
@@ -71,7 +71,7 @@ public class day6 {
 		float per=2*pi*r;
 		System.out.println("Parimeter of circle is: "+per);
 	}
-	
-	
-	
+
+
+
 }

@@ -1,7 +1,8 @@
 package main;
 
-import java.util.*;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 public class Arraylist {
 	public static void main(String[] args) {
@@ -12,15 +13,15 @@ public class Arraylist {
 	        System.out.print(a + " ");
 	    }
 	    System.out.println();
-	
+
 	    //List<Integer> arrList = new ArrayList<>();
 	    //List<String> arrList = new ArrayList<>();
 	    List <Integer> arrList = new java.util.ArrayList<>();
-	    
+
 	    arrList.add(6);
 	    arrList.add(5);
 	    arrList.add(3);
-	
+
 	    System.out.println("ArrayList: " + arrList);
 	}
 }

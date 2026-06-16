@@ -30,9 +30,9 @@ public class Arrays2D {
 		}
 		if(max==0) {
 			System.out.println(-1);
-		}
-		else
+		} else {
 			System.out.println(row);
+		}
 		sc.close();
 	}
 }

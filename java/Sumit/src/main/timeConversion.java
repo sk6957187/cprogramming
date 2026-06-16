@@ -12,7 +12,7 @@ public class timeConversion {
      */
 
     public static void main(String[] args) {
-        
+
         Scanner sc= new Scanner(System.in);
         System.out.println("Enter time in AM/PM formet: ");
         //String s = sc.nextLine();
@@ -22,9 +22,9 @@ public class timeConversion {
         System.out.println(result);
         sc.close();
     }
-    
+
     public static String timeCon(String s) {
-    	
+
 	    String h = s.substring(0, 3);
 	    System.out.println(h);
 	    int intHr= Integer.parseInt(s.substring(0, 2));
@@ -46,6 +46,6 @@ public class timeConversion {
 	    }
 	    String res = strHr + s.substring(2, s.length()-2);
 	    return res;
-	
+
 	    }
 }

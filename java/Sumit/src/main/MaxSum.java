@@ -4,7 +4,7 @@ public class MaxSum {
 
 	public static void main(String[] args) {
 		int[] a= {1,3,5,7,5,3,2,4,3};
-		int[] b= {2,3,7,6,4,2,1,2,3};      //where same number then your choice is line change or not 
+		int[] b= {2,3,7,6,4,2,1,2,3};      //where same number then your choice is line change or not
 		int res=maxSum(a,b);
 		System.out.println(res);
 	}
@@ -47,7 +47,7 @@ public class MaxSum {
 		}else {
 			sum +=sum2;
 		}
-		
+
 		return sum;
 	}
 

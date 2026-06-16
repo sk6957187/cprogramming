@@ -21,21 +21,21 @@ public class Today {
 //			System.out.println();
 //			a--;
 //		}
-//		
+//
 //	}
-//	
+//
 //	public static void main(String[] args) {
 //		Scanner sc =new Scanner(System.in);
 //		int n = sc.nextInt();
 //		printPattern(n);
-		
+
 //		for(int i=1; i<=n; i++) {
 //			for(int j=1; j<=2*(n-i)+1; j++) {
 //				System.out.print(i+" ");
 //			}
 //			System.out.println();
 //		}
-		
+
 //		int b=1;
 //		while(b<=n) {
 //			int j=1;
@@ -58,13 +58,13 @@ public class Today {
 //		sc.close();
 //	}
 
-	
-	
-	
+
+
+
 //	public static void main(String[] args) {
 //		Scanner sc = new Scanner(System.in);
 //		String str = sc.next();
-//		HashMap<Character, Integer> hm = new HashMap<>(); 
+//		HashMap<Character, Integer> hm = new HashMap<>();
 //		for(int i=0; i<str.length(); i++) {
 //			char ch = str.charAt(i);
 //
@@ -79,22 +79,22 @@ public class Today {
 //			System.out.println(key+" "+ hm.get(key));
 //		}
 //	}
-	
-	
+
+
 	public static void main(String[] args) {
 		String str = "3[a2[c]]";
 		int l = str.length();
 		String res = "";
-		
+
 		int a=0;
 		int b=0;
 		int num = 0;
 		for(int i=0;i<str.length(); i++) {
-			
+
 			char ch = str.charAt(i);
 			if(ch >= 48 && ch<= 57) {
 				num = str.charAt(i)-48;
-			
+
 			}
 			if(ch == '[') {
 				a=i+1;
@@ -116,7 +116,7 @@ public class Today {
 					System.out.println(str.substring(a,b));
 					temp = temp+str.substring(a,b);
 					flag = true;
-					
+
 				}
 				if(flag) {
 					res = res+temp;
@@ -126,7 +126,7 @@ public class Today {
 		}
 //		System.out.println(res);
 	}
-	
+
 }
 
 

@@ -7,14 +7,14 @@ public class SquarePattern {
 		n=5;
 		for(int i=0; i<n; i++) {
 			for(int j=0; j<n; j++) {
-				System.out.print(j+" ");	
+				System.out.print(j+" ");
 			}
 			System.out.println();
 		}
 		System.out.println();
-		
-		
-		for(int i=1; i<=n; i++) {	
+
+
+		for(int i=1; i<=n; i++) {
 			char c=97;
 			for(int j=1; j<=n; j++) {
 				System.out.print(c+" ");
@@ -23,7 +23,7 @@ public class SquarePattern {
 			System.out.println();
 		}
 		System.out.println();
-		
+
 		for(int i=0; i<n; i++) {
 			for(int j=0; j<n; j++) {
 				if(j%2==0) {

@@ -1,6 +1,6 @@
 package main;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class Palindrome {
 
@@ -16,11 +16,11 @@ public class Palindrome {
 		}
 		if(num.equals(rev)) {
 			System.out.println("Yes");
-		}
-		else
+		} else {
 			System.out.println("No");
+		}
 		sc.close();
-		
+
 
 	}
 

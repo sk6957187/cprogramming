@@ -1,7 +1,7 @@
 package main;
 
 public class DeseriumNum {
-	
+
 	public static boolean isDeseriumNum(int n){
 		int temp = n;
 		int count=0;
@@ -26,7 +26,7 @@ public class DeseriumNum {
 		}
 		return false;
 	}
-	
+
 	public static void main(String[] args) {
 		int n =135;
 		boolean res = isDeseriumNum(n);

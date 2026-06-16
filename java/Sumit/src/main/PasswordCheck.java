@@ -1,7 +1,8 @@
 package main;
 
 import java.util.Scanner;
-import java.util.regex.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 class PasswordCheck {
     public static void main(String[] args) {
@@ -14,14 +15,18 @@ class PasswordCheck {
         up = Pattern.compile("[ABCDEFGHIJKLMNOPQRSTUVWXYZ]").matcher(s);
         spec = Pattern.compile("[!@#$%^&*()-/+]").matcher(s);
         int count = 0;
-        if(!num.find())
-            count++;
-        if(!low.find())
-            count++;
-        if(!up.find())
-            count++;
-        if(!spec.find())
-            count++;
+        if(!num.find()) {
+			count++;
+		}
+        if(!low.find()) {
+			count++;
+		}
+        if(!up.find()) {
+			count++;
+		}
+        if(!spec.find()) {
+			count++;
+		}
         if(n+count<6){
             count+=6-n-count;
         }

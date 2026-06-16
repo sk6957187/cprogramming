@@ -4,7 +4,7 @@ package main;
 // 283 -> 2+8+3 = 13 ->1+3 = 4
 public class SumOfDigitInSingleDigt {
 	public static void main(String[] args) {
-		int n=283; 
+		int n=283;
 		int sum =0;
 		while(true) {
 			sum = 0 ;

@@ -1,6 +1,6 @@
 package main;
 
-//i/p: {5,10,3,18,7,16,8};   
+//i/p: {5,10,3,18,7,16,8};
 //o/p: [18, 18, 18, -1, 16, -1, -1];
 
 
@@ -30,7 +30,7 @@ public class ReplByLager {
 	}
 
 	public static void main(String[] args) {
-		int[] arr = {5,10,3,18,7,16,8};  
+		int[] arr = {5,10,3,18,7,16,8};
 		int[] rs = replByLager(arr);
 		System.out.println(Arrays.toString(rs));
 	}

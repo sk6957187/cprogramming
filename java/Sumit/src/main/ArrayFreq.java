@@ -18,7 +18,7 @@ public class ArrayFreq {
 			i = i+count-1;
 			System.out.println(arr[i]+" is "+count+" times");
 		}
-		
+
 		System.out.println("unique element:- ");
 	}
 }

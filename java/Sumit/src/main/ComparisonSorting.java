@@ -1,8 +1,13 @@
 package main;
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 class Result {
 
     /*
@@ -16,16 +21,16 @@ class Result {
     // Write your code here
     Collections.sort(arr);
     List<Integer> arrRtn = new ArrayList<>();
-    
+
     for(int j=0; j<100; j++){
        int count=0;
-       for(int i=0; i<arr.size(); i++){
-           if(j == arr.get(i)){
+       for (Integer element : arr) {
+           if(j == element){
                     count++;
          }
        }
        arrRtn.add(count);
-        
+
     }
     return arrRtn;
 

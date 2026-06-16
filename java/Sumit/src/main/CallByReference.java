@@ -13,7 +13,7 @@ public class CallByReference {
 
     @SuppressWarnings("removal")
 	private static Integer findSum(Integer x, Integer y) {
-        Integer s = new Integer(x.intValue()+y.intValue());
+        int s = x.intValue()+y.intValue();
         //s=x+y;      //using auto unboxing
         return s;
     }

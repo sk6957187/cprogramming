@@ -1,6 +1,6 @@
 package main;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class SpiralMatrix {
 
@@ -39,7 +39,7 @@ public class SpiralMatrix {
 			colStart++;
 		}
 		sc.close();
-		
+
 	}
 
 }
