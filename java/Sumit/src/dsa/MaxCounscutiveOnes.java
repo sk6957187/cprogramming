@@ -17,11 +17,11 @@ public class MaxCounscutiveOnes {
 	                	longL = Math.max(longL, (j-i+1));
 	                }
 	            }
-	            
+
 	        }
 	        return longL;
 	    }
-	
+
 	public static void main(String[] args) {
 		int[] nums = {0,0,1,1};
 		int k = 1;

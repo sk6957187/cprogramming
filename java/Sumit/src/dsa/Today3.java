@@ -1,15 +1,11 @@
 package dsa;
-import java.util.Queue;
-import java.util.Set;
 import java.util.Stack;
-import java.util.Arrays;
-import java.util.LinkedList;
 
 public class Today3 {
 	static int[] queue;
 	static int front;
 	static int rear;
-	
+
 	static void createQueue(int n) {
 		queue = new int[n];
 		front = 0;
@@ -20,11 +16,11 @@ public class Today3 {
 		if(rear >= queue.length) {
 			System.out.println("full");
 			return;
-		} 
+		}
 		queue[rear++] = ele;
 		System.out.println(ele + "is added.");
 	}
-	
+
 	static void display() {
 		if(front == rear) {
 			System.out.println("Empty..!!");
@@ -45,20 +41,20 @@ public class Today3 {
 		rear--;
 		display();
 	}
-	
+
 	public static void main(String[] args) {
 		Stack<Integer> st = new Stack<>();
 		st.push(10);
 		st.push(20);
 		System.out.println(st);
-		
+
 		System.out.println(st.pop());
 		st.isEmpty();
 		System.out.println(st.peek());
-		
 
-		
-		
-		
+
+
+
+
 	}
 }

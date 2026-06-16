@@ -19,7 +19,7 @@ public class SpiralPrint {
 			}
 			rowStart++;
 			for(int row = rowStart; row <= rowEnd; row++) {
-				System.out.print(matrix[row][colEnd]+" ");;
+				System.out.print(matrix[row][colEnd]+" ");
 			}
 			colEnd--;
 			for(int col = colEnd; col >= colStart; col--) {

@@ -6,8 +6,8 @@ import java.util.Set;
 public class Hashmaps {
 	static void hmap(int[] arr) {
 		HashMap<Integer, Integer> hm = new HashMap<>();
-		for(int i=0; i<arr.length; i++) {
-			hm.put(arr[i], hm.getOrDefault(arr[i], 0)+1);
+		for (int element : arr) {
+			hm.put(element, hm.getOrDefault(element, 0)+1);
 		}
 		Set<Integer> keys = hm.keySet();
 		for(int key : keys) {

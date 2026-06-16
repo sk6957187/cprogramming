@@ -1,9 +1,5 @@
 package dsa;
 
-import java.util.Scanner;
-import java.util.Stack;
-
-
 class Node4{
 	Node4 next;
 	Node4 prev;
@@ -15,7 +11,7 @@ class Node4{
 
 class doubleLinked{
 	Node4 head, tail;
-	
+
 	void insert(int ele) {
 		Node4 n = new Node4(ele);
 		if(head == null) {
@@ -28,7 +24,7 @@ class doubleLinked{
 		}
 		System.out.println(ele + " has been inserted into the doubly linked list!");
 	}
-	
+
 	void display() {
 		if (head == null) {
 			System.out.println("Empty ....!!");
@@ -94,8 +90,8 @@ class doubleLinked{
 }
 
 public class Today{
-	
-	
+
+
 	public static void main(String[] args) {
 		doubleLinked l1 = new doubleLinked();
         l1.insert(10);

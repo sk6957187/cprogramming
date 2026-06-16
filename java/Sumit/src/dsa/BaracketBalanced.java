@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class BaracketBalanced {
 	static char[] stack;
 	static int top = -1;
-	
-	
-	
+
+
+
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String str = sc.next();
@@ -29,14 +29,14 @@ public class BaracketBalanced {
 				System.out.println("Unbalanced");
 			}
 		}
-		
+
 //		stack = new char[str.length()];
 //		boolean flag = true;
 //		for(int i=0; i<str.length(); i++) {
 //			if(str.charAt(i) == '(') {
 //				push();
 //			} else if(top!=-1) {
-//				
+//
 //			}
 //		}
 		sc.close();

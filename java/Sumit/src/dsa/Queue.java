@@ -6,14 +6,14 @@ public class Queue {
 	static int[] queue;
 	static int front;
 	static int rear;
-	
+
 	static void createQueue(int n) {
 		queue = new int[n];
 		front = 0;
 		rear = 0;
 		System.out.println("Queue is created with size: "+n);
 	}
-	
+
 	static void enQueue(int ele) {
 		if(rear>=queue.length) {
 			System.out.println("Queue is full...!!");
@@ -22,7 +22,7 @@ public class Queue {
 			System.out.println(ele+" has been added..!!");
 		}
 	}
-	
+
 	static void display() {
 		if(rear == front) {
 			System.out.println("Queue is empty..!!");
@@ -31,7 +31,7 @@ public class Queue {
 			System.out.println(queue[i]);
 		}
 	}
-	
+
 	static void deQueue() {
 		if(rear==front) {
 			System.out.println("Queue is full...!!");
@@ -41,14 +41,14 @@ public class Queue {
 				queue[i] = queue[i+1];
 			}
 		}
-		
+
 	}
-	
+
 	static void clear() {
 		rear = front;
 		System.out.println("Queue is Clear..!!");
 	}
-	
+
 	static void isEmpty() {
 		if(rear == front) {
 			System.out.println("Queue is Empty...!!");
@@ -63,7 +63,7 @@ public class Queue {
 			System.out.println("Queue is not full...!!");
 		}
 	}
-	
+
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		while(true) {
@@ -106,7 +106,7 @@ public class Queue {
 			}
 			sc.close();
 		}
-		
-		
+
+
 	}
 }

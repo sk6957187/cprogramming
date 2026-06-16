@@ -60,6 +60,6 @@ public class MergeSort {
 		sort(arr, 0, arr.length - 1);
 		System.out.println(Arrays.toString(arr));
 		search(arr, 12);	//here array pass in sorted form
-		
+
 	}
 }

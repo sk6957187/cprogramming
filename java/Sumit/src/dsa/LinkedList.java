@@ -10,7 +10,7 @@ class Node{
 
 class LinkedImpl{
 	Node head, tail;
-	
+
 	void insert(int ele) {
 		Node n = new Node(ele);
 		if(head == null) {
@@ -22,7 +22,7 @@ class LinkedImpl{
 		}
 		System.out.println(ele+" had been inserted inside Linkedlist..!!");
 	}
-	
+
 	void view() {
 		System.out.println("=====LinkedList data=====");
 		if(head == null) {
@@ -40,7 +40,7 @@ class LinkedImpl{
 			System.out.println(temp.data);
 		}
 	}
-	
+
 	void delete(int n) {
 		Node temp = head;
 		if(head == null) {
@@ -61,7 +61,7 @@ class LinkedImpl{
 			System.out.println("Element not found..!!");
 		}
 	}
-	
+
 	void insertHead(int ele) {
 		Node n = new Node(ele);
 		if(head == null) {
@@ -80,7 +80,7 @@ class LinkedImpl{
 
 
 public class LinkedList {
-	
+
 	public static void main(String[] args) {
 		LinkedImpl l1 = new LinkedImpl();
 		l1.insert(10);

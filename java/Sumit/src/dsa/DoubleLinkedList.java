@@ -25,7 +25,7 @@ class LinkedImpl1 {
             tail = n;
 //            System.out.println(n.prev + " "+tail);
         }
-         
+
     }
 
     void display() {

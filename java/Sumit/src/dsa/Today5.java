@@ -18,12 +18,12 @@ public class Today5 {
 			}
 			arr[j+1] = key;
 			swap++;
-			
+
 		}
 		System.out.println(Arrays.toString(arr));
 		System.out.println("minmum iterate -> "+ min);
 		System.out.println("minmum Swap ->" + swap );
 	}
-	
-	
+
+
 }

@@ -33,7 +33,7 @@ class BSTImpl{
 			preOrder(root.right);
 		}
 	}
-	
+
 	public void inOrder(Node2 root) {
 		if(root != null) {
 			preOrder(root.left);
@@ -41,7 +41,7 @@ class BSTImpl{
 			preOrder(root.right);
 		}
 	}
-	
+
 	public void postOrder(Node2 root) {
 		if(root != null) {
 			preOrder(root.left);
@@ -49,7 +49,7 @@ class BSTImpl{
 			System.out.print(root.data +" ");
 		}
 	}
-	
+
 	public void search(Node2 root, int ele) {
 		if(root==null) {
 			System.out.println(ele+" is not available..!!");
@@ -80,7 +80,7 @@ public class BST {
 		System.out.println("=====PostOrder=====");
 		bstImpl.postOrder(root);
 		System.out.println();
-		
+
 		bstImpl.search(root, 90);
 	}
 }

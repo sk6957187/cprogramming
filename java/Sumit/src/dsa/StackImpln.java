@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class StackImpln {
 	static int[] stack;
 	static int top;
-	
+
 	static void createStack(int size) {
 		stack = new int[size];
 		top = -1;
 		System.out.println("Stack is created with size: "+size);
 	}
-	
+
 	static void push(int ele) {
 		if(top == stack.length-1) {
 			System.err.println("Stack is overflow error...!!!");
@@ -21,7 +21,7 @@ public class StackImpln {
 			System.out.println(ele +" had been added to stack...!!");
 		}
 	}
-	
+
 	static void display() {
 		if(top==-1) {
 			System.out.println("Stack is empty....!!");
@@ -31,7 +31,7 @@ public class StackImpln {
 			}
 		}
 	}
-	
+
 	static void pop() {
 		if(top==-1) {
 			System.out.println("Stack UnderFlow...!!");
@@ -40,7 +40,7 @@ public class StackImpln {
 			top--;
 		}
 	}
-	
+
 	static void isEmpty() {
 		if(top==-1) {
 			System.out.println("Yes");
@@ -48,22 +48,22 @@ public class StackImpln {
 			System.out.println("NO");
 		}
 	}
-	
+
 	static void isPeek() {
 		System.out.println("Top most element:- "+stack[top]);
 	}
-	
+
 	static void clear() {
 		System.out.println("Stack had been cleared.");
 		top = -1;
 	}
-	
+
 	static void isFull(int size) {
 		if((size-1) == top) {
 			System.out.println("Stack is full");
 		}
 	}
-	
+
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the size of stack: ");
@@ -75,7 +75,7 @@ public class StackImpln {
 			System.out.print("Enter your option:- ");
 			int choice = sc.nextInt();
 			switch (choice) {
-			case 1: 
+			case 1:
 				System.out.println("Enter the element");
 				int ele = sc.nextInt();
 				push(ele);
@@ -109,6 +109,6 @@ public class StackImpln {
 			sc.close();
 		}
 //		System.out.println("------------Program End--------------");
-		
+
 	}
 }

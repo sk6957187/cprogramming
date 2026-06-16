@@ -7,7 +7,7 @@ package dsa;
 		 this.data = ele;
 	 }
  }
- 
+
  class RevLinkedImpl{
 		Node head, tail;
 		void insert(int ele) {
@@ -20,7 +20,7 @@ package dsa;
 				tail = n;
 			}
 		}
-		
+
 		void display() {
 			System.out.println("=====LinkedList data=====");
 			if(head == null) {
@@ -34,7 +34,7 @@ package dsa;
 				System.out.println(temp.data);
 			}
 		}
-		
+
 		void displayRev() {
 			System.out.println("=====Reversed LinkedList data=====");
 			if(head == null) {
@@ -47,10 +47,10 @@ package dsa;
 					temp = temp.next;
 				}
 				System.out.println(temp.data);
-				
+
 			}
 		}
-		
+
  }
 
 public class RevLinkedList {
