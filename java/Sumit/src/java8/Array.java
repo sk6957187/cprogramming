@@ -15,13 +15,13 @@ public class Array {
 		                      n -> n, Collectors.counting()));
 
 		System.out.println(countMap);
-		
+
 		Arrays.stream(arr)
         .sorted()
         .distinct()
-        .skip(1)         
+        .skip(1)
         .forEach(System.out::println);
-		
+
 	}
 
 }
