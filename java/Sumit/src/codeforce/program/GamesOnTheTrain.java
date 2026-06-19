@@ -13,7 +13,7 @@ public class GamesOnTheTrain {
 		int max = arr[n-1];
 //		int min = arr[0];
 // 
-		int k = max - min + 1;
+//		int k = max - min + 1;
 		int[] arr1 = new int[n];
 		int h = max + 1;
 		for(int i=0; i<n; i++) {
