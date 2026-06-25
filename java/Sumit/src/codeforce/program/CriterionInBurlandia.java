@@ -34,13 +34,13 @@ public class CriterionInBurlandia {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-//		System.out.println("test case: ");
+		System.out.println("test case: ");
 		int t = sc.nextInt();
 		
 		while(t-- > 0) {
-//			System.out.println("n: ");
+			System.out.println("n: ");
 			int n = sc.nextInt();
-//			System.out.println("q: ");
+			System.out.println("q: ");
 			int q = sc.nextInt();
 			
 			int[] value = new int[n+1];
