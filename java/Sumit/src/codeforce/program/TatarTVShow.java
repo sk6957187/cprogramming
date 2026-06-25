@@ -6,16 +6,8 @@ import java.util.Scanner;
 
 public class TatarTVShow {
 	
-	static char changeChar(char c) {
-		if(c == '0') {
-			return '1';
-		} else {
-			return '0';
-		}
-	}
-	
 	static boolean bsf(int n, int k, String s) {
-		boolean[] vis = new boolean[n];
+//		boolean[] vis = new boolean[n];
 		for(int start=0; start<k; start++) {
 			int one = 0;
 			
@@ -34,16 +26,16 @@ public class TatarTVShow {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Test cases: ");
+//		System.out.println("Test cases: ");
 		int t = sc.nextInt();
 		
 		while(t-- > 0) {
-			System.out.println("n: ");
+//			System.out.println("n: ");
 			int n = sc.nextInt();
-			System.out.println("k: ");
+//			System.out.println("k: ");
 			int k = sc.nextInt();
 			sc.nextLine();
-			System.out.println("Binary string: ");
+//			System.out.println("Binary string: ");
 			String s = sc.nextLine();
 			boolean result = bsf(n,k,s);
 			if(result) {
@@ -52,7 +44,7 @@ public class TatarTVShow {
 				System.out.println("NO");
 			}
 		}
-
+		sc.close();
 	}
 
 }
