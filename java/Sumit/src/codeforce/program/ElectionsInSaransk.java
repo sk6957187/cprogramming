@@ -1,5 +1,7 @@
 package codeforce.program;
 
+//	Question Id: 2236 F1
+
 import java.util.HashMap;
 import java.util.Scanner;
 
