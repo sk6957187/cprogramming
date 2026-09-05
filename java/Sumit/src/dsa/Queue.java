@@ -34,7 +34,7 @@ public class Queue {
 
 	static void deQueue() {
 		if(rear==front) {
-			System.out.println("Queue is full...!!");
+			System.out.println("Queue is empty...!!");
 		} else {
 			System.out.println(queue[front]+" had been deleted");
 			for(int i=front; i<rear-1; i++) {
