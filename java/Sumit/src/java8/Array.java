@@ -21,7 +21,12 @@ public class Array {
         .distinct()
         .skip(1)
         .forEach(System.out::println);
-
+		
+		int sum = Arrays.stream(arr)
+				.filter(n -> n%2 != 0)
+				.sum();
+		
+		System.out.println("Sum of Odd number is: " + sum);
 	}
 
 }
