@@ -6,6 +6,7 @@ a.out
 */*/*.exe
 /*.exe
 /*.class
+java/Sumit/src/practice/*
 
 code force/qustion/**
 
@@ -16,6 +17,7 @@ python/*/*.pyc
 python/*/*/*.pyc
 python/*/*/*/*.pyc
 python/*/*/*/*/*.pyc
+
 
 sap/
 
